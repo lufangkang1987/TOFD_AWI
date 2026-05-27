@@ -30,6 +30,10 @@ namespace NewInspect.Services
         private Thread _aScanThread;
         private Thread _dScanThread;
         private bool _isRunning;
+        private bool _isConnected;
+
+        /// <summary>TOFD 设备连接状态</summary>
+        public bool IsConnected => _isConnected;
 
         public TofdService(
             ITofdHardware hardware,

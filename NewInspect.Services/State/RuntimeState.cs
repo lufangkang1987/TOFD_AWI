@@ -293,6 +293,9 @@ namespace NewInspect.Services.State
 
         /// <summary>灯光位置: true=前 false=后 (SysInfo.m_bl_Q1_H0)</summary>
         public bool LightFront { get; set; } = true;
+
+        /// <summary>电源连接状态</summary>
+        public bool IsPowerConnected { get; set; } = true;
     }
 
     /// <summary>

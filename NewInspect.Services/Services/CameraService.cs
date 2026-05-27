@@ -20,6 +20,10 @@ namespace NewInspect.Services
         private readonly ICameraDevice[] _cameras = new ICameraDevice[4];
         private int _activeCameraIndex = 0;
         private bool _isStreaming;
+        private bool _isConnected;
+
+        /// <summary>相机连接状态</summary>
+        public bool IsConnected => _isConnected;
 
         /// <summary>当前活动帧</summary>
         public Bitmap CurrentFrame { get; private set; }

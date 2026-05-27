@@ -3,24 +3,108 @@
   "WorkspaceRootPath": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Tofd_AWI\\From\\Frm_Main.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tofd_AWI\\From\\Frm_Main.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Tofd_AWI\\From\\Frm_Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tofd_AWI\\From\\Frm_Main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Tofd_DLL\\Tofd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tofd_DLL\\Tofd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA1E0F2-104C-4A1A-9963-CA27D9FC9B62}|ClimbVideo\\ClimbVideo\\ClimbVideo.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\climbvideo\\climbvideo\\sysinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CA1E0F2-104C-4A1A-9963-CA27D9FC9B62}|ClimbVideo\\ClimbVideo\\ClimbVideo.csproj|solutionrelative:climbvideo\\climbvideo\\sysinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C11F742E-B9DE-48B5-AA04-947DE8C528B5}|Clb_XmCam_DLL\\Clb_XmCam_DLL.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\clb_xmcam_dll\\clb_xmcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C11F742E-B9DE-48B5-AA04-947DE8C528B5}|Clb_XmCam_DLL\\Clb_XmCam_DLL.csproj|solutionrelative:clb_xmcam_dll\\clb_xmcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58E7B15E-F61D-4A52-A3EB-73FD1E66BFA8}|Clb_MT_Comm\\Clb_MT_Comm\\Clb_MT_Comm.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\clb_mt_comm\\clb_mt_comm\\mt_comm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58E7B15E-F61D-4A52-A3EB-73FD1E66BFA8}|Clb_MT_Comm\\Clb_MT_Comm\\Clb_MT_Comm.csproj|solutionrelative:clb_mt_comm\\clb_mt_comm\\mt_comm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58E7B15E-F61D-4A52-A3EB-73FD1E66BFA8}|Clb_MT_Comm\\Clb_MT_Comm\\Clb_MT_Comm.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\clb_mt_comm\\clb_mt_comm\\cancmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58E7B15E-F61D-4A52-A3EB-73FD1E66BFA8}|Clb_MT_Comm\\Clb_MT_Comm\\Clb_MT_Comm.csproj|solutionrelative:clb_mt_comm\\clb_mt_comm\\cancmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E2A3BC-8A1C-48BC-8647-5D1C75818D66}|Frame_Work\\Frame_Work\\Frame_Work.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\frame_work\\frame_work\\struct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E2A3BC-8A1C-48BC-8647-5D1C75818D66}|Frame_Work\\Frame_Work\\Frame_Work.csproj|solutionrelative:frame_work\\frame_work\\struct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\classlibrary_interface\\classinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|solutionrelative:classlibrary_interface\\classinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\class\\sysinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:class\\sysinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B1B605F-05DA-4F88-97F2-EF4ED6EA3037}|ClassLib_TestData\\ClassLib_TestData.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\classlib_testdata\\class_test_item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B1B605F-05DA-4F88-97F2-EF4ED6EA3037}|ClassLib_TestData\\ClassLib_TestData.csproj|solutionrelative:classlib_testdata\\class_test_item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA1E0F2-104C-4A1A-9963-CA27D9FC9B62}|ClimbVideo\\ClimbVideo\\ClimbVideo.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\climbvideo\\climbvideo\\showevideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2CA1E0F2-104C-4A1A-9963-CA27D9FC9B62}|ClimbVideo\\ClimbVideo\\ClimbVideo.csproj|solutionrelative:climbvideo\\climbvideo\\showevideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA1E0F2-104C-4A1A-9963-CA27D9FC9B62}|ClimbVideo\\ClimbVideo\\ClimbVideo.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\climbvideo\\climbvideo\\showevideo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CA1E0F2-104C-4A1A-9963-CA27D9FC9B62}|ClimbVideo\\ClimbVideo\\ClimbVideo.csproj|solutionrelative:climbvideo\\climbvideo\\showevideo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA1E0F2-104C-4A1A-9963-CA27D9FC9B62}|ClimbVideo\\ClimbVideo\\ClimbVideo.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\climbvideo\\climbvideo\\showevideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CA1E0F2-104C-4A1A-9963-CA27D9FC9B62}|ClimbVideo\\ClimbVideo\\ClimbVideo.csproj|solutionrelative:climbvideo\\climbvideo\\showevideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CA1E0F2-104C-4A1A-9963-CA27D9FC9B62}|ClimbVideo\\ClimbVideo\\ClimbVideo.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\climbvideo\\climbvideo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CA1E0F2-104C-4A1A-9963-CA27D9FC9B62}|ClimbVideo\\ClimbVideo\\ClimbVideo.csproj|solutionrelative:climbvideo\\climbvideo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\newinspect.services\\services\\motionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|solutionrelative:newinspect.services\\services\\motionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C04C6F6A-30C2-40CA-8BDF-C693FDC7C23E}|Video\\Video.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\video\\xmlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C04C6F6A-30C2-40CA-8BDF-C693FDC7C23E}|Video\\Video.csproj|solutionrelative:video\\xmlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\from\\frm_main_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C04C6F6A-30C2-40CA-8BDF-C693FDC7C23E}|Video\\Video.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\video\\classvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C04C6F6A-30C2-40CA-8BDF-C693FDC7C23E}|Video\\Video.csproj|solutionrelative:video\\classvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\from\\frm_main_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\newinspect.services\\adapters\\hardwareadapters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|solutionrelative:newinspect.services\\adapters\\hardwareadapters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\program_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\program_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:program_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\newinspect.services\\state\\runtimestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|solutionrelative:newinspect.services\\state\\runtimestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C04C6F6A-30C2-40CA-8BDF-C693FDC7C23E}|Video\\Video.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\video\\pubhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C04C6F6A-30C2-40CA-8BDF-C693FDC7C23E}|Video\\Video.csproj|solutionrelative:video\\pubhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65DB9CE0-3829-41AB-AD75-E894502E0090}|MVSDK\\MVSDK.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\mvsdk\\mvsdk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65DB9CE0-3829-41AB-AD75-E894502E0090}|MVSDK\\MVSDK.csproj|solutionrelative:mvsdk\\mvsdk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\classlibrary_interface\\ihardwareinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|solutionrelative:classlibrary_interface\\ihardwareinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\from\\frm_main_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,65 +122,333 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Frm_Main_C.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C.cs",
-              "RelativeDocumentMoniker": "From\\Frm_Main_C.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C.cs",
-              "RelativeToolTip": "From\\Frm_Main_C.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAACcAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Frm_Main.Designer.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Tofd_AWI\\From\\Frm_Main.Designer.cs",
+              "RelativeDocumentMoniker": "Tofd_AWI\\From\\Frm_Main.Designer.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Tofd_AWI\\From\\Frm_Main.Designer.cs",
+              "RelativeToolTip": "Tofd_AWI\\From\\Frm_Main.Designer.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:16:09.714Z",
+              "WhenOpened": "2026-05-27T07:18:43.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Frm_Main.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Tofd_AWI\\From\\Frm_Main.cs",
+              "RelativeDocumentMoniker": "Tofd_AWI\\From\\Frm_Main.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Tofd_AWI\\From\\Frm_Main.cs",
+              "RelativeToolTip": "Tofd_AWI\\From\\Frm_Main.cs",
+              "ViewState": "AgIAAAIBAAAAAAAAAAArwBABAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T07:17:43.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tofd.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Tofd_DLL\\Tofd.cs",
+              "RelativeDocumentMoniker": "Tofd_DLL\\Tofd.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Tofd_DLL\\Tofd.cs",
+              "RelativeToolTip": "Tofd_DLL\\Tofd.cs",
+              "ViewState": "AgIAADgOAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T07:16:42.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Frm_Main_C.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C.cs",
-              "RelativeDocumentMoniker": "From\\Frm_Main_C.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "From\\Frm_Main_C.cs [\u8BBE\u8BA1]",
+              "Title": "SysInfo.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClimbVideo\\ClimbVideo\\SysInfo.cs",
+              "RelativeDocumentMoniker": "ClimbVideo\\ClimbVideo\\SysInfo.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClimbVideo\\ClimbVideo\\SysInfo.cs",
+              "RelativeToolTip": "ClimbVideo\\ClimbVideo\\SysInfo.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAYwCoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:16:05.448Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Frm_Main_C_New.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C_New.cs",
-              "RelativeDocumentMoniker": "From\\Frm_Main_C_New.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C_New.cs",
-              "RelativeToolTip": "From\\Frm_Main_C_New.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAhwBYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:15:51.67Z",
+              "WhenOpened": "2026-05-27T06:48:08.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "MT_Comm.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Clb_MT_Comm\\Clb_MT_Comm\\MT_Comm.cs",
+              "RelativeDocumentMoniker": "Clb_MT_Comm\\Clb_MT_Comm\\MT_Comm.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Clb_MT_Comm\\Clb_MT_Comm\\MT_Comm.cs",
+              "RelativeToolTip": "Clb_MT_Comm\\Clb_MT_Comm\\MT_Comm.cs",
+              "ViewState": "AgIAAAkCAAAAAAAAAAAywAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:46:49.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CanCmd.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Clb_MT_Comm\\Clb_MT_Comm\\CanCmd.cs",
+              "RelativeDocumentMoniker": "Clb_MT_Comm\\Clb_MT_Comm\\CanCmd.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Clb_MT_Comm\\Clb_MT_Comm\\CanCmd.cs",
+              "RelativeToolTip": "Clb_MT_Comm\\Clb_MT_Comm\\CanCmd.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:46:37.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Struct.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Frame_Work\\Frame_Work\\Struct.cs",
+              "RelativeDocumentMoniker": "Frame_Work\\Frame_Work\\Struct.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Frame_Work\\Frame_Work\\Struct.cs",
+              "RelativeToolTip": "Frame_Work\\Frame_Work\\Struct.cs",
+              "ViewState": "AgIAAIEgAAAAAAAAAAAAAJUgAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:44:08.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClassInterFace.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\ClassInterFace.cs",
+              "RelativeDocumentMoniker": "ClassLibrary_Interface\\ClassInterFace.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\ClassInterFace.cs",
+              "RelativeToolTip": "ClassLibrary_Interface\\ClassInterFace.cs",
+              "ViewState": "AgIAAHoBAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:42:35.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Class_Test_Item.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLib_TestData\\Class_Test_Item.cs",
+              "RelativeDocumentMoniker": "ClassLib_TestData\\Class_Test_Item.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLib_TestData\\Class_Test_Item.cs",
+              "RelativeToolTip": "ClassLib_TestData\\Class_Test_Item.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:36:15.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Clb_XmCam.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Clb_XmCam_DLL\\Clb_XmCam.cs",
+              "RelativeDocumentMoniker": "Clb_XmCam_DLL\\Clb_XmCam.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Clb_XmCam_DLL\\Clb_XmCam.cs",
+              "RelativeToolTip": "Clb_XmCam_DLL\\Clb_XmCam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:16:22.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ShoweVideo.Designer.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClimbVideo\\ClimbVideo\\ShoweVideo.Designer.cs",
+              "RelativeDocumentMoniker": "ClimbVideo\\ClimbVideo\\ShoweVideo.Designer.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClimbVideo\\ClimbVideo\\ShoweVideo.Designer.cs",
+              "RelativeToolTip": "ClimbVideo\\ClimbVideo\\ShoweVideo.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:14:30.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClimbVideo\\ClimbVideo\\Program.cs",
+              "RelativeDocumentMoniker": "ClimbVideo\\ClimbVideo\\Program.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClimbVideo\\ClimbVideo\\Program.cs",
+              "RelativeToolTip": "ClimbVideo\\ClimbVideo\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T06:13:00.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Frm_Main_C_New.cs [\u8BBE\u8BA1]",
               "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C_New.cs",
               "RelativeDocumentMoniker": "From\\Frm_Main_C_New.cs",
               "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C_New.cs [\u8BBE\u8BA1]",
               "RelativeToolTip": "From\\Frm_Main_C_New.cs [\u8BBE\u8BA1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:15:47.587Z",
+              "WhenOpened": "2026-05-27T05:18:46.563Z",
               "EditorCaption": " [\u8BBE\u8BA1]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 15,
+              "Title": "MotionService.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\Services\\MotionService.cs",
+              "RelativeDocumentMoniker": "NewInspect.Services\\Services\\MotionService.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\Services\\MotionService.cs",
+              "RelativeToolTip": "NewInspect.Services\\Services\\MotionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T03:13:41.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "XMLHelper.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Video\\XMLHelper.cs",
+              "RelativeDocumentMoniker": "Video\\XMLHelper.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Video\\XMLHelper.cs",
+              "RelativeToolTip": "Video\\XMLHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T02:17:40.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SysInfo.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Class\\SysInfo.cs",
+              "RelativeDocumentMoniker": "Class\\SysInfo.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Class\\SysInfo.cs",
+              "RelativeToolTip": "Class\\SysInfo.cs",
+              "ViewState": "AgIAAGkBAAAAAAAAAAAvwHABAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T00:23:48.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ShoweVideo.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClimbVideo\\ClimbVideo\\ShoweVideo.cs",
+              "RelativeDocumentMoniker": "ClimbVideo\\ClimbVideo\\ShoweVideo.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClimbVideo\\ClimbVideo\\ShoweVideo.cs",
+              "RelativeToolTip": "ClimbVideo\\ClimbVideo\\ShoweVideo.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAMwCkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T01:50:11.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ShoweVideo.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClimbVideo\\ClimbVideo\\ShoweVideo.cs",
+              "RelativeDocumentMoniker": "ClimbVideo\\ClimbVideo\\ShoweVideo.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClimbVideo\\ClimbVideo\\ShoweVideo.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "ClimbVideo\\ClimbVideo\\ShoweVideo.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T01:50:05.297Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClassVideo.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Video\\ClassVideo.cs",
+              "RelativeDocumentMoniker": "Video\\ClassVideo.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Video\\ClassVideo.cs",
+              "RelativeToolTip": "Video\\ClassVideo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T02:17:10.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HardwareAdapters.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\Adapters\\HardwareAdapters.cs",
+              "RelativeDocumentMoniker": "NewInspect.Services\\Adapters\\HardwareAdapters.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\Adapters\\HardwareAdapters.cs",
+              "RelativeToolTip": "NewInspect.Services\\Adapters\\HardwareAdapters.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAADwv2cBAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T00:22:01.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "Program_New.cs",
               "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Program_New.cs",
               "RelativeDocumentMoniker": "Program_New.cs",
               "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Program_New.cs",
               "RelativeToolTip": "Program_New.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAArwEIAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:15:32.962Z",
+              "WhenOpened": "2026-05-27T05:55:32.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RuntimeState.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\State\\RuntimeState.cs",
+              "RelativeDocumentMoniker": "NewInspect.Services\\State\\RuntimeState.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\State\\RuntimeState.cs",
+              "RelativeToolTip": "NewInspect.Services\\State\\RuntimeState.cs",
+              "ViewState": "AgIAANQAAAAAAAAAAAAawOIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T05:22:33.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MVSDK.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\MVSDK\\MVSDK.cs",
+              "RelativeDocumentMoniker": "MVSDK\\MVSDK.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\MVSDK\\MVSDK.cs",
+              "RelativeToolTip": "MVSDK\\MVSDK.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAhwBgBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T01:47:25.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PubHelper.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Video\\PubHelper.cs",
+              "RelativeDocumentMoniker": "Video\\PubHelper.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Video\\PubHelper.cs",
+              "RelativeToolTip": "Video\\PubHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T02:17:33.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IHardwareInterfaces.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\IHardwareInterfaces.cs",
+              "RelativeDocumentMoniker": "ClassLibrary_Interface\\IHardwareInterfaces.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\IHardwareInterfaces.cs",
+              "RelativeToolTip": "ClassLibrary_Interface\\IHardwareInterfaces.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA1wBEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T00:21:27.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Frm_Main_C.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C.cs",
+              "RelativeDocumentMoniker": "From\\Frm_Main_C.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C.cs",
+              "RelativeToolTip": "From\\Frm_Main_C.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAA1wCcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T09:16:09.714Z",
               "EditorCaption": ""
             }
           ]
