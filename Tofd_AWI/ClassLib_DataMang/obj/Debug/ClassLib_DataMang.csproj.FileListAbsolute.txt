@@ -1,0 +1,7 @@
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.csproj.CoreCompileInputs.cache
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\bin\Debug\ClassLib_DataMang.dll
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\bin\Debug\ClassLib_DataMang.pdb
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.csproj.CopyComplete
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.dll
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.pdb
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.csproj.AssemblyReference.cache

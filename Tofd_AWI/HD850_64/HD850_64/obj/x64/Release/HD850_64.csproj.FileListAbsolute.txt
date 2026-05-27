@@ -1,0 +1,12 @@
+D:\陈大伟\3D\项目文件\HD850_64\HD850_64\bin\x64\Debug\HD850_64.dll
+D:\陈大伟\3D\项目文件\HD850_64\HD850_64\bin\x64\Debug\HD850_64.pdb
+D:\陈大伟\3D\项目文件\HD850_64\HD850_64\bin\x64\Debug\C_ProfileDll64.dll
+D:\陈大伟\3D\项目文件\HD850_64\HD850_64\obj\x64\Release\HD850_64.dll
+D:\陈大伟\3D\项目文件\HD850_64\HD850_64\obj\x64\Release\HD850_64.pdb
+D:\陈大伟\3D\设计文档\WeldInspe\WeldInspetion\WeldInspetion\bin\Debug\HD850_64.dll
+D:\陈大伟\3D\设计文档\WeldInspe\WeldInspetion\WeldInspetion\bin\Debug\HD850_64.pdb
+D:\陈大伟\3D\设计文档\WeldInspe\HD850_64\HD850_64\obj\x64\Release\HD850_64.csproj.CoreCompileInputs.cache
+D:\陈大伟\3D\设计文档\WeldInspe\HD850_64\HD850_64\obj\x64\Release\HD850_64.csproj.CopyComplete
+D:\陈大伟\3D\设计文档\WeldInspe\HD850_64\HD850_64\obj\x64\Release\HD850_64.dll
+D:\陈大伟\3D\设计文档\WeldInspe\HD850_64\HD850_64\obj\x64\Release\HD850_64.pdb
+D:\陈大伟\3D\设计文档\WeldInspe\HD850_64\HD850_64\obj\x64\Release\HD850_64.csproj.AssemblyReference.cache

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>TOFD_AWI 新框架架构设计文档</title>
+<style>
+  @page { size: A4; margin: 2cm 2.2cm; @bottom-center { content: "— " counter(page) " —"; font-size: 9pt; color: #888; } }
+
+  * { box-sizing: border-box; }
+  body { font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", "SimSun", sans-serif; font-size: 11pt; line-height: 1.75; color: #2d3436; max-width: 100%; }
+
+  h1 { font-size: 22pt; text-align: center; margin: 40px 0 8px 0; color: #1a1a2e; border-bottom: 2px solid #1a1a2e; padding-bottom: 12px; }
+  .subtitle { text-align: center; color: #636e72; font-size: 10pt; margin-bottom: 30px; }
+  h2 { font-size: 15pt; color: #1a1a2e; margin: 32px 0 14px 0; padding: 6px 0; border-bottom: 1px solid #dfe6e9; page-break-after: avoid; }
+  h3 { font-size: 12.5pt; color: #2d3436; margin: 22px 0 10px 0; page-break-after: avoid; }
+  h4 { font-size: 11pt; color: #636e72; margin: 14px 0 8px 0; }
+
+  p { margin: 6px 0 10px 0; }
+  strong { color: #1a1a2e; }
+  ul, ol { margin: 6px 0 12px 20px; }
+  li { margin: 2px 0; }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 16px 0; font-size: 10pt; }
+  th { background: #1a1a2e; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+  td { padding: 6px 10px; border-bottom: 1px solid #dfe6e9; }
+  tr:nth-child(even) td { background: #f8f9fa; }
+  tr:hover td { background: #e8f0fe; }
+
+  code { background: #f1f3f5; padding: 1px 5px; border-radius: 3px; font-family: "Cascadia Code", "Consolas", "Courier New", monospace; font-size: 9.5pt; }
+  pre { background: #1e272e; color: #d2dae2; padding: 14px 16px; border-radius: 6px; overflow-x: auto; font-size: 9pt; line-height: 1.55; margin: 12px 0; white-space: pre-wrap; word-break: break-all; }
+  pre .kw { color: #ffa502; }
+  pre .ty { color: #7bed9f; }
+  pre .cm { color: #6ab04c; }
+  pre .fn { color: #70a1ff; }
+  pre .str { color: #ff6b81; }
+
+  .arch-box { background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%); border: 1px solid #c8d6e5; border-radius: 8px; padding: 16px 20px; margin: 14px 0; page-break-inside: avoid; }
+  .arch-box h3 { margin-top: 0; }
+  .call-chain { font-family: "Cascadia Code", "Consolas", monospace; font-size: 9.5pt; line-height: 2; }
+  .call-chain .indent1 { padding-left: 20px; color: #636e72; }
+  .call-chain .indent2 { padding-left: 40px; color: #888; }
+  .call-chain .indent3 { padding-left: 60px; color: #aaa; }
+  .call-chain .indent4 { padding-left: 80px; color: #ccc; }
+
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 9pt; font-weight: 600; margin: 0 2px; }
+  .badge-new { background: #00b894; color: #fff; }
+  .badge-old { background: #dfe6e9; color: #636e72; }
+  .badge-done { background: #0984e3; color: #fff; }
+  .badge-todo { background: #fdcb6e; color: #2d3436; }
+
+  .info-card { border-left: 4px solid #0984e3; background: #f0f6ff; padding: 10px 14px; margin: 12px 0; border-radius: 0 6px 6px 0; }
+  .warn-card { border-left: 4px solid #fdcb6e; background: #fffdf0; padding: 10px 14px; margin: 12px 0; border-radius: 0 6px 6px 0; }
+
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<h1>TOFD_AWI 新框架架构设计文档</h1>
+<p class="subtitle">4轮车体超声波检测控制系统 · .NET Framework 4.8 · 2026-05-26</p>
+
+<!-- ================================================================ -->
+<h2>一、架构总览</h2>
+
+<div class="arch-box">
+  <h3>新旧对比</h3>
+  <table>
+    <tr><th></th><th>旧框架</th><th>新框架</th></tr>
+    <tr><td>入口</td><td><code>Program.cs → Frm_Main_C</code></td><td><code>Program_New.cs → Frm_Main_C_New</code></td></tr>
+    <tr><td>主窗体规模</td><td>8,712 行 (God Object)</td><td>244 行 (纯 UI)</td></tr>
+    <tr><td>全局状态</td><td><code>SysInfo.cs</code> 7,096 行静态类</td><td>6 个独立状态类，每个 &lt;70 行</td></tr>
+    <tr><td>依赖方向</td><td>UI → 直接 new DLL 类</td><td>Program_New → Service → 接口 ← 适配器 → DLL</td></tr>
+    <tr><td>可测试性</td><td>不可测（强耦合）</td><td>可注入 Mock 独立测试</td></tr>
+    <tr><td>配置管理</td><td>散落在各处的 INI 读取</td><td><code>SystemConfig.Load()</code> 集中加载</td></tr>
+    <tr><td>换硬件</td><td>改遍所有窗体</td><td>只换一个适配器</td></tr>
+  </table>
+</div>
+
+<p><strong>核心设计思想：接口隔离 + 依赖注入 + 适配器模式</strong></p>
+
+<p>上层代码永远只看到接口（<code>ITofdHardware</code> / <code>IMotionController</code>），不知道底下是 <code>Tofd_DLL.CLTofd_BJ</code> 还是 <code>CanCmd</code>。将来换硬件或改为模拟测试，只换适配器实现即可。</p>
+
+<!-- ================================================================ -->
+<h2>二、解决方案项目结构</h2>
+
+<table>
+  <tr><th>项目</th><th>类型</th><th>职责</th><th>状态</th></tr>
+  <tr><td><strong>Tofd_AWI</strong></td><td>WinExe</td><td>主程序入口 + 窗体</td><td><span class="badge badge-new">改造中</span></td></tr>
+  <tr><td><strong>ClassLibrary_Interface</strong></td><td>Library</td><td>7 个硬件抽象接口 + 配置类</td><td><span class="badge badge-new">新增</span></td></tr>
+  <tr><td><strong>NewInspect.Services</strong></td><td>Library</td><td>服务层 + 适配器 + 状态类</td><td><span class="badge badge-new">新增</span></td></tr>
+  <tr><td>Tofd_DLL</td><td>Library</td><td>TOFD 超声采集卡封装 (3,737 行)</td><td><span class="badge badge-old">保持</span></td></tr>
+  <tr><td>Clb_MT_Comm</td><td>Library</td><td>CAN/COM 运动控制 (3,512 行)</td><td><span class="badge badge-old">保持</span></td></tr>
+  <tr><td>Clb_XmCam_DLL</td><td>Library</td><td>4 路工业相机 SDK (1,096 行)</td><td><span class="badge badge-old">保持</span></td></tr>
+  <tr><td>HD850_64</td><td>Library</td><td>激光轮廓仪驱动 (3,109 行)</td><td><span class="badge badge-old">保持</span></td></tr>
+  <tr><td>Frame_Work</td><td>Library</td><td>公共数据结构 (10,211 行)</td><td><span class="badge badge-old">保持</span></td></tr>
+  <tr><td>ClassLib_TestData</td><td>Library</td><td>测试数据实体</td><td><span class="badge badge-old">保持</span></td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>三、分层架构设计</h2>
+
+<div class="arch-box">
+<pre style="background:transparent; color:inherit; font-size:11pt; line-height:2.2;">
+┌─────────────────────────────────────────────────────────┐
+│  表示层 (Presentation)                                    │
+│  Frm_Main_C_New.cs  ·  Program_New.cs                   │
+│  职责: 按钮绑定、状态刷新、画波形                         │
+├─────────────────────────────────────────────────────────┤
+│  服务层 (Service)                                         │
+│  TofdService  ·  MotionService  ·  CameraService  ·  DataService  │
+│  职责: 业务编排、线程管理、参数计算                       │
+├─────────────────────────────────────────────────────────┤
+│  接口层 (Interface)                                       │
+│  ITofdHardware  ·  IMotionController  ·  ICameraDevice   │
+│  职责: 硬件能力契约，隔离上层与具体实现                   │
+├─────────────────────────────────────────────────────────┤
+│  适配器层 (Adapter)                                       │
+│  TofdHardwareAdapter  ·  CanMotionControllerAdapter  ·  CameraAdapter  │
+│  职责: 把现有 DLL 封装为接口实现，不改原始代码             │
+├─────────────────────────────────────────────────────────┤
+│  硬件驱动层 (Driver)                                      │
+│  Tofd_DLL  ·  Clb_MT_Comm  ·  Clb_XmCam_DLL  ·  HD850_64  │
+│  职责: C# 封装原始 C/C++ 驱动                            │
+├─────────────────────────────────────────────────────────┤
+│  原生驱动层 (Native)                                      │
+│  CanCmd.dll  ·  V_DLL.dll  ·  LS_HD6.dll  ·  AnyCardXDll.dll  │
+│  职责: 厂商闭源 C/C++ 驱动 → 硬件物理层                  │
+└─────────────────────────────────────────────────────────┘
+</pre>
+</div>
+
+<!-- ================================================================ -->
+<h2 class="page-break">四、DI 组装流程</h2>
+
+<p><code>Program_New.cs</code> 作为新入口点，按顺序组装整个应用：</p>
+
+<pre>static void Main()
+{
+    // Step 1 — 防止重复运行
+    string processName = Process.GetCurrentProcess().ProcessName;
+    if (Process.GetProcessesByName(processName).Length > 1) return;
+
+    // Step 2 — 加载配置 (替代 SysInfo 中散落的 INI 读取)
+    var config = SystemConfig.Load();
+
+    // Step 3 — 创建运行时状态 (替代 SysInfo 的静态全局字段)
+    var tofdState    = new TofdState      { Gain = 5f };
+    var motionState  = new MotionState    { MarkEnabled = false };
+    var systemState  = new SystemRuntimeState { ... };
+    ...
+
+    // Step 4 — 创建硬件适配器 (封装真实 DLL)
+    ITofdHardware     tofdHw   = new TofdHardwareAdapter();
+    IMotionController motionHw = new CanMotionControllerAdapter();
+
+    // Step 5 — 创建服务层 (注入接口 + 状态，替代窗体里的业务代码)
+    var tofdService   = new TofdService(tofdHw, null, tofdState, cScanState, config);
+    var motionService = new MotionService(motionHw, motionState, config);
+    var cameraService = new CameraService();
+    var dataService   = new DataService(config);
+
+    // Step 6 — 启动新主窗体 (注入所有服务)
+    var mainForm = new Frm_Main_C_New(
+        config, systemState,
+        tofdService, motionService, cameraService, dataService,
+        tofdState, motionState, projectState, reportState);
+    Application.Run(mainForm);
+}</pre>
+
+<p>对比旧入口 <code>Program.cs</code>：直接 <code>Application.Run(new Frm_Main_C())</code>，无任何注入。</p>
+
+<!-- ================================================================ -->
+<h2>五、接口定义</h2>
+
+<h3>5.1 完整接口清单</h3>
+
+<p>所有接口定义在 <code>ClassLibrary_Interface/IHardwareInterfaces.cs</code> (142 行)：</p>
+
+<table>
+  <tr><th>接口</th><th>适配器实现</th><th>状态</th><th>说明</th></tr>
+  <tr><td><code>ITofdHardware</code></td><td><code>TofdHardwareAdapter</code></td><td><span class="badge badge-todo">桩</span></td><td>TOFD 超声采集</td></tr>
+  <tr><td><code>ICScanHardware</code></td><td>未实现</td><td><span class="badge badge-todo">未创建</span></td><td>C-Scan 扫描</td></tr>
+  <tr><td><code>IMotionController</code></td><td><code>CanMotionControllerAdapter</code></td><td><span class="badge badge-done">P0 完成</span></td><td>车体运动控制</td></tr>
+  <tr><td><code>ICameraDevice</code></td><td><code>CameraAdapter</code></td><td><span class="badge badge-todo">桩</span></td><td>工业相机</td></tr>
+  <tr><td><code>ILaserProfiler</code></td><td>未实现</td><td><span class="badge badge-todo">待规划</span></td><td>激光轮廓仪</td></tr>
+  <tr><td><code>IPowerMonitor</code></td><td>未实现</td><td><span class="badge badge-todo">待规划</span></td><td>电池监控</td></tr>
+  <tr><td><code>IEddyCurrentDevice</code></td><td>未实现</td><td><span class="badge badge-todo">待规划</span></td><td>涡流检测</td></tr>
+</table>
+
+<h3>5.2 核心接口方法 (IMotionController)</h3>
+
+<table>
+  <tr><th>方法</th><th>CAN 指令</th><th>说明</th></tr>
+  <tr><td><code>Connect(port, isCom)</code></td><td>—</td><td>InitCan(125,5) / InitCom(port)</td></tr>
+  <tr><td><code>MoveForward()</code></td><td>SendData(1,1,6,0,"1")</td><td>帧 43 52 01 ...</td></tr>
+  <tr><td><code>MoveBackward()</code></td><td>SendData(1,1,6,0,"2")</td><td>帧 43 52 02 ...</td></tr>
+  <tr><td><code>Stop()</code></td><td>SendData(1,1,6,0,"3")</td><td>帧 43 52 03 ...</td></tr>
+  <tr><td><code>SetSpeed(%)</code></td><td>SendData(2,2,0,0,"pct,50")</td><td>手动速度参数</td></tr>
+  <tr><td><code>SetGratingArm(up)</code></td><td>SendData(5,1,0,0,"0"/"1")</td><td>0=提起 1=落下</td></tr>
+  <tr><td><code>MarkDefect()</code></td><td>SendData(5,2,0,0,"1")</td><td>缺陷打标</td></tr>
+  <tr><td><code>GetDistance()</code></td><td>回传帧解析</td><td>从编码器读取</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>六、完整调用链路</h2>
+
+<h3>6.1 运动控制链路（P0 已实现）</h3>
+
+<div class="arch-box">
+<div class="call-chain">
+ 用户点击 "前进" 按钮<br>
+<span class="indent1">→ Frm_Main_C_New.Btn_Forward_Click()</span><br>
+<span class="indent2">→ _motionService.Forward()</span><br>
+<span class="indent3">→ _controller.MoveForward() &nbsp; <em>← 接口调用，不依赖具体类</em></span><br>
+<span class="indent4">→ CanMotionControllerAdapter.MoveForward()</span><br>
+<span class="indent4">→ _mtComm.SendData(1, 1, 6, 0, "1")</span><br>
+<span class="indent4">&nbsp;&nbsp;&nbsp;→ MT_Comm.SendData() — 拼帧头 → byte[]</span><br>
+<span class="indent4">&nbsp;&nbsp;&nbsp;→ MT_Comm.Can_Send(strSend) — 拆成 8 字节 CAN 帧</span><br>
+<span class="indent4">&nbsp;&nbsp;&nbsp;→ CanCmd.CAN_ChannelSend(...) &nbsp; <em>← [DllImport("CanCmd.dll")]</em></span><br>
+<span class="indent4">&nbsp;&nbsp;&nbsp;→ CanCmd.dll (原生 C 驱动) → USB-CAN 硬件 → CAN 总线 → 车体 MCU</span>
+</div>
+</div>
+
+<h3>6.2 心跳保活机制</h3>
+
+<p>适配器内部启动 <code>System.Threading.Timer</code>，每 1.5 秒发送 <code>SendData(1, 3, 0, 0, "99")</code>。车体 MCU 约 3 秒收不到心跳即判定主机断线，自动停车。</p>
+
+<h3>6.3 TOFD 链路（桩，待实现）</h3>
+
+<div class="call-chain">
+ 用户点击 "开始检测"<br>
+<span class="indent1">→ _tofdService.StartAScan(callback)</span><br>
+<span class="indent2">→ _hardware.StartAcquisition(channel, callback)</span><br>
+<span class="indent3">→ TofdHardwareAdapter.StartAcquisition() &nbsp; <em>← 目前空桩，需接入 Tofd_DLL</em></span><br>
+<span class="indent4">→ [DllImport] → AnyCardXDll.dll → 超声采集卡</span>
+</div>
+
+<!-- ================================================================ -->
+<h2 class="page-break">七、系统状态管理</h2>
+
+<p>旧框架中所有状态散落在 <code>SysInfo.cs</code>（7,096 行）的 <code>public static</code> 字段中，全局任意位置可读写，极难追踪。</p>
+<p>新框架将状态收敛为 6 个独立类（<code>NewInspect.Services/State/RuntimeState.cs</code>，186 行）：</p>
+
+<table>
+  <tr><th>状态类</th><th>替代的 SysInfo 字段</th><th>关键属性</th></tr>
+  <tr><td><code>TofdState</code></td><td>m_SysBuff, m_fl_Gain, m_i_UI_Type</td><td>IsLinked, Gain, ExposureTime, ProbeType</td></tr>
+  <tr><td><code>CScanState</code></td><td>m_SysBuff_C, m_C_Item_Info</td><td>DataBuff, ItemInfo, WaitTimeMs</td></tr>
+  <tr><td><code>MotionState</code></td><td>Climb 相关全部字段</td><td>SpeedPercent, Direction, DistanceX/Y, GratingArmState</td></tr>
+  <tr><td><code>SystemRuntimeState</code></td><td>m_iLanguage, m_i_TOFD_0, m_bl_Save</td><td>Language, WorkMode, IsSaved, VideoRecording</td></tr>
+  <tr><td><code>InspectionProjectState</code></td><td>检测项目字段</td><td>WeldId, ItemName, IsNewItem</td></tr>
+  <tr><td><code>ReportState</code></td><td>报表缓存</td><td>PrintItems, ReportParams</td></tr>
+</table>
+
+<div class="info-card">
+  <strong>设计原则</strong>：每个状态类只包含相关字段，不包含任何业务逻辑。状态通过构造函数注入，由服务层统一读写，窗体只做展示。
+</div>
+
+<!-- ================================================================ -->
+<h2>八、系统配置</h2>
+
+<p><code>SystemConfig.cs</code> 集中管理所有 INI 配置，替代散落在各处的 <code>IniReadDefine</code> 调用。</p>
+
+<table>
+  <tr><th>分类</th><th>属性</th><th>INI Section/Key</th><th>默认值</th></tr>
+  <tr><td>基础</td><td>Language</td><td>System/m_iLanguage</td><td>0 (中文)</td></tr>
+  <tr><td>基础</td><td>WorkMode</td><td>System/m_i_TOFD_0_Cscan_1</td><td>0 (TOFD)</td></tr>
+  <tr><td>网络</td><td>NetworkIp</td><td>IP/IP</td><td>192.168.1.10</td></tr>
+  <tr><td>通讯</td><td>CommMode</td><td>COM_Can/m_blCom1_Can0</td><td>1 (COM)</td></tr>
+  <tr><td>通讯</td><td>CommPort</td><td>COM_Can/COM</td><td>COM3</td></tr>
+  <tr><td>运动</td><td>SpeedPercent</td><td>SYSinfo/iSpeed_Xs</td><td>50</td></tr>
+  <tr><td>运动</td><td>GratingSpeed</td><td>SYSinfo/i_Para_Speed_Gsb</td><td>50</td></tr>
+  <tr><td>TOFD</td><td>SoundVelocity</td><td>TOFD/SoundVelocity (HardConfig)</td><td>5900 m/s</td></tr>
+  <tr><td>TOFD</td><td>ProbeCenterDistance</td><td>TOFD/PCS (HardConfig)</td><td>50 mm</td></tr>
+  <tr><td>TOFD</td><td>ProbeAngle</td><td>TOFD/ProbeAngle (HardConfig)</td><td>60°</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>九、新主窗体</h2>
+
+<h3>9.1 控件布局</h3>
+
+<p>1280 × 800 窗体，居中显示。控件通过 <code>Frm_Main_C_New.Designer.cs</code> 定义（VS 设计器原生格式，支持可视化编辑）：</p>
+
+<table>
+  <tr><th>名称</th><th>类型</th><th>位置</th><th>功能</th></tr>
+  <tr><td>Lb_LinkState</td><td>Label</td><td>10,10 / 150×25</td><td>显示联机状态</td></tr>
+  <tr><td>Lb_Distance</td><td>Label</td><td>200,10 / 150×25</td><td>显示行进距离</td></tr>
+  <tr><td>Lb_Speed</td><td>Label</td><td>400,10 / 100×25</td><td>显示当前速度</td></tr>
+  <tr><td>Btn_Link</td><td>Button</td><td>10,50 / 100×35</td><td>连接设备</td></tr>
+  <tr><td>Btn_Forward</td><td>Button</td><td>120,50 / 80×35</td><td>前进</td></tr>
+  <tr><td>Btn_Backward</td><td>Button</td><td>210,50 / 80×35</td><td>后退</td></tr>
+  <tr><td>Btn_Stop</td><td>Button</td><td>300,50 / 80×35</td><td>停止</td></tr>
+  <tr><td>Btn_Mark</td><td>Button</td><td>390,50 / 80×35</td><td>打标</td></tr>
+  <tr><td>Btn_StartScan</td><td>Button</td><td>500,50 / 100×35</td><td>开始检测</td></tr>
+  <tr><td>Btn_StopScan</td><td>Button</td><td>610,50 / 100×35</td><td>停止检测</td></tr>
+  <tr><td>Pic_AScan</td><td>PictureBox</td><td>10,100 / 600×300</td><td>A 扫描波形</td></tr>
+  <tr><td>Pic_BScan</td><td>PictureBox</td><td>620,100 / 300×300</td><td>B 扫描图像</td></tr>
+  <tr><td>Pic_DScan</td><td>PictureBox</td><td>10,410 / 600×150</td><td>D 扫描图像</td></tr>
+</table>
+
+<h3>9.2 按钮事件映射</h3>
+
+<table>
+  <tr><th>按钮</th><th>事件</th><th>调用链</th></tr>
+  <tr><td>连接</td><td><code>Btn_Link_Click</code></td><td><code>_tofdService.Connect()</code> + <code>_motionService.Connect()</code></td></tr>
+  <tr><td>前进</td><td><code>Btn_Forward_Click</code></td><td><code>_motionService.Forward()</code></td></tr>
+  <tr><td>后退</td><td><code>Btn_Backward_Click</code></td><td><code>_motionService.Backward()</code></td></tr>
+  <tr><td>停止</td><td><code>Btn_Stop_Click</code></td><td><code>_motionService.Stop()</code></td></tr>
+  <tr><td>打标</td><td><code>Btn_Mark_Click</code></td><td><code>_motionService.MarkDefect()</code></td></tr>
+  <tr><td>开始检测</td><td><code>Btn_StartScan_Click</code></td><td><code>_tofdService.StartAScan(callback)</code></td></tr>
+  <tr><td>停止检测</td><td><code>Btn_StopScan_Click</code></td><td><code>_tofdService.StopAScan()</code> + <code>_motionService.Stop()</code></td></tr>
+</table>
+
+<h3>9.3 生命周期管理</h3>
+<p><code>OnFormClosing()</code> 重写确保资源正确释放：停止所有扫描、断开硬件连接、释放相机资源。</p>
+
+<!-- ================================================================ -->
+<h2 class="page-break">十、硬件 CAN 协议参考</h2>
+
+<p>车体运动控制通过 <code>Clb_MT_Comm.MT_Comm.SendData(iComType_0, iComType_1, iDataType_0, iFloor_0, strData)</code> 发送 CAN 帧。</p>
+
+<h3>10.1 运动指令速查</h3>
+
+<table>
+  <tr><th>操作</th><th>SendData 调用</th><th>帧结构</th></tr>
+  <tr><td>前进</td><td><code>SendData(1, 1, 6, 0, "1")</code></td><td>43 52 01 00 00 00 00 00</td></tr>
+  <tr><td>后退</td><td><code>SendData(1, 1, 6, 0, "2")</code></td><td>43 52 02 00 00 00 00 00</td></tr>
+  <tr><td>停止</td><td><code>SendData(1, 1, 6, 0, "3")</code></td><td>43 52 03 00 00 00 00 00</td></tr>
+  <tr><td>索取状态 (心跳)</td><td><code>SendData(1, 3, 0, 0, "99")</code></td><td>43 52 99 00 00 00 00 00</td></tr>
+  <tr><td>写速度</td><td><code>SendData(2, 2, 0, 0, "speed,gsb")</code></td><td>帧头 0x4A 0x56</td></tr>
+  <tr><td>光栅臂升降</td><td><code>SendData(5, 1, 0, 0, up?"0":"1")</code></td><td>0=提起 1=落下</td></tr>
+  <tr><td>扫查范围</td><td><code>SendData(2, 1, 0, 0, "start,end")</code></td><td>帧头 0x42 0x4C</td></tr>
+  <tr><td>纠偏控制</td><td><code>SendData(1, 1, 8, 0, direction)</code></td><td>1=左 2=右 3=停</td></tr>
+  <tr><td>打标</td><td><code>SendData(5, 2, 0, 0, "1")</code></td><td>触发缺陷标记</td></tr>
+  <tr><td>灯光</td><td><code>SendData(4, 1, 3/4, 0, "50"/"0")</code></td><td>前灯/后灯亮度</td></tr>
+</table>
+
+<h3>10.2 SendData 内部流程</h3>
+
+<div class="call-chain">
+SendData(iComType_0, iComType_1, iDataType, iFloor, strData)<br>
+<span class="indent1">① 根据参数拼帧头 → byte[] _btArrSend (CRC 校验)</span><br>
+<span class="indent2">② hex 编码 → _strSend</span><br>
+<span class="indent2">③ 写日志 → WriteErrorLog("发送 报文：" + _strSend)</span><br>
+<span class="indent2">④ 判断通讯模式:</span><br>
+<span class="indent3">COM (m_blCom1_Can0=1) → RS232.WriteComm(_btArrSend)</span><br>
+<span class="indent3">CAN (m_blCom1_Can0=0) → Can_Send(_strSend) → CAN_ChannelSend([DllImport])</span><br>
+<span class="indent2">⑤ WaitTime(10ms)</span>
+</div>
+
+<h3>10.3 底层 P/Invoke</h3>
+
+<p><code>CanCmd.CAN_ChannelSend()</code> 声明在 <code>Clb_MT_Comm/CanCmd.cs</code>：</p>
+
+<pre>[DllImport("CanCmd.dll")]
+public static extern UInt32 CAN_ChannelSend(
+    UInt32 dwDeviceHandle,
+    UInt32 dwChannel,
+    ref CAN_DataFrame pSend,
+    UInt32 Len);</pre>
+
+<p><code>CAN_DataFrame</code> 结构体：8 字节数据 (<code>arryData[8]</code>) + 帧 ID (<code>uID</code>) + 数据长度 (<code>nDataLen</code>) + 发送类型/帧格式标志。</p>
+
+<!-- ================================================================ -->
+<h2>十一、演进路线图</h2>
+
+<table>
+  <tr><th>优先级</th><th>模块</th><th>状态</th><th>说明</th></tr>
+  <tr><td><span class="badge badge-done">P0 ✓</span></td><td>基础运动 (前进/后退/停止)</td><td>已完成</td><td>3 个 SendData 调用 + 连接/断开心跳</td></tr>
+  <tr><td><span class="badge badge-done">P0 ✓</span></td><td>新窗体 + 接口 + 服务层骨架</td><td>已完成</td><td>Program_New.cs → Frm_Main_C_New 完整 DI 链路</td></tr>
+  <tr><td><span class="badge badge-todo">P1</span></td><td>速度控制</td><td>待实现</td><td>需要模式判断(手动/自动)</td></tr>
+  <tr><td><span class="badge badge-todo">P1</span></td><td>距离读取</td><td>待实现</td><td>需解析 CAN 回传帧编码器位置</td></tr>
+  <tr><td><span class="badge badge-todo">P2</span></td><td>光栅臂控制</td><td>接口已实现</td><td>涉及位置范围参数</td></tr>
+  <tr><td><span class="badge badge-todo">P2</span></td><td>TofdHardwareAdapter</td><td>空桩</td><td>需接入 Tofd_DLL.CLTofd_BJ</td></tr>
+  <tr><td><span class="badge badge-todo">P2</span></td><td>CameraAdapter</td><td>空桩</td><td>需接入 Clb_XmCam_DLL</td></tr>
+  <tr><td><span class="badge badge-todo">P3</span></td><td>打标 / 自动扫查</td><td>接口已预留</td><td>涉及复杂动作序列</td></tr>
+  <tr><td><span class="badge badge-todo">远期</span></td><td>ICScanHardware / ILaserProfiler / IPowerMonitor</td><td>待规划</td><td>适配器 + 接口均已定义</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2 class="page-break">十二、新增文件清单</h2>
+
+<table>
+  <tr><th>#</th><th>文件</th><th>行数</th><th>职责</th></tr>
+  <tr><td>1</td><td>ClassLibrary_Interface/IHardwareInterfaces.cs</td><td>142</td><td>7 个硬件抽象接口</td></tr>
+  <tr><td>2</td><td>ClassLibrary_Interface/SystemConfig.cs</td><td>186</td><td>配置集中加载/保存</td></tr>
+  <tr><td>3</td><td>NewInspect.Services/Services/TofdService.cs</td><td>153</td><td>TOFD 业务编排</td></tr>
+  <tr><td>4</td><td>NewInspect.Services/Services/MotionService.cs</td><td>167</td><td>运动控制编排</td></tr>
+  <tr><td>5</td><td>NewInspect.Services/Services/CameraService.cs</td><td>116</td><td>相机管理</td></tr>
+  <tr><td>6</td><td>NewInspect.Services/Services/DataService.cs</td><td>95</td><td>数据持久化</td></tr>
+  <tr><td>7</td><td>NewInspect.Services/Adapters/HardwareAdapters.cs</td><td>372</td><td>3 个硬件适配器</td></tr>
+  <tr><td>8</td><td>NewInspect.Services/State/RuntimeState.cs</td><td>186</td><td>6 个状态类</td></tr>
+  <tr><td>9</td><td>Program_New.cs</td><td>125</td><td>DI 入口点</td></tr>
+  <tr><td>10</td><td>From/Frm_Main_C_New.cs</td><td>244</td><td>新主窗体</td></tr>
+  <tr><td>11</td><td>From/Frm_Main_C_New.Designer.cs</td><td>225</td><td>控件布局定义</td></tr>
+  <tr><td></td><td><strong>新框架总计</strong></td><td><strong>2,011</strong></td><td>vs 旧框架 36,154 行</td></tr>
+</table>
+
+<br>
+<div class="info-card">
+  <strong>代码精简比</strong>：新框架 2,011 行 vs 旧框架 (Frm_Main_C + SysInfo + Struct) 36,154 行 = 仅 5.6%。核心原因：新框架不重复实现已有 DLL 逻辑，只做接口适配和业务编排。
+</div>
+
+</body>
+</html>

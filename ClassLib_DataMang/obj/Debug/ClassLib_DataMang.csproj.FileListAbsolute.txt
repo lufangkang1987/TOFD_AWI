@@ -1,0 +1,14 @@
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.csproj.CoreCompileInputs.cache
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\bin\Debug\ClassLib_DataMang.dll
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\bin\Debug\ClassLib_DataMang.pdb
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.csproj.CopyComplete
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.dll
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.pdb
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.csproj.AssemblyReference.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.pdb
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\ClassLib_DataMang.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\ClassLib_DataMang.pdb
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.csproj.AssemblyReference.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_DataMang\obj\Debug\ClassLib_DataMang.csproj.CoreCompileInputs.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_DataMang\obj\Debug\ClassLib.78DD38AB.Up2Date

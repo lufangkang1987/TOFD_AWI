@@ -1,0 +1,18 @@
+LIBRARY "Measure_Dll"
+
+EXPORTS
+
+pair_image_capture @ 1
+Set_Flag  @ 2
+Video @ 3
+StereoMatch @ 4
+Video_Run @ 5
+SetPath @ 6
+Change_Cam @ 7
+FindCornint @ 8
+
+GetHight @ 9
+
+Img_SetFanSe @ 10
+Img_UpDown @ 11
+

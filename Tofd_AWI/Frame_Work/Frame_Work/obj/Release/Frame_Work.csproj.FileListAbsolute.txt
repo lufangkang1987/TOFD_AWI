@@ -1,0 +1,10 @@
+D:\陈大伟\3D\设计文档\WeldInspe\Frame_Work\Frame_Work\bin\Release\Frame_Work.dll
+D:\陈大伟\3D\设计文档\WeldInspe\Frame_Work\Frame_Work\bin\Release\Frame_Work.pdb
+D:\陈大伟\3D\设计文档\WeldInspe\Frame_Work\Frame_Work\obj\Release\Frame_Work.csproj.CoreCompileInputs.cache
+D:\陈大伟\3D\设计文档\WeldInspe\Frame_Work\Frame_Work\obj\Release\Frame_Work.dll
+D:\陈大伟\3D\设计文档\WeldInspe\Frame_Work\Frame_Work\obj\Release\Frame_Work.pdb
+D:\陈大伟\3D\设计文档\WeldInspe\WeldInspetion\WeldInspetion\bin\Release\Frame_Work.dll
+D:\陈大伟\3D\设计文档\WeldInspe\WeldInspetion\WeldInspetion\bin\Release\Frame_Work.pdb
+D:\陈大伟\3D\设计文档\WeldInspe\WeldInspetion\WeldInspetion\bin\Debug\Frame_Work.dll
+D:\陈大伟\3D\设计文档\WeldInspe\WeldInspetion\WeldInspetion\bin\Debug\Frame_Work.pdb
+D:\陈大伟\3D\设计文档\WeldInspe\Frame_Work\Frame_Work\obj\Release\Frame_Work.csproj.AssemblyReference.cache

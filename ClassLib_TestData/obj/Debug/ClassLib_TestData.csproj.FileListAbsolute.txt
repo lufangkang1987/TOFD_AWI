@@ -1,0 +1,58 @@
+D:\陈大伟\磁粉\Magnetic_Particle_Testing\Magnetic_Particle_Testing\bin\Debug\ClassLib_TestData.dll
+D:\陈大伟\磁粉\Magnetic_Particle_Testing\Magnetic_Particle_Testing\bin\Debug\ClassLib_TestData.pdb
+D:\陈大伟\磁粉\Magnetic_Particle_Testing\ClassLib_TestData\obj\Debug\ClassLib_TestData.dll
+D:\陈大伟\磁粉\Magnetic_Particle_Testing\ClassLib_TestData\obj\Debug\ClassLib_TestData.pdb
+D:\陈大伟\磁粉\Magnetic_Particle_Testing\ClassLib_TestData\obj\Debug\ClassLib_TestData.csprojResolveAssemblyReference.cache
+D:\陈大伟\磁粉\Magnetic_Pa...ticle_Testing\Magnetic_Particle_Testing\Magnetic_Particle_Testing\bin\Debug\ClassLib_TestData.dll
+D:\陈大伟\磁粉\Magnetic_Pa...ticle_Testing\Magnetic_Particle_Testing\ClassLib_TestData\obj\Debug\ClassLib_TestData.dll
+D:\陈大伟\磁粉\Magnetic_Pa...ticle_Testing\Magnetic_Particle_Testing\ClassLib_TestData\obj\Debug\ClassLib_TestData.pdb
+D:\陈大伟\磁粉\Magnetic_Pa...ticle_Testing\Magnetic_Particle_Testing\Magnetic_Particle_Testing\bin\Debug\ClassLib_TestData.pdb
+D:\陈大伟\磁粉\Magnetic_Particle_Test\Magnetic_Particle_Testing\bin\Debug\ClassLib_TestData.dll
+D:\陈大伟\磁粉\Magnetic_Particle_Test\Magnetic_Particle_Testing\bin\Debug\ClassLib_TestData.pdb
+D:\陈大伟\磁粉\Magnetic_Particle_Test\ClassLib_TestData\obj\Debug\ClassLib_TestData.dll
+D:\陈大伟\磁粉\Magnetic_Particle_Test\ClassLib_TestData\obj\Debug\ClassLib_TestData.pdb
+D:\陈大伟\磁粉\Magnetic_Particle_Test\Magnetic_Particle_Test\bin\Debug\ClassLib_TestData.dll
+D:\陈大伟\磁粉\Magnetic_Particle_Test\Magnetic_Particle_Test\bin\Debug\ClassLib_TestData.pdb
+D:\陈大伟\磁粉\Magnetic_Particle_Test\ClassLib_TestData\obj\Debug\ClassLib_TestData.csprojResolveAssemblyReference.cache
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\bin\Debug\ClassLib_TestData.dll
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\bin\Debug\ClassLib_TestData.pdb
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CoreCompileInputs.cache
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.dll
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.pdb
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CopyComplete
+D:\陈大伟\TOFD\设计文档\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.AssemblyReference.cache
+D:\陈大伟\Tofd_AWI-2022-9-20\Tofd_AWI\bin\Debug\ClassLib_TestData.dll
+D:\陈大伟\Tofd_AWI-2022-9-20\Tofd_AWI\bin\Debug\ClassLib_TestData.pdb
+D:\陈大伟\Tofd_AWI-2022-9-20\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.AssemblyReference.cache
+D:\陈大伟\Tofd_AWI-2022-9-20\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CoreCompileInputs.cache
+D:\陈大伟\Tofd_AWI-2022-9-20\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CopyComplete
+D:\陈大伟\Tofd_AWI-2022-9-20\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.dll
+D:\陈大伟\Tofd_AWI-2022-9-20\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.pdb
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\bin\Debug\ClassLib_TestData.dll
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\bin\Debug\ClassLib_TestData.pdb
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.AssemblyReference.cache
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CoreCompileInputs.cache
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CopyComplete
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.dll
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.pdb
+C:\Users\cdw\Desktop\Tofd_AWI\Tofd_AWI\bin\Debug\ClassLib_TestData.dll
+C:\Users\cdw\Desktop\Tofd_AWI\Tofd_AWI\bin\Debug\ClassLib_TestData.pdb
+C:\Users\cdw\Desktop\Tofd_AWI\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.AssemblyReference.cache
+C:\Users\cdw\Desktop\Tofd_AWI\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CoreCompileInputs.cache
+C:\Users\cdw\Desktop\Tofd_AWI\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CopyComplete
+C:\Users\cdw\Desktop\Tofd_AWI\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.dll
+C:\Users\cdw\Desktop\Tofd_AWI\Tofd_AWI\ClassLib_TestData\obj\Debug\ClassLib_TestData.pdb
+E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd_AWI - 简易版\bin\Debug\ClassLib_TestData.dll
+E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd_AWI - 简易版\bin\Debug\ClassLib_TestData.pdb
+E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd_AWI - 简易版\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.AssemblyReference.cache
+E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd_AWI - 简易版\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CoreCompileInputs.cache
+E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd_AWI - 简易版\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CopyComplete
+E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd_AWI - 简易版\ClassLib_TestData\obj\Debug\ClassLib_TestData.dll
+E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd_AWI - 简易版\ClassLib_TestData\obj\Debug\ClassLib_TestData.pdb
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\ClassLib_TestData.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\ClassLib_TestData.pdb
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.AssemblyReference.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_TestData\obj\Debug\ClassLib_TestData.csproj.CoreCompileInputs.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_TestData\obj\Debug\ClassLib.045ADC27.Up2Date
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_TestData\obj\Debug\ClassLib_TestData.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_TestData\obj\Debug\ClassLib_TestData.pdb

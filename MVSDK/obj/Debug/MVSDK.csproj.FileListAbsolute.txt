@@ -1,0 +1,18 @@
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\文档\苏州热--SDK\MindVision\Demo\C#\MVSDK\obj\Debug\MVSDK.csproj.AssemblyReference.cache
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\文档\苏州热--SDK\MindVision\Demo\C#\MVSDK\obj\Debug\MVSDK.csproj.CoreCompileInputs.cache
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\文档\苏州热--SDK\MindVision\Demo\C#\MVSDK\obj\Debug\MVSDK.dll
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\文档\苏州热--SDK\MindVision\Demo\C#\MVSDK\obj\Debug\MVSDK.pdb
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\文档\苏州热--SDK\MindVision\Demo\C#\MVSDK\MVSDK.dll
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\文档\苏州热--SDK\MindVision\Demo\C#\MVSDK\MVSDK.pdb
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\bin\Debug\MVSDK.dll
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\bin\Debug\MVSDK.pdb
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\MVSDK\obj\Debug\MVSDK.csproj.AssemblyReference.cache
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\MVSDK\obj\Debug\MVSDK.csproj.CoreCompileInputs.cache
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\MVSDK\obj\Debug\MVSDK.dll
+D:\陈大伟\Tofd_AWI-2023-1-7\Tofd_AWI\MVSDK\obj\Debug\MVSDK.pdb
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\MVSDK.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\MVSDK.pdb
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\MVSDK\obj\Debug\MVSDK.csproj.AssemblyReference.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\MVSDK\obj\Debug\MVSDK.csproj.CoreCompileInputs.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\MVSDK\obj\Debug\MVSDK.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\MVSDK\obj\Debug\MVSDK.pdb

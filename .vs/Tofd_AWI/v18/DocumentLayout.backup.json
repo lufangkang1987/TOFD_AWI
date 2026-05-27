@@ -1,0 +1,107 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\from\\frm_main_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\from\\frm_main_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\program_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:program_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Frm_Main_C.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C.cs",
+              "RelativeDocumentMoniker": "From\\Frm_Main_C.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C.cs",
+              "RelativeToolTip": "From\\Frm_Main_C.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T09:16:09.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Frm_Main_C.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C.cs",
+              "RelativeDocumentMoniker": "From\\Frm_Main_C.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "From\\Frm_Main_C.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T09:16:05.448Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Frm_Main_C_New.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C_New.cs",
+              "RelativeDocumentMoniker": "From\\Frm_Main_C_New.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C_New.cs",
+              "RelativeToolTip": "From\\Frm_Main_C_New.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAhwBYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T09:15:51.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Frm_Main_C_New.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C_New.cs",
+              "RelativeDocumentMoniker": "From\\Frm_Main_C_New.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C_New.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "From\\Frm_Main_C_New.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T09:15:47.587Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program_New.cs",
+              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Program_New.cs",
+              "RelativeDocumentMoniker": "Program_New.cs",
+              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Program_New.cs",
+              "RelativeToolTip": "Program_New.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T09:15:32.962Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

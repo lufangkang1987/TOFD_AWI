@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1820,5): warning MSB3245: 未能解析此引用。未能找到程序集“OPENCV2CS”。请检查磁盘上是否存在该程序集。 如果您的代码需要此引用，则可能出现编译错误。
+  stdafx.cpp
+c1xx : fatal error C1083: 无法打开源文件: “stdafx.cpp”: No such file or directory

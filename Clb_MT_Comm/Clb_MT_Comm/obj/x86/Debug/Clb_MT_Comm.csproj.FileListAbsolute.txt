@@ -1,0 +1,11 @@
+D:\陈大伟\8相机检测\Clb_MT_Comm\Clb_MT_Comm\bin\Debug\Clb_MT_Comm.dll
+D:\陈大伟\8相机检测\Clb_MT_Comm\Clb_MT_Comm\bin\Debug\Clb_MT_Comm.pdb
+D:\陈大伟\8相机检测\Clb_MT_Comm\Clb_MT_Comm\obj\x86\Debug\Clb_MT_Comm.dll
+D:\陈大伟\8相机检测\Clb_MT_Comm\Clb_MT_Comm\obj\x86\Debug\Clb_MT_Comm.pdb
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\Clb_MT_Comm.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\Clb_MT_Comm.pdb
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_MT_Comm\Clb_MT_Comm\obj\x86\Debug\Clb_MT_Comm.csproj.AssemblyReference.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_MT_Comm\Clb_MT_Comm\obj\x86\Debug\Clb_MT_Comm.csproj.CoreCompileInputs.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_MT_Comm\Clb_MT_Comm\obj\x86\Debug\Clb_MT_C.19BCBEA3.Up2Date
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_MT_Comm\Clb_MT_Comm\obj\x86\Debug\Clb_MT_Comm.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_MT_Comm\Clb_MT_Comm\obj\x86\Debug\Clb_MT_Comm.pdb

@@ -1,0 +1,36 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly Dellon_C_DLL_CAN, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Clb_MT_Comm, Version=1.0.*, Culture=固定语言(固定国家/地区): 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class DellonCDLLCAN.ClS_CAN: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Clb_MT_Comm.MT_Comm m_Can : Public
+  Methods:
+    InitCan(): PrivateScope, Public, HideBySig
+    CanClose(): PrivateScope, Public, HideBySig
+    Get_Gsb_Y(): PrivateScope, Public, HideBySig
+    Get_Dist_X(): PrivateScope, Public, HideBySig
+    Get_P_V(): PrivateScope, Public, HideBySig
+    Clear_Dis(): PrivateScope, Public, HideBySig
+    SetSpeed(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Bt_Q_Click(): PrivateScope, Public, HideBySig
+    Bt_H_Click(): PrivateScope, Public, HideBySig
+    Bt_Stop_Click(): PrivateScope, Public, HideBySig
+    Bt_U_L_Click(): PrivateScope, Public, HideBySig
+    Bt_Q_R_Click(): PrivateScope, Public, HideBySig
+    Bt_H_L_Click(): PrivateScope, Public, HideBySig
+    Bt_H_R_Click(): PrivateScope, Public, HideBySig
+    Bt_BJ(Int32, Int32): PrivateScope, Public, HideBySig
+    Bt_Light_Q_H(Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    Bt_Probe_Lift_Low(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Bt_Probe_Lift_Low(Int32): PrivateScope, Public, HideBySig
