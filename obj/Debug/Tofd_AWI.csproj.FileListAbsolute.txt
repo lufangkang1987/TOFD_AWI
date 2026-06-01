@@ -794,14 +794,24 @@ E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd
 E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd_AWI - 简易版\bin\Debug\Clb_MT_Comm.pdb
 E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd_AWI - 简易版\bin\Debug\Clb_XmCam_DLL.pdb
 E:\程序代码\Tofd_AWI-2023-1-7\Tofd_AWI - 简易版\Tofd_AWI - 简易版\Tofd_AWI - 简易版\bin\Debug\Frame_Work.pdb
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.csproj.AssemblyReference.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.Frm_Main_C_New.resources
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.From.Frm_Move_New.resources
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.Properties.Resources.resources
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.csproj.GenerateResource.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.csproj.CoreCompileInputs.cache
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\4轮车体控制系统.exe.config
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\4轮车体控制系统.exe
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\4轮车体控制系统.pdb
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\CL3d.dll
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\Kitware.mummy.Runtime.dll
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\Kitware.VTK.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\OxyPlot.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\OxyPlot.WindowsForms.dll
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\CL3d.pdb
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\Kitware.VTK.xml
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\OxyPlot.xml
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\OxyPlot.WindowsForms.xml
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\Kitware.mummy.Runtime.Unmanaged.dll
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\Kitware.VTK.vtkCharts.Unmanaged.dll
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\Kitware.VTK.vtkCommon.Unmanaged.dll
@@ -856,25 +866,6 @@ D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\Microsoft.VC90.CRT.man
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\msvcm90.dll
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\msvcp90.dll
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\msvcr90.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.csproj.AssemblyReference.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.Frm_Main_C.resources
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.Frm_Main_C_New.resources
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.From.Frm_Move.resources
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.From.Frm_TOFD.resources
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.From.Frm_Tofd_Calcu.resources
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.Properties.Resources.resources
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.csproj.GenerateResource.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.csproj.CoreCompileInputs.cache
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.csproj.Up2Date
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\4轮车体控制系统.exe
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\4轮车体控制系统.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\ClassLibrary_Interface.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\NewInspect.Services.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\ClassLib_TestData.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\Clb_MT_Comm.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\Clb_XmCam_DLL.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\Frame_Work.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\OxyPlot.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\OxyPlot.WindowsForms.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\OxyPlot.xml
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\OxyPlot.WindowsForms.xml

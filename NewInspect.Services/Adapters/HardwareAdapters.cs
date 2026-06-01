@@ -145,6 +145,24 @@ namespace NewInspect.Services.Adapters
             Clb_MT_Comm.MT_Comm.m_blQin1_Hou2 = 2;
         }
 
+        /// <summary>手动左转 — SendData(1,1,6,0,"4")</summary>
+        public void MoveLeft()
+        {
+            System.Diagnostics.Debug.WriteLine("[MotionAdapter] MoveLeft called. CanSend={0}", CanSend);
+            if (!CanSend) return;
+            _mtComm.SendData(1, 1, 6, 0, "4");
+            Clb_MT_Comm.MT_Comm.m_blQin1_Hou2 = 4;
+        }
+        
+        /// <summary>手动右转 — SendData(1,1,6,0,"5")</summary>
+        public void MoveRight()
+        {
+            System.Diagnostics.Debug.WriteLine("[MotionAdapter] MoveRight called. CanSend={0}", CanSend);
+            if (!CanSend) return;
+            _mtComm.SendData(1, 1, 6, 0, "5");
+            Clb_MT_Comm.MT_Comm.m_blQin1_Hou2 = 5;
+        }           
+
         /// <summary>停止 — SendData(1,1,6,0,"3")</summary>
         public void Stop()
         {

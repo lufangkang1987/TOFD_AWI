@@ -1,4 +1,0 @@
-D:\陈大伟\8相机检测\Clb_MT_Comm\Clb_MT_Comm\bin\Debug\Clb_MT_Comm.dll
-D:\陈大伟\8相机检测\Clb_MT_Comm\Clb_MT_Comm\bin\Debug\Clb_MT_Comm.pdb
-D:\陈大伟\8相机检测\Clb_MT_Comm\Clb_MT_Comm\obj\x86\Debug\Clb_MT_Comm.dll
-D:\陈大伟\8相机检测\Clb_MT_Comm\Clb_MT_Comm\obj\x86\Debug\Clb_MT_Comm.pdb

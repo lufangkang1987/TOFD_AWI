@@ -1,5 +1,0 @@
-E:\陈大伟\磁爬\AutoThickTest\ReportDLL\obj\Release\ReportDLL.csprojResolveAssemblyReference.cache
-E:\陈大伟\磁爬\AutoThickTest\AutoThickTest\bin\Debug\ReportDLL.dll
-E:\陈大伟\磁爬\AutoThickTest\AutoThickTest\bin\Debug\ReportDLL.pdb
-E:\陈大伟\磁爬\AutoThickTest\ReportDLL\obj\Release\ReportDLL.dll
-E:\陈大伟\磁爬\AutoThickTest\ReportDLL\obj\Release\ReportDLL.pdb

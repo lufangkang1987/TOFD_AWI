@@ -85,7 +85,22 @@ namespace NewInspect.Services
             _state.Direction = 2;
             return true;
         }
-
+        /// <summary>左移 (对应 Bt_ZuoYi)，返回是否成功发送指令</summary>
+        public bool MoveLeft()
+        {
+            if (!_state.IsOnline) return false;
+            _controller.MoveLeft();
+            _state.Direction = 3;
+            return true;
+        }
+        /// <summary>右移 (对应 Bt_YouYi)，返回是否成功发送指令</summary>      
+        public bool MoveRight()
+        {
+            if (!_state.IsOnline) return false;
+            _controller.MoveRight();
+            _state.Direction = 4;
+            return true;
+        }
         /// <summary>停止 (对应 Bt_Stop)，返回是否成功发送指令</summary>
         public bool Stop()
         {

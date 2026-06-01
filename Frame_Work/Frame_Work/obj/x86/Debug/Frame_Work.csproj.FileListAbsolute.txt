@@ -1,7 +1,0 @@
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\Frame_Work.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\Frame_Work.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Frame_Work\Frame_Work\obj\x86\Debug\Frame_Work.csproj.AssemblyReference.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Frame_Work\Frame_Work\obj\x86\Debug\Frame_Work.csproj.CoreCompileInputs.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Frame_Work\Frame_Work\obj\x86\Debug\Frame_Work.csproj.Up2Date
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Frame_Work\Frame_Work\obj\x86\Debug\Frame_Work.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Frame_Work\Frame_Work\obj\x86\Debug\Frame_Work.pdb

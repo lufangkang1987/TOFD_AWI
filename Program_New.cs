@@ -74,7 +74,6 @@ namespace Tofd_AWI
             var tofdService   = new TofdService(tofdHw, cScanHw, tofdState, cScanState, config);
             var motionService = new MotionService(motionHw, motionState, config);
             var cameraService = new CameraService();
-            var dataService   = new DataService(config);
 
             // ==========================================
             // Step 6b: (已移除 — 显示组件改为在 Frm_Main_C_New 内部用设计器 PictureBox 创建)
@@ -91,7 +90,6 @@ namespace Tofd_AWI
                     tofdService,
                     motionService,
                     cameraService,
-                    dataService,
                     tofdState,
                     motionState,
                     projectState,
@@ -104,26 +102,6 @@ namespace Tofd_AWI
                 MessageBox.Show($"System error: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        // ==========================================
-        // 辅助方法：网卡 MAC 获取 (保留原有逻辑)
-        // ==========================================
-        private static string GetMacAddress(string ip)
-        {
-            foreach (NetworkInterface adapter in NetworkInterface.GetAllNetworkInterfaces())
-            {
-                if (adapter.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
-                {
-                    var ipProps = adapter.GetIPProperties();
-                    foreach (var addr in ipProps.UnicastAddresses)
-                    {
-                        if (addr.Address.ToString() == ip)
-                            return adapter.GetPhysicalAddress().ToString();
-                    }
-                }
-            }
-            return "";
-        }
+        }       
     }
 }

@@ -1,7 +1,0 @@
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\Clb_XmCam_DLL.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\Clb_XmCam_DLL.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_XmCam_DLL\obj\x86\Debug\Clb_XmCam_DLL.csproj.AssemblyReference.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_XmCam_DLL\obj\x86\Debug\Clb_XmCam_DLL.csproj.CoreCompileInputs.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_XmCam_DLL\obj\x86\Debug\Clb_XmCa.D0A7E687.Up2Date
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_XmCam_DLL\obj\x86\Debug\Clb_XmCam_DLL.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_XmCam_DLL\obj\x86\Debug\Clb_XmCam_DLL.pdb

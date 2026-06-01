@@ -1,7 +1,0 @@
-E:\陈大伟\磁爬\AutoThickTest\clsExcel\bin\Release\clsExcel.dll
-E:\陈大伟\磁爬\AutoThickTest\clsExcel\bin\Release\clsExcel.pdb
-E:\陈大伟\磁爬\AutoThickTest\clsExcel\obj\Release\clsExcel.dll
-E:\陈大伟\磁爬\AutoThickTest\clsExcel\obj\Release\clsExcel.pdb
-E:\陈大伟\磁爬\AutoThickTest\AutoThickTest\bin\Debug\clsExcel.dll
-E:\陈大伟\磁爬\AutoThickTest\AutoThickTest\bin\Debug\clsExcel.pdb
-E:\陈大伟\磁爬\AutoThickTest\clsExcel\obj\Release\clsExcel.csprojResolveAssemblyReference.cache

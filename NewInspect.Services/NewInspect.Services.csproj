@@ -89,17 +89,9 @@
       <Project>{6C68D876-97A7-4D09-9F1F-5D639E066B0D}</Project>
       <Name>ClassLibrary_Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Frame_Work\Frame_Work\Frame_Work.csproj">
-      <Project>{07E2A3BC-8A1C-48BC-8647-5D1C75818D66}</Project>
-      <Name>Frame_Work</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Clb_MT_Comm\Clb_MT_Comm\Clb_MT_Comm.csproj">
       <Project>{58E7B15E-F61D-4A52-A3EB-73FD1E66BFA8}</Project>
       <Name>Clb_MT_Comm</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClassLib_TestData\ClassLib_TestData.csproj">
-      <Project>{9B1B605F-05DA-4F88-97F2-EF4ED6EA3037}</Project>
-      <Name>ClassLib_TestData</Name>
     </ProjectReference>
     <ProjectReference Include="..\ClassLib_DataMang\ClassLib_DataMang.csproj">
       <Project>{7C123940-A34A-4A85-887A-C9D0389447A4}</Project>
@@ -116,20 +108,27 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\bin\Debug\Clb_XmCam_DLL.dll</HintPath>
     </Reference>
+    <Reference Include="Frame_Work, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\Frame_Work.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLib_TestData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\ClassLib_TestData.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <!-- ====== 代码文件 ====== -->
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="State\RuntimeState.cs" />
     <Compile Include="Adapters\HardwareAdapters.cs" />
-    <Compile Include="Services\TofdService.cs" />
     <Compile Include="Services\MotionService.cs" />
     <Compile Include="Services\CameraService.cs" />
-    <Compile Include="Services\DataService.cs" />
+    <Compile Include="Services\TofdService.cs" />
     <Compile Include="Services\VideoDisplayService.cs" />
     <Compile Include="Services\WaveformDisplayService.cs" />
+    <Compile Include="State\RuntimeState.cs" />
     <Compile Include="Utilities\SysUtility.cs" />
-    <Compile Include="Utilities\GridHelper.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -65,6 +65,8 @@ namespace ClassLibrary_Interface
 
         void MoveForward();
         void MoveBackward();
+        void MoveLeft();
+        void MoveRight();
         void Stop();
 
         float GetDistance();

@@ -1,7 +1,0 @@
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\MVSDK.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\MVSDK.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\MVSDK\obj\x86\Debug\MVSDK.csproj.AssemblyReference.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\MVSDK\obj\x86\Debug\MVSDK.csproj.CoreCompileInputs.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\MVSDK\obj\x86\Debug\MVSDK.csproj.Up2Date
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\MVSDK\obj\x86\Debug\MVSDK.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\MVSDK\obj\x86\Debug\MVSDK.pdb

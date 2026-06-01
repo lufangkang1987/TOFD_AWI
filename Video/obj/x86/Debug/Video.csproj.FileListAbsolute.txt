@@ -1,7 +1,0 @@
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\Video.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\Video.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Video\obj\x86\Debug\Video.csproj.AssemblyReference.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Video\obj\x86\Debug\Video.csproj.CoreCompileInputs.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Video\obj\x86\Debug\Video.csproj.Up2Date
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Video\obj\x86\Debug\Video.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\Video\obj\x86\Debug\Video.pdb

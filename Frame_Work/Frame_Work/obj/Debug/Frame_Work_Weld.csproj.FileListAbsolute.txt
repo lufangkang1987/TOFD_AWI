@@ -1,6 +1,0 @@
-D:\陈大伟\专利-设计文档\设计文档\WeldInspeOK--2023-3-13-1824\WeldInspeOK\WeldInspetion\WeldInspetion\bin\Debug\Frame_Work_Weld.dll
-D:\陈大伟\专利-设计文档\设计文档\WeldInspeOK--2023-3-13-1824\WeldInspeOK\WeldInspetion\WeldInspetion\bin\Debug\Frame_Work_Weld.pdb
-D:\陈大伟\专利-设计文档\设计文档\WeldInspeOK--2023-3-13-1824\WeldInspeOK\Frame_Work\Frame_Work\obj\Debug\Frame_Work_Weld.csproj.AssemblyReference.cache
-D:\陈大伟\专利-设计文档\设计文档\WeldInspeOK--2023-3-13-1824\WeldInspeOK\Frame_Work\Frame_Work\obj\Debug\Frame_Work_Weld.csproj.CoreCompileInputs.cache
-D:\陈大伟\专利-设计文档\设计文档\WeldInspeOK--2023-3-13-1824\WeldInspeOK\Frame_Work\Frame_Work\obj\Debug\Frame_Work_Weld.dll
-D:\陈大伟\专利-设计文档\设计文档\WeldInspeOK--2023-3-13-1824\WeldInspeOK\Frame_Work\Frame_Work\obj\Debug\Frame_Work_Weld.pdb

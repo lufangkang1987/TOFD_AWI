@@ -1,7 +1,7 @@
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\NewInspect.Services.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\NewInspect.Services.pdb
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\NewInspect.Services\obj\Debug\NewInspect.Services.csproj.AssemblyReference.cache
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\NewInspect.Services\obj\Debug\NewInspect.Services.csproj.CoreCompileInputs.cache
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\NewInspect.Services.dll
+D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\Debug\NewInspect.Services.pdb
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\NewInspect.Services\obj\Debug\NewInspe.CE941CDE.Up2Date
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\NewInspect.Services\obj\Debug\NewInspect.Services.dll
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\NewInspect.Services\obj\Debug\NewInspect.Services.pdb

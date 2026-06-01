@@ -30,7 +30,7 @@ namespace Tofd_AWI
         private readonly TofdService _tofdService;
         private readonly MotionService _motionService;
         private readonly CameraService _cameraService;
-        private readonly DataService _dataService;
+        //private readonly DataService _dataService;
         //private VideoDisplayService _videoDisplayService;
         private WaveformDisplayService _waveformDisplayService;
         private readonly TofdState _tofdState;
@@ -55,7 +55,6 @@ namespace Tofd_AWI
             TofdService tofdService,
             MotionService motionService,
             CameraService cameraService,
-            DataService dataService,
             TofdState tofdState,
             MotionState motionState,
             InspectionProjectState projectState,
@@ -66,7 +65,6 @@ namespace Tofd_AWI
             _tofdService   = tofdService ?? throw new ArgumentNullException(nameof(tofdService));
             _motionService = motionService ?? throw new ArgumentNullException(nameof(motionService));
             _cameraService = cameraService ?? throw new ArgumentNullException(nameof(cameraService));
-            _dataService   = dataService ?? throw new ArgumentNullException(nameof(dataService));
             _tofdState     = tofdState ?? throw new ArgumentNullException(nameof(tofdState));
             _motionState   = motionState ?? throw new ArgumentNullException(nameof(motionState));
             _projectState  = projectState ?? throw new ArgumentNullException(nameof(projectState));
@@ -99,9 +97,6 @@ namespace Tofd_AWI
 
             // 订阅相机帧更新事件
             _cameraService.FrameUpdated += OnCameraFrameUpdated;
-
-            // 初始隐藏检测画面，等连接后显示
-            //_videoDisplayService.IsInspectVideoActive = false;
         }
 
         // ==========================================
@@ -126,8 +121,6 @@ namespace Tofd_AWI
             _tofdService.StopAScan();
             _motionService.Disconnect();
             _cameraService.Dispose();
-            //_videoDisplayService.Dispose();
-            //_waveformDisplayService.Dispose();
             _statusTimer?.Stop();
             base.OnFormClosing(e);
         }
@@ -159,8 +152,12 @@ namespace Tofd_AWI
 
         private void Btn_MotionControl_Click(object sender, EventArgs e)
         {
-            // TODO: 打开运动控制页面
-            MessageBox.Show("运动控制页面待开发", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // 打开运动控制页面 — DI 注入 MotionService/MotionState/SystemConfig
+            // 调用链: Btn_Click → Frm_Move_New → MotionService → IMotionController
+            //       → CanMotionControllerAdapter → MT_Comm.SendData → CanCmd.dll
+            //       → USBCAN 卡 → CAN 2.0B → 车体 MCU → 电机驱动
+            var moveForm = new From.Frm_Move_New(_motionService, _motionState, _config);
+            moveForm.Show(this);
         }
 
         private void Btn_EmergencyStop_Click(object sender, EventArgs e)

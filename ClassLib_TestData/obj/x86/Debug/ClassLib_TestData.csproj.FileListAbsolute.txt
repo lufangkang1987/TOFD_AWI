@@ -1,7 +1,0 @@
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\ClassLib_TestData.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\bin\x86\Debug\ClassLib_TestData.pdb
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_TestData\obj\x86\Debug\ClassLib_TestData.csproj.AssemblyReference.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_TestData\obj\x86\Debug\ClassLib_TestData.csproj.CoreCompileInputs.cache
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_TestData\obj\x86\Debug\ClassLib.045ADC27.Up2Date
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_TestData\obj\x86\Debug\ClassLib_TestData.dll
-D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLib_TestData\obj\x86\Debug\ClassLib_TestData.pdb
