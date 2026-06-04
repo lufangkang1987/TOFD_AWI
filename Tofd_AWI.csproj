@@ -208,6 +208,42 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="From\NewInspect\Frm_NewInspect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\NewInspect\Frm_NewInspect.Designer.cs">
+      <DependentUpon>Frm_NewInspect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From\NewInspect\UcPA22SParams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="From\NewInspect\UcPA22SParams.Designer.cs">
+      <DependentUpon>UcPA22SParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From\NewInspect\UcRightPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="From\NewInspect\UcRightPanel.Designer.cs">
+      <DependentUpon>UcRightPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From\NewInspect\UcMotionBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="From\NewInspect\UcMotionBar.Designer.cs">
+      <DependentUpon>UcMotionBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From\NewInspect\UcMotionParams.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="From\NewInspect\UcMotionParams.Designer.cs">
+      <DependentUpon>UcMotionParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From\NewInspect\UcWaveformView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="From\NewInspect\UcWaveformView.Designer.cs">
+      <DependentUpon>UcWaveformView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program_New.cs" />
     <Compile Include="From\Frm_Main_C_New.cs">
       <SubType>Form</SubType>

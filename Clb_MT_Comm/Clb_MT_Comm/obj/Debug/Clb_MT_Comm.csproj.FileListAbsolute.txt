@@ -62,3 +62,10 @@ D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_MT_Comm\Clb_MT_Comm\obj\Debu
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_C.19BCBEA3.Up2Date
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.dll
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.pdb
+C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\Clb_MT_Comm.dll
+C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\Clb_MT_Comm.pdb
+C:\Users\Administrator\source\repos\Tofd_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\Tofd_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\Tofd_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_C.19BCBEA3.Up2Date
+C:\Users\Administrator\source\repos\Tofd_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.dll
+C:\Users\Administrator\source\repos\Tofd_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.pdb

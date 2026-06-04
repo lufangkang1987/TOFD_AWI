@@ -29,3 +29,10 @@ D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLibrary_Interface\obj\Debug
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLibrary_Interface\obj\Debug\ClassLib.8BAEBD8B.Up2Date
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.dll
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.pdb
+C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\ClassLibrary_Interface.dll
+C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\ClassLibrary_Interface.pdb
+C:\Users\Administrator\source\repos\Tofd_AWI\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\Tofd_AWI\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\Tofd_AWI\ClassLibrary_Interface\obj\Debug\ClassLib.8BAEBD8B.Up2Date
+C:\Users\Administrator\source\repos\Tofd_AWI\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.dll
+C:\Users\Administrator\source\repos\Tofd_AWI\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.pdb

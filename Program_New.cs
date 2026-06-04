@@ -80,22 +80,19 @@ namespace Tofd_AWI
             // ==========================================
 
             // ==========================================
-            // Step 7: 启动主窗体 (注入服务，而非直接访问 SysInfo)
+            // Step 7: 启动主窗体 — 临时改为 Frm_NewInspect 预览新界面
             // ==========================================
             try
             {
-                var mainForm = new Frm_Main_C_New(
-                    config,
-                    systemState,
-                    tofdService,
-                    motionService,
-                    cameraService,
-                    tofdState,
-                    motionState,
-                    projectState,
-                    reportState);
+                // 新界面预览 (CTSPA22S 参数面板 + 三栏布局 + 深色主题)
+                var previewForm = new From.NewInspect.Frm_NewInspect();
+                Application.Run(previewForm);
 
-                Application.Run(mainForm);
+                // 原启动代码 (保留，后续恢复)
+                // var mainForm = new Frm_Main_C_New(
+                //     config, systemState, tofdService, motionService,
+                //     cameraService, tofdState, motionState, projectState, reportState);
+                // Application.Run(mainForm);
             }
             catch (Exception ex)
             {

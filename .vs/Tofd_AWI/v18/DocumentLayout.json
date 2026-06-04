@@ -1,70 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\from\\frm_move_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_move_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\newinspect.services\\services\\motionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|solutionrelative:newinspect.services\\services\\motionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\classlibrary_interface\\ihardwareinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|solutionrelative:classlibrary_interface\\ihardwareinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58E7B15E-F61D-4A52-A3EB-73FD1E66BFA8}|Clb_MT_Comm\\Clb_MT_Comm\\Clb_MT_Comm.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\clb_mt_comm\\clb_mt_comm\\cancmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58E7B15E-F61D-4A52-A3EB-73FD1E66BFA8}|Clb_MT_Comm\\Clb_MT_Comm\\Clb_MT_Comm.csproj|solutionrelative:clb_mt_comm\\clb_mt_comm\\cancmd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58E7B15E-F61D-4A52-A3EB-73FD1E66BFA8}|Clb_MT_Comm\\Clb_MT_Comm\\Clb_MT_Comm.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\clb_mt_comm\\clb_mt_comm\\mt_comm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58E7B15E-F61D-4A52-A3EB-73FD1E66BFA8}|Clb_MT_Comm\\Clb_MT_Comm\\Clb_MT_Comm.csproj|solutionrelative:clb_mt_comm\\clb_mt_comm\\mt_comm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\newinspect.services\\adapters\\hardwareadapters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|solutionrelative:newinspect.services\\adapters\\hardwareadapters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\from\\frm_move_new.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_move_new.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|d:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\tofd_awi - \u7B80\u6613\u7248\\program_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|c:\\users\\administrator\\source\\repos\\tofd_awi\\program_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:program_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\classlibrary_interface\\systemconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|solutionrelative:classlibrary_interface\\systemconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\newinspect.services\\utilities\\sysutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE7324D7-B900-4C28-866B-5BAD3A67D598}|NewInspect.Services\\NewInspect.Services.csproj|solutionrelative:newinspect.services\\utilities\\sysutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\classlibrary_interface\\models\\infrastructuremodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|solutionrelative:classlibrary_interface\\models\\infrastructuremodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\classlibrary_interface\\classinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C68D876-97A7-4D09-9F1F-5D639E066B0D}|ClassLibrary_Interface\\ClassLibrary_Interface.csproj|solutionrelative:classlibrary_interface\\classinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\from\\frm_move_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_move_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,218 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HardwareAdapters.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\Adapters\\HardwareAdapters.cs",
-              "RelativeDocumentMoniker": "NewInspect.Services\\Adapters\\HardwareAdapters.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\Adapters\\HardwareAdapters.cs",
-              "RelativeToolTip": "NewInspect.Services\\Adapters\\HardwareAdapters.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAnwE0AAAAjAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program_New.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\Program_New.cs",
+              "RelativeDocumentMoniker": "Program_New.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\Program_New.cs",
+              "RelativeToolTip": "Program_New.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T05:24:16.271Z",
+              "WhenOpened": "2026-06-04T02:47:03.249Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MotionService.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\Services\\MotionService.cs",
-              "RelativeDocumentMoniker": "NewInspect.Services\\Services\\MotionService.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\Services\\MotionService.cs",
-              "RelativeToolTip": "NewInspect.Services\\Services\\MotionService.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAIA0wJYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T05:25:51.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Frm_Main_C_New.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C_New.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\Frm_Main_C_New.cs",
               "RelativeDocumentMoniker": "From\\Frm_Main_C_New.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Main_C_New.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\Frm_Main_C_New.cs",
               "RelativeToolTip": "From\\Frm_Main_C_New.cs",
               "ViewState": "AgIAAJAAAAAAAAAAAIAxwJsAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T05:04:39.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Frm_Move_New.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Move_New.cs",
-              "RelativeDocumentMoniker": "From\\Frm_Move_New.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Move_New.cs",
-              "RelativeToolTip": "From\\Frm_Move_New.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T05:29:36.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IHardwareInterfaces.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\IHardwareInterfaces.cs",
-              "RelativeDocumentMoniker": "ClassLibrary_Interface\\IHardwareInterfaces.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\IHardwareInterfaces.cs",
-              "RelativeToolTip": "ClassLibrary_Interface\\IHardwareInterfaces.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAADwvzgAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T05:23:27.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CanCmd.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Clb_MT_Comm\\Clb_MT_Comm\\CanCmd.cs",
-              "RelativeDocumentMoniker": "Clb_MT_Comm\\Clb_MT_Comm\\CanCmd.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Clb_MT_Comm\\Clb_MT_Comm\\CanCmd.cs",
-              "RelativeToolTip": "Clb_MT_Comm\\Clb_MT_Comm\\CanCmd.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T06:50:20.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MT_Comm.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Clb_MT_Comm\\Clb_MT_Comm\\MT_Comm.cs",
-              "RelativeDocumentMoniker": "Clb_MT_Comm\\Clb_MT_Comm\\MT_Comm.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Clb_MT_Comm\\Clb_MT_Comm\\MT_Comm.cs",
-              "RelativeToolTip": "Clb_MT_Comm\\Clb_MT_Comm\\MT_Comm.cs",
-              "ViewState": "AgIAABcBAAAAAAAAAAAswDYBAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T07:20:02.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Frm_Move_New.Designer.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Move_New.Designer.cs",
-              "RelativeDocumentMoniker": "From\\Frm_Move_New.Designer.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Move_New.Designer.cs",
-              "RelativeToolTip": "From\\Frm_Move_New.Designer.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAArwK0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T05:32:57.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program_New.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Program_New.cs",
-              "RelativeDocumentMoniker": "Program_New.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\Program_New.cs",
-              "RelativeToolTip": "Program_New.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAhwEQAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T07:14:48.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SystemConfig.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\SystemConfig.cs",
-              "RelativeDocumentMoniker": "ClassLibrary_Interface\\SystemConfig.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\SystemConfig.cs",
-              "RelativeToolTip": "ClassLibrary_Interface\\SystemConfig.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAcwEAAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T06:00:12.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "app.config",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\app.config",
-              "RelativeDocumentMoniker": "app.config",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\app.config",
-              "RelativeToolTip": "app.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-06-01T05:50:55.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "packages.config",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\packages.config",
-              "RelativeDocumentMoniker": "packages.config",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\packages.config",
-              "RelativeToolTip": "packages.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-06-01T05:51:31.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SysUtility.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\Utilities\\SysUtility.cs",
-              "RelativeDocumentMoniker": "NewInspect.Services\\Utilities\\SysUtility.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\NewInspect.Services\\Utilities\\SysUtility.cs",
-              "RelativeToolTip": "NewInspect.Services\\Utilities\\SysUtility.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T06:49:47.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "InfrastructureModels.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\Models\\InfrastructureModels.cs",
-              "RelativeDocumentMoniker": "ClassLibrary_Interface\\Models\\InfrastructureModels.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\Models\\InfrastructureModels.cs",
-              "RelativeToolTip": "ClassLibrary_Interface\\Models\\InfrastructureModels.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAIBPwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T06:03:51.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ClassInterFace.cs",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\ClassInterFace.cs",
-              "RelativeDocumentMoniker": "ClassLibrary_Interface\\ClassInterFace.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\ClassLibrary_Interface\\ClassInterFace.cs",
-              "RelativeToolTip": "ClassLibrary_Interface\\ClassInterFace.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T06:00:15.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Frm_Move_New.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Move_New.cs",
-              "RelativeDocumentMoniker": "From\\Frm_Move_New.cs",
-              "ToolTip": "D:\\demo\\\u5FB7\u6717\u63A7\u5236\u63A5\u53E3\\Tofd_AWI - \u7B80\u6613\u7248\\From\\Frm_Move_New.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "From\\Frm_Move_New.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T05:29:48.925Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
+              "WhenOpened": "2026-06-01T05:04:39.369Z"
             }
           ]
         }
