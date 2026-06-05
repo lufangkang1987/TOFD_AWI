@@ -945,3 +945,6 @@ C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\msvcr90.dll
 C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\Tofd_AWI.csproj.Up2Date
 C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\4轮车体控制系统.exe
 C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\4轮车体控制系统.pdb
+C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\ClassLibrary_Interface.pdb
+C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\NewInspect.Services.pdb
+C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\Clb_MT_Comm.pdb

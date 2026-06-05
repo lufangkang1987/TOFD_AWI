@@ -3,56 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|c:\\users\\administrator\\source\\repos\\tofd_awi\\from\\newinspect\\frm_newinspect.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\newinspect\\frm_newinspect.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\newinspect\\frm_newinspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\newinspect\\frm_newinspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|c:\\users\\administrator\\source\\repos\\tofd_awi\\from\\newinspect\\appstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\newinspect\\appstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\newinspect\\frmconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\newinspect\\frmconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\newinspect\\frmconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\newinspect\\frmconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\program_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:program_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\frm_move_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_move_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\newinspect\\ucwaveformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\newinspect\\ucwaveformview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\newinspect\\ucmotionparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\newinspect\\ucmotionparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\newinspect\\ucpa22sparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\newinspect\\ucpa22sparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\newinspect\\ucrightpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\newinspect\\ucrightpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\frm_main_c_new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|c:\\users\\administrator\\source\\repos\\tofd_awi\\from\\newinspect\\frm_newinspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BBE5296E-99BC-4769-8C91-7096E41A1244}|Tofd_AWI.csproj|solutionrelative:from\\newinspect\\frm_newinspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,164 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Frm_NewInspect.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\Frm_NewInspect.Designer.cs",
-              "RelativeDocumentMoniker": "From\\NewInspect\\Frm_NewInspect.Designer.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\Frm_NewInspect.Designer.cs",
-              "RelativeToolTip": "From\\NewInspect\\Frm_NewInspect.Designer.cs",
-              "ViewState": "AgIAALgCAAAAAAAAAAAcwMwCAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T02:48:10.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppState.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\AppState.cs",
-              "RelativeDocumentMoniker": "From\\NewInspect\\AppState.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\AppState.cs",
-              "RelativeToolTip": "From\\NewInspect\\AppState.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAIAxwDYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T02:35:30.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmConnect.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\FrmConnect.cs",
-              "RelativeDocumentMoniker": "From\\NewInspect\\FrmConnect.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\FrmConnect.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "From\\NewInspect\\FrmConnect.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T02:23:41.822Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmConnect.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\FrmConnect.cs",
-              "RelativeDocumentMoniker": "From\\NewInspect\\FrmConnect.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\FrmConnect.cs",
-              "RelativeToolTip": "From\\NewInspect\\FrmConnect.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAABVwFYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T02:03:16.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Frm_NewInspect.cs",
+              "Title": "Frm_NewInspect.cs [\u8BBE\u8BA1]",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\Frm_NewInspect.cs",
               "RelativeDocumentMoniker": "From\\NewInspect\\Frm_NewInspect.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\Frm_NewInspect.cs",
-              "RelativeToolTip": "From\\NewInspect\\Frm_NewInspect.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAcwDIAAAAfAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\Frm_NewInspect.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "From\\NewInspect\\Frm_NewInspect.cs [\u8BBE\u8BA1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T02:01:31.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Frm_Move_New.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\Frm_Move_New.cs",
-              "RelativeDocumentMoniker": "From\\Frm_Move_New.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\Frm_Move_New.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "From\\Frm_Move_New.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T01:45:56.634Z",
+              "WhenOpened": "2026-06-05T08:04:42.227Z",
               "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Frm_Main_C_New.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\Frm_Main_C_New.cs",
-              "RelativeDocumentMoniker": "From\\Frm_Main_C_New.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\Frm_Main_C_New.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "From\\Frm_Main_C_New.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T01:45:43.407Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UcWaveformView.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\UcWaveformView.cs",
-              "RelativeDocumentMoniker": "From\\NewInspect\\UcWaveformView.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\UcWaveformView.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "From\\NewInspect\\UcWaveformView.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T01:45:40.172Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UcMotionParams.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\UcMotionParams.cs",
-              "RelativeDocumentMoniker": "From\\NewInspect\\UcMotionParams.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\UcMotionParams.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "From\\NewInspect\\UcMotionParams.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T01:45:34.477Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UcPA22SParams.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\UcPA22SParams.cs",
-              "RelativeDocumentMoniker": "From\\NewInspect\\UcPA22SParams.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\UcPA22SParams.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "From\\NewInspect\\UcPA22SParams.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T01:45:31.903Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program_New.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\Program_New.cs",
-              "RelativeDocumentMoniker": "Program_New.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\Program_New.cs",
-              "RelativeToolTip": "Program_New.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAYwFcAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:47:03.249Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UcRightPanel.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\UcRightPanel.cs",
-              "RelativeDocumentMoniker": "From\\NewInspect\\UcRightPanel.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\NewInspect\\UcRightPanel.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "From\\NewInspect\\UcRightPanel.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T01:45:28.375Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Frm_Main_C_New.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\Frm_Main_C_New.cs",
-              "RelativeDocumentMoniker": "From\\Frm_Main_C_New.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\Tofd_AWI\\From\\Frm_Main_C_New.cs",
-              "RelativeToolTip": "From\\Frm_Main_C_New.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAIAxwJsAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T05:04:39.369Z",
-              "EditorCaption": ""
             }
           ]
         }

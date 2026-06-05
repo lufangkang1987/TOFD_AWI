@@ -394,10 +394,11 @@ namespace Tofd_AWI.From.NewInspect
 
             switch (tag)
             {
+                case "scanCtrl": _panelScanCtrl.Visible = true; break;
                 case "tx":       _panelTx.Visible = true;       break;
                 case "rx":       _panelRx.Visible = true;       break;
                 case "probe":    _panelProbe.Visible = true;    break;
-                case "wedge":    _panelWedge.Visible = true;    break;
+                case "wedge":    _panelWedge.Visible = true;     break;
                 case "mat":      _panelMaterial.Visible = true; break;
                 case "aperture": _panelAperture.Visible = true; break;
                 case "gate":     _panelGate.Visible = true;     break;
@@ -413,6 +414,7 @@ namespace Tofd_AWI.From.NewInspect
 
         private void HideAllTabPanels()
         {
+            _panelScanCtrl.Visible = false;
             _panelTx.Visible       = false;
             _panelRx.Visible       = false;
             _panelProbe.Visible    = false;
@@ -597,7 +599,7 @@ namespace Tofd_AWI.From.NewInspect
             _scanCtrlProgress.Value = 0;
 
             // 更新控制面板状态
-            foreach (Control c in _scanCtrlPanel.Controls)
+            foreach (Control c in _panelScanCtrl.Controls)
             {
                 if (c is Label && c.Name == "lblCtrlProg")
                     c.Text = "扫描中...";
@@ -612,7 +614,7 @@ namespace Tofd_AWI.From.NewInspect
         {
             IsScanning = false;
 
-            foreach (Control c in _scanCtrlPanel.Controls)
+            foreach (Control c in _panelScanCtrl.Controls)
             {
                 if (c is Label && c.Name == "lblCtrlProg")
                     c.Text = "已停止";
@@ -699,7 +701,7 @@ namespace Tofd_AWI.From.NewInspect
             _lblScanProgress.Text = string.Format("{0}%", percent);
             _scanCtrlProgress.Value = percent;
 
-            foreach (Control c in _scanCtrlPanel.Controls)
+            foreach (Control c in _panelScanCtrl.Controls)
             {
                 if (c is Label && c.Name == "lblCtrlProg")
                     c.Text = string.Format("进度 {0}%", percent);

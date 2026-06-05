@@ -495,18 +495,22 @@ namespace NewInspect.UI
 
             _chkShowPeak = new CheckBox
             {
+                AutoSize = false,
                 Location = new Point(14, 24),
-                Size = new Size(120, 20),
+                Size = new Size(160, 20),
                 Text = "显示波峰标记",
-                Checked = true
+                Checked = true,
+                Font = new Font("微软雅黑", 8.5F)
             };
 
             _chkShowEnvelope = new CheckBox
             {
+                AutoSize = false,
                 Location = new Point(14, 48),
-                Size = new Size(120, 20),
+                Size = new Size(160, 20),
                 Text = "显示包络线",
-                Checked = false
+                Checked = false,
+                Font = new Font("微软雅黑", 8.5F)
             };
 
             var lblLineWidth = new Label
@@ -763,10 +767,12 @@ namespace NewInspect.UI
 
             _chkAutoReconnect = new CheckBox
             {
+                AutoSize = false,
                 Location = new Point(14, 24),
-                Size = new Size(120, 20),
+                Size = new Size(160, 20),
                 Text = "自动重连",
-                Checked = true
+                Checked = true,
+                Font = new Font("微软雅黑", 8.5F)
             };
 
             var lblReconnInterval = new Label

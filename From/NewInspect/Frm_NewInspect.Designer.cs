@@ -112,12 +112,12 @@ namespace Tofd_AWI.From.NewInspect
             sep2.Location = new System.Drawing.Point(418, 10);
             this._topBar.Controls.Add(sep2);
 
-            // 显示切换 CheckBox: 闸门 / TCG / 包络 / 峰值保持
+            // 显示切换 CheckBox: 闸门 / TCG / 包络 / 峰值保持 (统一80x20)
             int chkX = 426;
-            this._chkGate = MakeTopCheckBox("闸门", true, chkX, 12);
-            this._chkTcg = MakeTopCheckBox("TCG", false, chkX + 48, 12);
-            this._chkEnvelope = MakeTopCheckBox("包络", false, chkX + 96, 12);
-            this._chkPeakHold = MakeTopCheckBox("峰值保持", false, chkX + 144, 12);
+            this._chkGate = MakeTopCheckBox("闸门", true, chkX, 10);
+            this._chkTcg = MakeTopCheckBox("TCG", false, chkX + 80, 10);
+            this._chkEnvelope = MakeTopCheckBox("包络", false, chkX + 160, 10);
+            this._chkPeakHold = MakeTopCheckBox("峰值保持", false, chkX + 240, 10);
 
             // "快速应用" 标签
             this._lblQuickApply = new System.Windows.Forms.Label();
@@ -125,7 +125,7 @@ namespace Tofd_AWI.From.NewInspect
             this._lblQuickApply.Font = fontSize85;
             this._lblQuickApply.ForeColor = cMuted;
             this._lblQuickApply.Size = new System.Drawing.Size(60, 20);
-            this._lblQuickApply.Location = new System.Drawing.Point(chkX + 200, 12);
+            this._lblQuickApply.Location = new System.Drawing.Point(chkX + 320, 10);
             this._lblQuickApply.BackColor = System.Drawing.Color.Transparent;
             this._lblQuickApply.Cursor = System.Windows.Forms.Cursors.Hand;
             this._topBar.Controls.Add(this._lblQuickApply);
@@ -238,206 +238,69 @@ namespace Tofd_AWI.From.NewInspect
             this._bottomBar.Controls.Add(this._lblDateTime);
 
             // ==========================================
-            // 左栏 _leftPanel  (200px) — Tab参数面板
+            // 底部参数面板 _bottomParamPanel (位于中心显示区和底栏之间)
             // ==========================================
-            this._leftPanel = new System.Windows.Forms.Panel();
-            this._leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this._leftPanel.Width = 200;
-            this._leftPanel.BackColor = cBgPanel;
-            this._leftPanel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this._bottomParamPanel = new System.Windows.Forms.Panel();
+            this._bottomParamPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this._bottomParamPanel.Height = 180;
+            this._bottomParamPanel.BackColor = cBgPanel;
+            this._bottomParamPanel.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
 
-            // --- Tab分类按钮区 (Dock=Top, 56px) ---
+            // --- Tab分类按钮区 (位于参数内容区底部，三行布局) ---
             this._catPanel = new System.Windows.Forms.Panel();
-            this._catPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this._catPanel.Height = 56;
+            this._catPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this._catPanel.Height = 90;
             this._catPanel.BackColor = System.Drawing.Color.Transparent;
-            int catW = 180;
 
-            // Row1: 发射 | 接收 | 探头 | 楔块 | 材料 | 孔径
-            var catRow1 = new[] { "发射", "接收", "探头", "楔块", "材料", "孔径" };
-            var catTags1 = new[] { "tx", "rx", "probe", "wedge", "mat", "aperture" };
-            int btnW1 = (catW - 4) / 6;
-            for (int i = 0; i < 6; i++)
+            var catNames = new[] { "扫查控制", "发射", "接收", "探头", "楔块", "材料", "孔径", "闸门", "扫查", "编码器", "校准", "TFM" };
+            var catTags = new[] { "scanCtrl", "tx", "rx", "probe", "wedge", "mat", "aperture", "gate", "scan", "encoder", "cal", "tfm" };
+            int catBtnW = 72;
+            int catBtnH = 24;
+            int colsPerRow = 6;
+            int gapX = 6;
+            int gapY = 4;
+
+            for (int i = 0; i < catNames.Length; i++)
             {
-                var btn = MakeCatButton(catRow1[i], catTags1[i], 2 + i * btnW1, 2, btnW1, 22,
+                int row = i / colsPerRow;
+                int col = i % colsPerRow;
+                int x = 4 + col * (catBtnW + gapX);
+                int y = 4 + row * (catBtnH + gapY);
+                var btn = MakeCatButton(catNames[i], catTags[i], x, y, catBtnW, catBtnH,
                     (i == 0) ? cBlue : cBgInput, (i == 0) ? System.Drawing.Color.White : cMuted);
-                this._catPanel.Controls.Add(btn);
-            }
-
-            // Row2: 闸门 | 扫查 | 编码器 | 校准 | TFM
-            var catRow2 = new[] { "闸门", "扫查", "编码器", "校准", "TFM" };
-            var catTags2 = new[] { "gate", "scan", "encoder", "cal", "tfm" };
-            int btnW2 = (catW - 4) / 5;
-            for (int i = 0; i < 5; i++)
-            {
-                var btn = MakeCatButton(catRow2[i], catTags2[i], 2 + i * btnW2, 28, btnW2, 22,
-                    cBgInput, cMuted);
                 this._catPanel.Controls.Add(btn);
                 _catButtons.Add(btn);
             }
-            this._leftPanel.Controls.Add(this._catPanel);
 
             // --- Tab内容区 (Dock=Fill, AutoScroll) ---
             this._tabContentHost = new System.Windows.Forms.Panel();
             this._tabContentHost.Dock = System.Windows.Forms.DockStyle.Fill;
             this._tabContentHost.AutoScroll = true;
             this._tabContentHost.BackColor = cBgPanel;
-
-            // ---- 扫查控制面板 (绿色区块, Dock=Bottom) ----
-            this._scanCtrlPanel = new System.Windows.Forms.Panel();
-            this._scanCtrlPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this._scanCtrlPanel.Height = 165;
-            this._scanCtrlPanel.BackColor = System.Drawing.Color.FromArgb(18, 50, 28);
-            this._scanCtrlPanel.Padding = new System.Windows.Forms.Padding(4, 2, 4, 4);
-
-            int scy = 2;
-
-            var scanCtrlHdr = new System.Windows.Forms.Label();
-            scanCtrlHdr.Text = "▌扫查控制面板";
-            scanCtrlHdr.Font = new System.Drawing.Font("微软雅黑", 8.5F, System.Drawing.FontStyle.Bold);
-            scanCtrlHdr.ForeColor = cGreen;
-            scanCtrlHdr.Size = new System.Drawing.Size(180, 20);
-            scanCtrlHdr.Location = new System.Drawing.Point(4, scy);
-            scanCtrlHdr.BackColor = System.Drawing.Color.Transparent;
-            this._scanCtrlPanel.Controls.Add(scanCtrlHdr);
-            scy += 20;
-
-            // 编码器使能
-            this._chkEncoderEnable = new System.Windows.Forms.CheckBox();
-            this._chkEncoderEnable.Text = "编码器使能";
-            this._chkEncoderEnable.Checked = true;
-            this._chkEncoderEnable.Font = fontSize85;
-            this._chkEncoderEnable.ForeColor = cGreen;
-            this._chkEncoderEnable.BackColor = System.Drawing.Color.Transparent;
-            this._chkEncoderEnable.Size = new System.Drawing.Size(100, 22);
-            this._chkEncoderEnable.Location = new System.Drawing.Point(6, scy);
-            this._chkEncoderEnable.Cursor = System.Windows.Forms.Cursors.Hand;
-            this._scanCtrlPanel.Controls.Add(this._chkEncoderEnable);
-            scy += 22;
-
-            // 扫描方向
-            var lblDir = new System.Windows.Forms.Label();
-            lblDir.Text = "扫描方向";
-            lblDir.Font = fontSize8;
-            lblDir.ForeColor = cMuted;
-            lblDir.Size = new System.Drawing.Size(58, 20);
-            lblDir.Location = new System.Drawing.Point(6, scy + 2);
-            lblDir.BackColor = System.Drawing.Color.Transparent;
-            this._scanCtrlPanel.Controls.Add(lblDir);
-
-            this._cmbScanDir = new System.Windows.Forms.ComboBox();
-            this._cmbScanDir.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this._cmbScanDir.Items.AddRange(new[] { "正向(→)", "反向(←)", "往复(↔)" });
-            this._cmbScanDir.SelectedIndex = 0;
-            this._cmbScanDir.Size = new System.Drawing.Size(100, 20);
-            this._cmbScanDir.Location = new System.Drawing.Point(66, scy);
-            this._cmbScanDir.BackColor = cBgInput;
-            this._cmbScanDir.ForeColor = cText;
-            this._cmbScanDir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this._cmbScanDir.Font = fontSize8;
-            this._scanCtrlPanel.Controls.Add(this._cmbScanDir);
-            scy += 24;
-
-            // 扫描速度
-            var lblSpeed = new System.Windows.Forms.Label();
-            lblSpeed.Text = "扫描速度";
-            lblSpeed.Font = fontSize8;
-            lblSpeed.ForeColor = cMuted;
-            lblSpeed.Size = new System.Drawing.Size(58, 20);
-            lblSpeed.Location = new System.Drawing.Point(6, scy + 2);
-            lblSpeed.BackColor = System.Drawing.Color.Transparent;
-            this._scanCtrlPanel.Controls.Add(lblSpeed);
-
-            this._nudScanSpeed = new System.Windows.Forms.NumericUpDown();
-            this._nudScanSpeed.Minimum = 1;
-            this._nudScanSpeed.Maximum = 500;
-            this._nudScanSpeed.Value = 50;
-            this._nudScanSpeed.Increment = 5;
-            this._nudScanSpeed.Size = new System.Drawing.Size(70, 20);
-            this._nudScanSpeed.Location = new System.Drawing.Point(66, scy);
-            this._nudScanSpeed.BackColor = cBgInput;
-            this._nudScanSpeed.ForeColor = cText;
-            this._nudScanSpeed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._nudScanSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this._scanCtrlPanel.Controls.Add(this._nudScanSpeed);
-
-            var lblSpeedUnit = new System.Windows.Forms.Label();
-            lblSpeedUnit.Text = "mm/s";
-            lblSpeedUnit.Font = fontSize8;
-            lblSpeedUnit.ForeColor = cMuted;
-            lblSpeedUnit.Size = new System.Drawing.Size(36, 20);
-            lblSpeedUnit.Location = new System.Drawing.Point(138, scy + 2);
-            lblSpeedUnit.BackColor = System.Drawing.Color.Transparent;
-            this._scanCtrlPanel.Controls.Add(lblSpeedUnit);
-            scy += 24;
-
-            // 扫描进度
-            this._scanCtrlProgress = new System.Windows.Forms.ProgressBar();
-            this._scanCtrlProgress.Size = new System.Drawing.Size(160, 12);
-            this._scanCtrlProgress.Location = new System.Drawing.Point(6, scy);
-            this._scanCtrlProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this._scanCtrlProgress.Value = 0;
-            this._scanCtrlPanel.Controls.Add(this._scanCtrlProgress);
-            scy += 16;
-
-            var lblCtrlProg = new System.Windows.Forms.Label();
-            lblCtrlProg.Text = "就绪";
-            lblCtrlProg.Font = fontSize8;
-            lblCtrlProg.ForeColor = cGreen;
-            lblCtrlProg.Size = new System.Drawing.Size(120, 16);
-            lblCtrlProg.Location = new System.Drawing.Point(6, scy);
-            lblCtrlProg.BackColor = System.Drawing.Color.Transparent;
-            lblCtrlProg.Name = "lblCtrlProg";
-            this._scanCtrlPanel.Controls.Add(lblCtrlProg);
-            scy += 18;
-
-            // 启动/停止按钮
-            this._btnScanStart = new System.Windows.Forms.Button();
-            this._btnScanStart.Text = "▶ 启动扫查";
-            this._btnScanStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this._btnScanStart.FlatAppearance.BorderSize = 0;
-            this._btnScanStart.Font = new System.Drawing.Font("微软雅黑", 8.5F);
-            this._btnScanStart.Size = new System.Drawing.Size(80, 24);
-            this._btnScanStart.Location = new System.Drawing.Point(6, scy);
-            this._btnScanStart.BackColor = cGreen;
-            this._btnScanStart.ForeColor = System.Drawing.Color.White;
-            this._btnScanStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this._btnScanStart.Click += new System.EventHandler(this.BtnScanStart_Click);
-            this._scanCtrlPanel.Controls.Add(this._btnScanStart);
-
-            this._btnScanStop = new System.Windows.Forms.Button();
-            this._btnScanStop.Text = "■ 停止";
-            this._btnScanStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this._btnScanStop.FlatAppearance.BorderSize = 0;
-            this._btnScanStop.Font = new System.Drawing.Font("微软雅黑", 8.5F);
-            this._btnScanStop.Size = new System.Drawing.Size(70, 24);
-            this._btnScanStop.Location = new System.Drawing.Point(92, scy);
-            this._btnScanStop.BackColor = cRed;
-            this._btnScanStop.ForeColor = System.Drawing.Color.White;
-            this._btnScanStop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this._btnScanStop.Click += new System.EventHandler(this.BtnScanStop_Click);
-            this._scanCtrlPanel.Controls.Add(this._btnScanStop);
-
-            this._leftPanel.Controls.Add(this._scanCtrlPanel);
+            this._tabContentHost.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
 
             // ===========================================
-            // 构建11个Tab参数面板 (放在 _tabContentHost 中)
+            // 构建12个Tab参数面板 (放在 _tabContentHost 中，水平排列)
             // ===========================================
-            BuildTabPanelTx(cBgInput, cText, cMuted, cRed, fontSize8, fontSize85);
-            BuildTabPanelRx(cBgInput, cText, cMuted, fontSize8, fontSize85);
-            BuildTabPanelProbe(cBgInput, cText, cMuted, fontSize8, fontSize85);
-            BuildTabPanelWedge(cBgInput, cText, cMuted, fontSize8, fontSize85);
-            BuildTabPanelMaterial(cBgInput, cText, cMuted, fontSize8, fontSize85);
-            BuildTabPanelAperture(cBgInput, cText, cMuted, fontSize8, fontSize85);
-            BuildTabPanelGate(cBgInput, cText, cMuted, fontSize8, fontSize85);
-            BuildTabPanelScan(cBgInput, cText, cMuted, fontSize8, fontSize85);
-            BuildTabPanelEncoder(cBgInput, cText, cMuted, fontSize8, fontSize85);
-            BuildTabPanelCal(cBgInput, cText, cMuted, cGreen, fontSize8, fontSize85);
-            BuildTabPanelTfm(cBgInput, cText, cMuted, fontSize8, fontSize85);
+            BuildTabPanelScanCtrl_Horizontal(cBgInput, cText, cMuted, cGreen, cRed, fontSize8, fontSize85);
+            BuildTabPanelTx_Horizontal(cBgInput, cText, cMuted, cRed, fontSize8, fontSize85);
+            BuildTabPanelRx_Horizontal(cBgInput, cText, cMuted, fontSize8, fontSize85);
+            BuildTabPanelProbe_Horizontal(cBgInput, cText, cMuted, fontSize8, fontSize85);
+            BuildTabPanelWedge_Horizontal(cBgInput, cText, cMuted, fontSize8, fontSize85);
+            BuildTabPanelMaterial_Horizontal(cBgInput, cText, cMuted, fontSize8, fontSize85);
+            BuildTabPanelAperture_Horizontal(cBgInput, cText, cMuted, fontSize8, fontSize85);
+            BuildTabPanelGate_Horizontal(cBgInput, cText, cMuted, fontSize8, fontSize85);
+            BuildTabPanelScan_Horizontal(cBgInput, cText, cMuted, fontSize8, fontSize85);
+            BuildTabPanelEncoder_Horizontal(cBgInput, cText, cMuted, fontSize8, fontSize85);
+            BuildTabPanelCal_Horizontal(cBgInput, cText, cMuted, cGreen, fontSize8, fontSize85);
+            BuildTabPanelTfm_Horizontal(cBgInput, cText, cMuted, fontSize8, fontSize85);
 
-            // 默认显示发射面板
-            _panelTx.Visible = true;
-            this._leftPanel.Controls.Add(this._tabContentHost);
+            // 默认显示扫查控制面板
+            _panelScanCtrl.Visible = true;
+
+            // 添加顺序: Bottom(catPanel) → Fill(tabContent)
+            this._bottomParamPanel.Controls.Add(this._catPanel);
+            this._bottomParamPanel.Controls.Add(this._tabContentHost);
 
             // ==========================================
             // 中心显示区 _centerPanel — 2x2 四象限
@@ -529,26 +392,28 @@ namespace Tofd_AWI.From.NewInspect
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewInspect - 相控阵超声检测系统";
 
-            // 添加顺序: Dock=Top → Bottom → Right → Left → Fill
+            // 添加顺序: Top → Right → BottomParam → Bottom(status) → Fill
+            // 注意: Dock=Bottom 后添加的会靠近底部边缘，因此 _bottomBar 要最后加才在最底部
             this.Controls.Add(this._topBar);
-            this.Controls.Add(this._bottomBar);
             this.Controls.Add(this._rightPanel);
-            this.Controls.Add(this._leftPanel);
+            this.Controls.Add(this._bottomParamPanel);
+            this.Controls.Add(this._bottomBar);
             this.Controls.Add(this._centerPanel);
 
             this.ResumeLayout(false);
         }
 
-        // ===== 辅助: 顶栏 CheckBox =====
+        // ===== 辅助: 顶栏 CheckBox (统一大小) =====
         private System.Windows.Forms.CheckBox MakeTopCheckBox(string text, bool chk, int x, int y)
         {
             var cb = new System.Windows.Forms.CheckBox();
             cb.Text = text;
             cb.Checked = chk;
-            cb.AutoSize = true;
+            cb.AutoSize = false;
             cb.Font = new System.Drawing.Font("微软雅黑", 8.5F);
             cb.ForeColor = System.Drawing.Color.FromArgb(200, 210, 225);
             cb.BackColor = System.Drawing.Color.Transparent;
+            cb.Size = new System.Drawing.Size(80, 20);
             cb.Location = new System.Drawing.Point(x, y);
             cb.Cursor = System.Windows.Forms.Cursors.Hand;
             this._topBar.Controls.Add(cb);
@@ -670,7 +535,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelTx = new System.Windows.Forms.Panel();
-            _panelTx.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelTx.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelTx.Height = 210;
             _panelTx.BackColor = System.Drawing.Color.Transparent;
 
@@ -742,7 +607,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelRx = new System.Windows.Forms.Panel();
-            _panelRx.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelRx.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelRx.Height = 210;
             _panelRx.BackColor = System.Drawing.Color.Transparent;
 
@@ -799,7 +664,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelProbe = new System.Windows.Forms.Panel();
-            _panelProbe.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelProbe.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelProbe.Height = 210;
             _panelProbe.BackColor = System.Drawing.Color.Transparent;
 
@@ -856,7 +721,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelWedge = new System.Windows.Forms.Panel();
-            _panelWedge.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelWedge.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelWedge.Height = 210;
             _panelWedge.BackColor = System.Drawing.Color.Transparent;
 
@@ -909,7 +774,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelMaterial = new System.Windows.Forms.Panel();
-            _panelMaterial.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelMaterial.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelMaterial.Height = 160;
             _panelMaterial.BackColor = System.Drawing.Color.Transparent;
 
@@ -956,7 +821,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelAperture = new System.Windows.Forms.Panel();
-            _panelAperture.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelAperture.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelAperture.Height = 210;
             _panelAperture.BackColor = System.Drawing.Color.Transparent;
 
@@ -1006,7 +871,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelGate = new System.Windows.Forms.Panel();
-            _panelGate.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelGate.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelGate.Height = 230;
             _panelGate.BackColor = System.Drawing.Color.Transparent;
 
@@ -1087,7 +952,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelScan = new System.Windows.Forms.Panel();
-            _panelScan.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelScan.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelScan.Height = 210;
             _panelScan.BackColor = System.Drawing.Color.Transparent;
 
@@ -1139,7 +1004,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelEncoder = new System.Windows.Forms.Panel();
-            _panelEncoder.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelEncoder.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelEncoder.Height = 210;
             _panelEncoder.BackColor = System.Drawing.Color.Transparent;
 
@@ -1192,7 +1057,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelCal = new System.Windows.Forms.Panel();
-            _panelCal.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelCal.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelCal.Height = 210;
             _panelCal.BackColor = System.Drawing.Color.Transparent;
 
@@ -1223,20 +1088,22 @@ namespace Tofd_AWI.From.NewInspect
             this._chkACG = new System.Windows.Forms.CheckBox();
             this._chkACG.Text = "ACG 角度增益补偿";
             this._chkACG.Checked = false;
-            this._chkACG.Font = f8;
+            this._chkACG.AutoSize = false;
+            this._chkACG.Font = f85;
             this._chkACG.ForeColor = cGreen;
             this._chkACG.BackColor = System.Drawing.Color.Transparent;
             this._chkACG.Size = new System.Drawing.Size(160, 20);
             this._chkACG.Location = new System.Drawing.Point(6, y);
             this._chkACG.Cursor = System.Windows.Forms.Cursors.Hand;
             _panelCal.Controls.Add(this._chkACG);
-            y += 20;
+            y += 22;
 
             // TCG
             this._chkTCG = new System.Windows.Forms.CheckBox();
             this._chkTCG.Text = "TCG 时间增益补偿";
             this._chkTCG.Checked = false;
-            this._chkTCG.Font = f8;
+            this._chkTCG.AutoSize = false;
+            this._chkTCG.Font = f85;
             this._chkTCG.ForeColor = cGreen;
             this._chkTCG.BackColor = System.Drawing.Color.Transparent;
             this._chkTCG.Size = new System.Drawing.Size(160, 20);
@@ -1260,7 +1127,7 @@ namespace Tofd_AWI.From.NewInspect
             System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
         {
             _panelTfm = new System.Windows.Forms.Panel();
-            _panelTfm.Dock = System.Windows.Forms.DockStyle.Top;
+            _panelTfm.Dock = System.Windows.Forms.DockStyle.Fill;
             _panelTfm.Height = 210;
             _panelTfm.BackColor = System.Drawing.Color.Transparent;
 
@@ -1306,6 +1173,717 @@ namespace Tofd_AWI.From.NewInspect
             this._tabContentHost.Controls.Add(_panelTfm);
         }
 
+        // ============================================================
+        // 各Tab参数面板构建方法 - 水平布局版本
+        // ============================================================
+
+        // ---- 1. 发射参数 (水平) ----
+        // ============================================================
+        // 11个Tab参数面板 — 水平布局版 (列间距180px, 消除遮挡)
+        // 每个参数单元: label(56) + nud/combo(64~70) + unit(26~36) ≈ 160px
+        // ============================================================
+
+        // ---- 0. 扫查控制 (水平) ----
+        private void BuildTabPanelScanCtrl_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Color cGreen, System.Drawing.Color cRed,
+            System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelScanCtrl = new System.Windows.Forms.Panel();
+            _panelScanCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelScanCtrl.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 扫查控制";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = cGreen;
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelScanCtrl.Controls.Add(hdr);
+
+            // 4列布局, 间距180px
+            int col1X = 4, col2X = 184, col3X = 364, col4X = 544;
+            rowY += 24;
+
+            // 编码器使能
+            _chkEncoderEnable = new System.Windows.Forms.CheckBox();
+            _chkEncoderEnable.Text = "编码器使能";
+            _chkEncoderEnable.Checked = true;
+            _chkEncoderEnable.AutoSize = false;
+            _chkEncoderEnable.Font = f85;
+            _chkEncoderEnable.ForeColor = cGreen;
+            _chkEncoderEnable.BackColor = System.Drawing.Color.Transparent;
+            _chkEncoderEnable.Size = new System.Drawing.Size(100, 20);
+            _chkEncoderEnable.Location = new System.Drawing.Point(col1X, rowY);
+            _chkEncoderEnable.Cursor = System.Windows.Forms.Cursors.Hand;
+            _panelScanCtrl.Controls.Add(_chkEncoderEnable);
+
+            // 扫描方向
+            _panelScanCtrl.Controls.Add(MakeParamLabel("扫描方向", col2X, rowY, 56, cMuted, f8));
+            _cmbScanDir = MakeParamCombo(new[] { "正向(→)", "反向(←)", "往复(↔)" }, 0, col2X + 60, rowY, 86, f8);
+            _panelScanCtrl.Controls.Add(_cmbScanDir);
+
+            // 扫描速度
+            _panelScanCtrl.Controls.Add(MakeParamLabel("扫描速度", col3X, rowY, 56, cMuted, f8));
+            _nudScanSpeed = MakeParamNud(1, 500, 50, 5, 0, col3X + 60, rowY, 60);
+            _panelScanCtrl.Controls.Add(_nudScanSpeed);
+            _panelScanCtrl.Controls.Add(MakeParamLabel("mm/s", col3X + 122, rowY, 36, cMuted, f8));
+
+            // 扫描进度条
+            _scanCtrlProgress = new System.Windows.Forms.ProgressBar();
+            _scanCtrlProgress.Size = new System.Drawing.Size(150, 12);
+            _scanCtrlProgress.Location = new System.Drawing.Point(col4X, rowY + 4);
+            _scanCtrlProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            _scanCtrlProgress.Value = 0;
+            _panelScanCtrl.Controls.Add(_scanCtrlProgress);
+
+            rowY += 26;
+
+            // 启动/停止按钮
+            _btnScanStart = new System.Windows.Forms.Button();
+            _btnScanStart.Text = "▶ 启动";
+            _btnScanStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            _btnScanStart.FlatAppearance.BorderSize = 0;
+            _btnScanStart.Font = new System.Drawing.Font("微软雅黑", 8F);
+            _btnScanStart.Size = new System.Drawing.Size(72, 22);
+            _btnScanStart.Location = new System.Drawing.Point(col1X, rowY);
+            _btnScanStart.BackColor = cGreen;
+            _btnScanStart.ForeColor = System.Drawing.Color.White;
+            _btnScanStart.Cursor = System.Windows.Forms.Cursors.Hand;
+            _btnScanStart.Click += new System.EventHandler(this.BtnScanStart_Click);
+            _panelScanCtrl.Controls.Add(_btnScanStart);
+
+            _btnScanStop = new System.Windows.Forms.Button();
+            _btnScanStop.Text = "■ 停止";
+            _btnScanStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            _btnScanStop.FlatAppearance.BorderSize = 0;
+            _btnScanStop.Font = new System.Drawing.Font("微软雅黑", 8F);
+            _btnScanStop.Size = new System.Drawing.Size(72, 22);
+            _btnScanStop.Location = new System.Drawing.Point(col1X + 78, rowY);
+            _btnScanStop.BackColor = cRed;
+            _btnScanStop.ForeColor = System.Drawing.Color.White;
+            _btnScanStop.Cursor = System.Windows.Forms.Cursors.Hand;
+            _btnScanStop.Click += new System.EventHandler(this.BtnScanStop_Click);
+            _panelScanCtrl.Controls.Add(_btnScanStop);
+
+            _panelScanCtrl.Visible = false;
+            this._tabContentHost.Controls.Add(_panelScanCtrl);
+        }
+
+        // ---- 1. 发射参数 (水平) ----
+        private void BuildTabPanelTx_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Color cRed,
+            System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelTx = new System.Windows.Forms.Panel();
+            _panelTx.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelTx.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 发射参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = cRed;
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelTx.Controls.Add(hdr);
+
+            // 列间距180px: col1=4, col2=184, col3=364, col4=544
+            int col1X = 4, col2X = 184, col3X = 364, col4X = 544;
+            rowY += 24;
+
+            // ---- 第1行 ----
+            _panelTx.Controls.Add(MakeParamLabel("零位偏移", col1X, rowY, 56, cMuted, f8));
+            _nudTxOffset = MakeParamNud(0, 999, 0.0m, 0.1m, 1, col1X + 60, rowY, 70);
+            _panelTx.Controls.Add(_nudTxOffset);
+            _panelTx.Controls.Add(MakeParamLabel("μs", col1X + 132, rowY, 26, cMuted, f8));
+
+            _panelTx.Controls.Add(MakeParamLabel("增益", col2X, rowY, 56, cMuted, f8));
+            _nudTxGain = MakeParamNud(0, 120, 26.1m, 0.1m, 1, col2X + 60, rowY, 70);
+            _panelTx.Controls.Add(_nudTxGain);
+            _panelTx.Controls.Add(MakeParamLabel("dB", col2X + 132, rowY, 26, cMuted, f8));
+
+            _panelTx.Controls.Add(MakeParamLabel("量程", col3X, rowY, 56, cMuted, f8));
+            _nudTxRange = MakeParamNud(0, 9999, 56.0m, 1.0m, 1, col3X + 60, rowY, 70);
+            _panelTx.Controls.Add(_nudTxRange);
+            _panelTx.Controls.Add(MakeParamLabel("μs", col3X + 132, rowY, 26, cMuted, f8));
+
+            _panelTx.Controls.Add(MakeParamLabel("激励频率", col4X, rowY, 56, cMuted, f8));
+            _nudTxFreq = MakeParamNud(500, 25000, 20000, 500, 0, col4X + 60, rowY, 70);
+            _panelTx.Controls.Add(_nudTxFreq);
+            _panelTx.Controls.Add(MakeParamLabel("kHz", col4X + 132, rowY, 36, cMuted, f8));
+
+            rowY += 26;
+
+            // ---- 第2行 ----
+            _panelTx.Controls.Add(MakeParamLabel("脉冲宽度", col1X, rowY, 56, cMuted, f8));
+            _nudTxPulseWidth = MakeParamNud(20, 2000, 100, 10, 0, col1X + 60, rowY, 70);
+            _panelTx.Controls.Add(_nudTxPulseWidth);
+            _panelTx.Controls.Add(MakeParamLabel("ns", col1X + 132, rowY, 26, cMuted, f8));
+
+            _panelTx.Controls.Add(MakeParamLabel("接收滤波", col2X, rowY, 56, cMuted, f8));
+            _nudTxFilter = MakeParamNud(100, 25000, 3100, 100, 0, col2X + 60, rowY, 70);
+            _panelTx.Controls.Add(_nudTxFilter);
+            _panelTx.Controls.Add(MakeParamLabel("kHz", col2X + 132, rowY, 36, cMuted, f8));
+
+            _panelTx.Controls.Add(MakeParamLabel("采样率", col3X, rowY, 56, cMuted, f8));
+            _nudTxSampleRate = MakeParamNud(10, 500, 100, 10, 0, col3X + 60, rowY, 70);
+            _panelTx.Controls.Add(_nudTxSampleRate);
+            _panelTx.Controls.Add(MakeParamLabel("MHz", col3X + 132, rowY, 36, cMuted, f8));
+
+            _panelTx.Visible = false;
+            this._tabContentHost.Controls.Add(_panelTx);
+        }
+
+        // ---- 2. 接收参数 (水平) ----
+        private void BuildTabPanelRx_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelRx = new System.Windows.Forms.Panel();
+            _panelRx.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelRx.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 接收参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = System.Drawing.Color.FromArgb(56, 130, 246);
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelRx.Controls.Add(hdr);
+
+            // 6列, 间距180px: col1=4, col2=184, col3=364, col4=544, col5=724, col6=904
+            int col1X = 4, col2X = 184, col3X = 364, col4X = 544, col5X = 724, col6X = 904;
+            rowY += 24;
+
+            _panelRx.Controls.Add(MakeParamLabel("数字增益", col1X, rowY, 56, cMuted, f8));
+            _nudRxDigitalGain = MakeParamNud(0, 120, 0.0m, 0.1m, 1, col1X + 60, rowY, 64);
+            _panelRx.Controls.Add(_nudRxDigitalGain);
+            _panelRx.Controls.Add(MakeParamLabel("dB", col1X + 126, rowY, 26, cMuted, f8));
+
+            _panelRx.Controls.Add(MakeParamLabel("模拟增益", col2X, rowY, 56, cMuted, f8));
+            _nudRxAnalogGain = MakeParamNud(0, 120, 20.5m, 0.1m, 1, col2X + 60, rowY, 64);
+            _panelRx.Controls.Add(_nudRxAnalogGain);
+            _panelRx.Controls.Add(MakeParamLabel("dB", col2X + 126, rowY, 26, cMuted, f8));
+
+            _panelRx.Controls.Add(MakeParamLabel("高压", col3X, rowY, 56, cMuted, f8));
+            _nudRxVoltage = MakeParamNud(10, 200, 50, 5, 0, col3X + 60, rowY, 64);
+            _panelRx.Controls.Add(_nudRxVoltage);
+            _panelRx.Controls.Add(MakeParamLabel("V", col3X + 126, rowY, 26, cMuted, f8));
+
+            _panelRx.Controls.Add(MakeParamLabel("整流方式", col4X, rowY, 56, cMuted, f8));
+            _cmbRxRectify = MakeParamCombo(new[] { "全波", "半波", "射频" }, 0, col4X + 60, rowY, 64, f8);
+            _panelRx.Controls.Add(_cmbRxRectify);
+
+            _panelRx.Controls.Add(MakeParamLabel("平均次数", col5X, rowY, 56, cMuted, f8));
+            _nudRxAverage = MakeParamNud(1, 64, 1, 1, 0, col5X + 60, rowY, 64);
+            _panelRx.Controls.Add(_nudRxAverage);
+
+            _panelRx.Controls.Add(MakeParamLabel("阻尼", col6X, rowY, 56, cMuted, f8));
+            _nudRxDamping = MakeParamNud(25, 1000, 50, 25, 0, col6X + 60, rowY, 64);
+            _panelRx.Controls.Add(_nudRxDamping);
+            _panelRx.Controls.Add(MakeParamLabel("Ω", col6X + 126, rowY, 26, cMuted, f8));
+
+            _panelRx.Visible = false;
+            this._tabContentHost.Controls.Add(_panelRx);
+        }
+
+        // ---- 3. 探头参数 (水平) ----
+        private void BuildTabPanelProbe_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelProbe = new System.Windows.Forms.Panel();
+            _panelProbe.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelProbe.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 探头参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = System.Drawing.Color.FromArgb(168, 85, 247);
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelProbe.Controls.Add(hdr);
+
+            // 6列, 间距180px
+            int col1X = 4, col2X = 184, col3X = 364, col4X = 544, col5X = 724, col6X = 904;
+            rowY += 24;
+
+            _panelProbe.Controls.Add(MakeParamLabel("探头类型", col1X, rowY, 56, cMuted, f8));
+            _cmbProbeType = MakeParamCombo(new[] { "线阵", "面阵", "弧阵" }, 0, col1X + 60, rowY, 64, f8);
+            _panelProbe.Controls.Add(_cmbProbeType);
+
+            _panelProbe.Controls.Add(MakeParamLabel("晶片总数", col2X, rowY, 56, cMuted, f8));
+            _nudProbeElements = MakeParamNud(1, 256, 64, 1, 0, col2X + 60, rowY, 64);
+            _panelProbe.Controls.Add(_nudProbeElements);
+
+            _panelProbe.Controls.Add(MakeParamLabel("晶片间距", col3X, rowY, 56, cMuted, f8));
+            _nudProbePitch = MakeParamNud(0.01m, 10, 0.6m, 0.01m, 2, col3X + 60, rowY, 64);
+            _panelProbe.Controls.Add(_nudProbePitch);
+            _panelProbe.Controls.Add(MakeParamLabel("mm", col3X + 126, rowY, 26, cMuted, f8));
+
+            _panelProbe.Controls.Add(MakeParamLabel("首晶片位", col4X, rowY, 56, cMuted, f8));
+            _nudProbeFirstElem = MakeParamNud(0, 255, 0, 1, 0, col4X + 60, rowY, 64);
+            _panelProbe.Controls.Add(_nudProbeFirstElem);
+
+            _panelProbe.Controls.Add(MakeParamLabel("晶片频率", col5X, rowY, 56, cMuted, f8));
+            _nudProbeFreq = MakeParamNud(0.5m, 25, 5.0m, 0.5m, 1, col5X + 60, rowY, 64);
+            _panelProbe.Controls.Add(_nudProbeFreq);
+            _panelProbe.Controls.Add(MakeParamLabel("MHz", col5X + 126, rowY, 36, cMuted, f8));
+
+            _panelProbe.Controls.Add(MakeParamLabel("晶片宽度", col6X, rowY, 56, cMuted, f8));
+            _nudProbeWidth = MakeParamNud(0.1m, 10, 0.5m, 0.1m, 2, col6X + 60, rowY, 64);
+            _panelProbe.Controls.Add(_nudProbeWidth);
+            _panelProbe.Controls.Add(MakeParamLabel("mm", col6X + 126, rowY, 26, cMuted, f8));
+
+            _panelProbe.Visible = false;
+            this._tabContentHost.Controls.Add(_panelProbe);
+        }
+
+        // ---- 4. 楔块参数 (水平) ----
+        private void BuildTabPanelWedge_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelWedge = new System.Windows.Forms.Panel();
+            _panelWedge.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelWedge.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 楔块参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = System.Drawing.Color.FromArgb(34, 197, 94);
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelWedge.Controls.Add(hdr);
+
+            // 5列, 间距180px (nud=70)
+            int col1X = 4, col2X = 184, col3X = 364, col4X = 544, col5X = 724;
+            rowY += 24;
+
+            _panelWedge.Controls.Add(MakeParamLabel("楔块角度", col1X, rowY, 56, cMuted, f8));
+            _nudWedgeAngle = MakeParamNud(0, 85, 36.0m, 0.5m, 1, col1X + 60, rowY, 70);
+            _panelWedge.Controls.Add(_nudWedgeAngle);
+            _panelWedge.Controls.Add(MakeParamLabel("°", col1X + 132, rowY, 26, cMuted, f8));
+
+            _panelWedge.Controls.Add(MakeParamLabel("楔块声速", col2X, rowY, 56, cMuted, f8));
+            _nudWedgeVelocity = MakeParamNud(1000, 10000, 2337, 1, 0, col2X + 60, rowY, 70);
+            _panelWedge.Controls.Add(_nudWedgeVelocity);
+            _panelWedge.Controls.Add(MakeParamLabel("m/s", col2X + 132, rowY, 36, cMuted, f8));
+
+            _panelWedge.Controls.Add(MakeParamLabel("楔块高度", col3X, rowY, 56, cMuted, f8));
+            _nudWedgeHeight = MakeParamNud(0, 100, 20.0m, 0.5m, 1, col3X + 60, rowY, 70);
+            _panelWedge.Controls.Add(_nudWedgeHeight);
+            _panelWedge.Controls.Add(MakeParamLabel("mm", col3X + 132, rowY, 26, cMuted, f8));
+
+            _panelWedge.Controls.Add(MakeParamLabel("前端高度", col4X, rowY, 56, cMuted, f8));
+            _nudWedgeFrontH = MakeParamNud(0, 100, 10.0m, 0.5m, 1, col4X + 60, rowY, 70);
+            _panelWedge.Controls.Add(_nudWedgeFrontH);
+            _panelWedge.Controls.Add(MakeParamLabel("mm", col4X + 132, rowY, 26, cMuted, f8));
+
+            _panelWedge.Controls.Add(MakeParamLabel("楔块偏移", col5X, rowY, 56, cMuted, f8));
+            _nudWedgeOffset = MakeParamNud(-100, 100, 0, 0.5m, 1, col5X + 60, rowY, 70);
+            _panelWedge.Controls.Add(_nudWedgeOffset);
+            _panelWedge.Controls.Add(MakeParamLabel("mm", col5X + 132, rowY, 26, cMuted, f8));
+
+            _panelWedge.Visible = false;
+            this._tabContentHost.Controls.Add(_panelWedge);
+        }
+
+        // ---- 5. 材料参数 (水平) ----
+        private void BuildTabPanelMaterial_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelMaterial = new System.Windows.Forms.Panel();
+            _panelMaterial.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelMaterial.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 材料参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = System.Drawing.Color.FromArgb(245, 158, 11);
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelMaterial.Controls.Add(hdr);
+
+            // 4列, 间距180px
+            int col1X = 4, col2X = 184, col3X = 364, col4X = 544;
+            rowY += 24;
+
+            _panelMaterial.Controls.Add(MakeParamLabel("纵波声速", col1X, rowY, 56, cMuted, f8));
+            _nudMatLongVel = MakeParamNud(1000, 15000, 5900, 10, 0, col1X + 60, rowY, 70);
+            _panelMaterial.Controls.Add(_nudMatLongVel);
+            _panelMaterial.Controls.Add(MakeParamLabel("m/s", col1X + 132, rowY, 36, cMuted, f8));
+
+            _panelMaterial.Controls.Add(MakeParamLabel("横波声速", col2X, rowY, 56, cMuted, f8));
+            _nudMatShearVel = MakeParamNud(500, 10000, 3230, 10, 0, col2X + 60, rowY, 70);
+            _panelMaterial.Controls.Add(_nudMatShearVel);
+            _panelMaterial.Controls.Add(MakeParamLabel("m/s", col2X + 132, rowY, 36, cMuted, f8));
+
+            _panelMaterial.Controls.Add(MakeParamLabel("材料厚度", col3X, rowY, 56, cMuted, f8));
+            _nudMatThickness = MakeParamNud(0.1m, 9999, 50.0m, 0.5m, 1, col3X + 60, rowY, 70);
+            _panelMaterial.Controls.Add(_nudMatThickness);
+            _panelMaterial.Controls.Add(MakeParamLabel("mm", col3X + 132, rowY, 26, cMuted, f8));
+
+            _panelMaterial.Controls.Add(MakeParamLabel("衰减系数", col4X, rowY, 56, cMuted, f8));
+            _nudMatAtten = MakeParamNud(0, 99, 0, 0.01m, 2, col4X + 60, rowY, 70);
+            _panelMaterial.Controls.Add(_nudMatAtten);
+            _panelMaterial.Controls.Add(MakeParamLabel("dB/m", col4X + 132, rowY, 36, cMuted, f8));
+
+            _panelMaterial.Visible = false;
+            this._tabContentHost.Controls.Add(_panelMaterial);
+        }
+
+        // ---- 6. 孔径参数 (水平) ----
+        private void BuildTabPanelAperture_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelAperture = new System.Windows.Forms.Panel();
+            _panelAperture.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelAperture.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 孔径参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = System.Drawing.Color.FromArgb(236, 72, 153);
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelAperture.Controls.Add(hdr);
+
+            // 5列, 间距180px
+            int col1X = 4, col2X = 184, col3X = 364, col4X = 544, col5X = 724;
+            rowY += 24;
+
+            _panelAperture.Controls.Add(MakeParamLabel("起始晶片", col1X, rowY, 56, cMuted, f8));
+            _nudApertureStart = MakeParamNud(1, 256, 1, 1, 0, col1X + 60, rowY, 64);
+            _panelAperture.Controls.Add(_nudApertureStart);
+
+            _panelAperture.Controls.Add(MakeParamLabel("晶片数量", col2X, rowY, 56, cMuted, f8));
+            _nudApertureCount = MakeParamNud(1, 256, 16, 1, 0, col2X + 60, rowY, 64);
+            _panelAperture.Controls.Add(_nudApertureCount);
+
+            _panelAperture.Controls.Add(MakeParamLabel("聚焦深度", col3X, rowY, 56, cMuted, f8));
+            _nudApertureFocus = MakeParamNud(0, 9999, 30.0m, 1.0m, 1, col3X + 60, rowY, 70);
+            _panelAperture.Controls.Add(_nudApertureFocus);
+            _panelAperture.Controls.Add(MakeParamLabel("mm", col3X + 132, rowY, 26, cMuted, f8));
+
+            _panelAperture.Controls.Add(MakeParamLabel("孔径类型", col4X, rowY, 56, cMuted, f8));
+            _cmbApertureType = MakeParamCombo(new[] { "固定", "动态" }, 0, col4X + 60, rowY, 64, f8);
+            _panelAperture.Controls.Add(_cmbApertureType);
+
+            _panelAperture.Controls.Add(MakeParamLabel("偏转角度", col5X, rowY, 56, cMuted, f8));
+            _nudApertureAngle = MakeParamNud(-80, 80, 0, 0.5m, 1, col5X + 60, rowY, 70);
+            _panelAperture.Controls.Add(_nudApertureAngle);
+            _panelAperture.Controls.Add(MakeParamLabel("°", col5X + 132, rowY, 26, cMuted, f8));
+
+            _panelAperture.Visible = false;
+            this._tabContentHost.Controls.Add(_panelAperture);
+        }
+
+        // ---- 7. 闸门参数 (水平) ----
+        private void BuildTabPanelGate_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelGate = new System.Windows.Forms.Panel();
+            _panelGate.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelGate.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 闸门参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = System.Drawing.Color.FromArgb(251, 191, 36);
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelGate.Controls.Add(hdr);
+
+            // 闸门A 左半边, 闸门B 右半边, 间距400px
+            int gaX = 4, gbX = 420;
+            rowY += 24;
+
+            var gaHdr = new System.Windows.Forms.Label();
+            gaHdr.Text = "▸ 闸门A";
+            gaHdr.Font = new System.Drawing.Font("微软雅黑", 8.5F, System.Drawing.FontStyle.Bold);
+            gaHdr.ForeColor = System.Drawing.Color.FromArgb(245, 158, 11);
+            gaHdr.Size = new System.Drawing.Size(60, 18);
+            gaHdr.Location = new System.Drawing.Point(gaX, rowY);
+            gaHdr.BackColor = System.Drawing.Color.Transparent;
+            _panelGate.Controls.Add(gaHdr);
+
+            var gbHdr = new System.Windows.Forms.Label();
+            gbHdr.Text = "▸ 闸门B";
+            gbHdr.Font = new System.Drawing.Font("微软雅黑", 8.5F, System.Drawing.FontStyle.Bold);
+            gbHdr.ForeColor = System.Drawing.Color.FromArgb(59, 130, 246);
+            gbHdr.Size = new System.Drawing.Size(60, 18);
+            gbHdr.Location = new System.Drawing.Point(gbX, rowY);
+            gbHdr.BackColor = System.Drawing.Color.Transparent;
+            _panelGate.Controls.Add(gbHdr);
+
+            rowY += 20;
+
+            // ---- 闸门A: 起点 / 宽度 / 阈值 ----
+            _panelGate.Controls.Add(MakeParamLabel("起点", gaX, rowY, 30, cMuted, f8));
+            _nudGateAStart = MakeParamNud(0, 9999, 10.0m, 1.0m, 1, gaX + 36, rowY, 56);
+            _panelGate.Controls.Add(_nudGateAStart);
+            _panelGate.Controls.Add(MakeParamLabel("μs", gaX + 94, rowY, 26, cMuted, f8));
+
+            _panelGate.Controls.Add(MakeParamLabel("宽度", gaX + 130, rowY, 30, cMuted, f8));
+            _nudGateAWidth = MakeParamNud(0, 9999, 50.0m, 1.0m, 1, gaX + 166, rowY, 56);
+            _panelGate.Controls.Add(_nudGateAWidth);
+            _panelGate.Controls.Add(MakeParamLabel("μs", gaX + 224, rowY, 26, cMuted, f8));
+
+            _panelGate.Controls.Add(MakeParamLabel("阈值", gaX + 260, rowY, 30, cMuted, f8));
+            _nudGateAThld = MakeParamNud(0, 100, 50, 1, 0, gaX + 296, rowY, 56);
+            _panelGate.Controls.Add(_nudGateAThld);
+            _panelGate.Controls.Add(MakeParamLabel("%", gaX + 354, rowY, 26, cMuted, f8));
+
+            // ---- 闸门B: 起点 / 宽度 / 阈值 ----
+            _panelGate.Controls.Add(MakeParamLabel("起点", gbX, rowY, 30, cMuted, f8));
+            _nudGateBStart = MakeParamNud(0, 9999, 20.0m, 1.0m, 1, gbX + 36, rowY, 56);
+            _panelGate.Controls.Add(_nudGateBStart);
+            _panelGate.Controls.Add(MakeParamLabel("μs", gbX + 94, rowY, 26, cMuted, f8));
+
+            _panelGate.Controls.Add(MakeParamLabel("宽度", gbX + 130, rowY, 30, cMuted, f8));
+            _nudGateBWidth = MakeParamNud(0, 9999, 40.0m, 1.0m, 1, gbX + 166, rowY, 56);
+            _panelGate.Controls.Add(_nudGateBWidth);
+            _panelGate.Controls.Add(MakeParamLabel("μs", gbX + 224, rowY, 26, cMuted, f8));
+
+            _panelGate.Controls.Add(MakeParamLabel("阈值", gbX + 260, rowY, 30, cMuted, f8));
+            _nudGateBThld = MakeParamNud(0, 100, 50, 1, 0, gbX + 296, rowY, 56);
+            _panelGate.Controls.Add(_nudGateBThld);
+            _panelGate.Controls.Add(MakeParamLabel("%", gbX + 354, rowY, 26, cMuted, f8));
+
+            _panelGate.Visible = false;
+            this._tabContentHost.Controls.Add(_panelGate);
+        }
+
+        // ---- 8. 扫查参数 (水平) ----
+        private void BuildTabPanelScan_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelScan = new System.Windows.Forms.Panel();
+            _panelScan.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelScan.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 扫查参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = System.Drawing.Color.FromArgb(34, 197, 94);
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelScan.Controls.Add(hdr);
+
+            // 5列, 间距180px
+            int col1X = 4, col2X = 184, col3X = 364, col4X = 544, col5X = 724;
+            rowY += 24;
+
+            _panelScan.Controls.Add(MakeParamLabel("扫查类型", col1X, rowY, 56, cMuted, f8));
+            _cmbScanType = MakeParamCombo(new[] { "S扫", "L扫", "CL扫" }, 0, col1X + 60, rowY, 64, f8);
+            _panelScan.Controls.Add(_cmbScanType);
+
+            _panelScan.Controls.Add(MakeParamLabel("起始角度", col2X, rowY, 56, cMuted, f8));
+            _nudScanStartAngle = MakeParamNud(-90, 90, -45, 1.0m, 1, col2X + 60, rowY, 64);
+            _panelScan.Controls.Add(_nudScanStartAngle);
+            _panelScan.Controls.Add(MakeParamLabel("°", col2X + 126, rowY, 26, cMuted, f8));
+
+            _panelScan.Controls.Add(MakeParamLabel("终止角度", col3X, rowY, 56, cMuted, f8));
+            _nudScanEndAngle = MakeParamNud(-90, 90, 45, 1.0m, 1, col3X + 60, rowY, 64);
+            _panelScan.Controls.Add(_nudScanEndAngle);
+            _panelScan.Controls.Add(MakeParamLabel("°", col3X + 126, rowY, 26, cMuted, f8));
+
+            _panelScan.Controls.Add(MakeParamLabel("角度步进", col4X, rowY, 56, cMuted, f8));
+            _nudScanAngleStep = MakeParamNud(0.1m, 10, 1.0m, 0.1m, 1, col4X + 60, rowY, 64);
+            _panelScan.Controls.Add(_nudScanAngleStep);
+            _panelScan.Controls.Add(MakeParamLabel("°", col4X + 126, rowY, 26, cMuted, f8));
+
+            _panelScan.Controls.Add(MakeParamLabel("深度范围", col5X, rowY, 56, cMuted, f8));
+            _nudScanDepth = MakeParamNud(1, 9999, 200.0m, 10.0m, 1, col5X + 60, rowY, 70);
+            _panelScan.Controls.Add(_nudScanDepth);
+            _panelScan.Controls.Add(MakeParamLabel("mm", col5X + 132, rowY, 26, cMuted, f8));
+
+            _panelScan.Visible = false;
+            this._tabContentHost.Controls.Add(_panelScan);
+        }
+
+        // ---- 9. 编码器参数 (水平) ----
+        private void BuildTabPanelEncoder_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelEncoder = new System.Windows.Forms.Panel();
+            _panelEncoder.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelEncoder.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 编码器参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = System.Drawing.Color.FromArgb(14, 165, 233);
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelEncoder.Controls.Add(hdr);
+
+            // col1宽标签(76px), 5列: col1=4, col2=200, col3=360, col4=520, col5=680
+            int col1X = 4, col2X = 200, col3X = 360, col4X = 520, col5X = 680;
+            rowY += 24;
+
+            _panelEncoder.Controls.Add(MakeParamLabel("编码器分辨率", col1X, rowY, 76, cMuted, f8));
+            _nudEncRes = MakeParamNud(1, 5000, 100, 1, 0, col1X + 80, rowY, 70);
+            _panelEncoder.Controls.Add(_nudEncRes);
+            _panelEncoder.Controls.Add(MakeParamLabel("P/mm", col1X + 152, rowY, 36, cMuted, f8));
+
+            _panelEncoder.Controls.Add(MakeParamLabel("触发方式", col2X, rowY, 56, cMuted, f8));
+            _cmbEncTrig = MakeParamCombo(new[] { "等距触发", "等时触发" }, 0, col2X + 60, rowY, 70, f8);
+            _panelEncoder.Controls.Add(_cmbEncTrig);
+
+            _panelEncoder.Controls.Add(MakeParamLabel("触发间距", col3X, rowY, 56, cMuted, f8));
+            _nudEncInterval = MakeParamNud(0.1m, 100, 1.0m, 0.1m, 1, col3X + 60, rowY, 64);
+            _panelEncoder.Controls.Add(_nudEncInterval);
+            _panelEncoder.Controls.Add(MakeParamLabel("mm", col3X + 126, rowY, 26, cMuted, f8));
+
+            _panelEncoder.Controls.Add(MakeParamLabel("X步进", col4X, rowY, 56, cMuted, f8));
+            _nudEncXStep = MakeParamNud(0.1m, 100, 7.8m, 0.1m, 1, col4X + 60, rowY, 64);
+            _panelEncoder.Controls.Add(_nudEncXStep);
+            _panelEncoder.Controls.Add(MakeParamLabel("mm", col4X + 126, rowY, 26, cMuted, f8));
+
+            _panelEncoder.Controls.Add(MakeParamLabel("Y步进", col5X, rowY, 56, cMuted, f8));
+            _nudEncYStep = MakeParamNud(0.1m, 100, 1.6m, 0.1m, 1, col5X + 60, rowY, 64);
+            _panelEncoder.Controls.Add(_nudEncYStep);
+            _panelEncoder.Controls.Add(MakeParamLabel("mm", col5X + 126, rowY, 26, cMuted, f8));
+
+            _panelEncoder.Visible = false;
+            this._tabContentHost.Controls.Add(_panelEncoder);
+        }
+
+        // ---- 10. 校准参数 (水平) ----
+        private void BuildTabPanelCal_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Color cGreen,
+            System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelCal = new System.Windows.Forms.Panel();
+            _panelCal.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelCal.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● 校准参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = System.Drawing.Color.FromArgb(34, 197, 94);
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelCal.Controls.Add(hdr);
+
+            // 4列, 间距180px
+            int col1X = 4, col2X = 184, col3X = 364, col4X = 544;
+            rowY += 24;
+
+            _panelCal.Controls.Add(MakeParamLabel("声速校准", col1X, rowY, 56, cMuted, f8));
+            _nudCalVelocity = MakeParamNud(500, 15000, 5900, 10, 0, col1X + 60, rowY, 70);
+            _panelCal.Controls.Add(_nudCalVelocity);
+            _panelCal.Controls.Add(MakeParamLabel("m/s", col1X + 132, rowY, 36, cMuted, f8));
+
+            _panelCal.Controls.Add(MakeParamLabel("零位校准", col2X, rowY, 56, cMuted, f8));
+            _nudCalZero = MakeParamNud(0, 9999, 0, 0.1m, 1, col2X + 60, rowY, 70);
+            _panelCal.Controls.Add(_nudCalZero);
+            _panelCal.Controls.Add(MakeParamLabel("μs", col2X + 132, rowY, 26, cMuted, f8));
+
+            this._chkACG = new System.Windows.Forms.CheckBox();
+            this._chkACG.Text = "ACG 角度增益补偿";
+            this._chkACG.Checked = false;
+            this._chkACG.AutoSize = false;
+            this._chkACG.Font = f85;
+            this._chkACG.ForeColor = cGreen;
+            this._chkACG.BackColor = System.Drawing.Color.Transparent;
+            this._chkACG.Size = new System.Drawing.Size(160, 20);
+            this._chkACG.Location = new System.Drawing.Point(col3X, rowY);
+            this._chkACG.Cursor = System.Windows.Forms.Cursors.Hand;
+            _panelCal.Controls.Add(this._chkACG);
+
+            this._chkTCG = new System.Windows.Forms.CheckBox();
+            this._chkTCG.Text = "TCG 时间增益补偿";
+            this._chkTCG.Checked = false;
+            this._chkTCG.AutoSize = false;
+            this._chkTCG.Font = f85;
+            this._chkTCG.ForeColor = cGreen;
+            this._chkTCG.BackColor = System.Drawing.Color.Transparent;
+            this._chkTCG.Size = new System.Drawing.Size(160, 20);
+            this._chkTCG.Location = new System.Drawing.Point(col4X, rowY);
+            this._chkTCG.Cursor = System.Windows.Forms.Cursors.Hand;
+            _panelCal.Controls.Add(this._chkTCG);
+
+            rowY += 26;
+
+            _panelCal.Controls.Add(MakeParamLabel("TCG增益", col1X, rowY, 56, cMuted, f8));
+            _nudCalTCGGain = MakeParamNud(0, 80, 0, 0.1m, 1, col1X + 60, rowY, 64);
+            _panelCal.Controls.Add(_nudCalTCGGain);
+            _panelCal.Controls.Add(MakeParamLabel("dB", col1X + 126, rowY, 26, cMuted, f8));
+
+            _panelCal.Visible = false;
+            this._tabContentHost.Controls.Add(_panelCal);
+        }
+
+        // ---- 11. TFM参数 (水平) ----
+        private void BuildTabPanelTfm_Horizontal(System.Drawing.Color cBg, System.Drawing.Color cText,
+            System.Drawing.Color cMuted, System.Drawing.Font f8, System.Drawing.Font f85)
+        {
+            _panelTfm = new System.Windows.Forms.Panel();
+            _panelTfm.Dock = System.Windows.Forms.DockStyle.Fill;
+            _panelTfm.BackColor = System.Drawing.Color.Transparent;
+
+            int rowY = 4;
+            var hdr = new System.Windows.Forms.Label();
+            hdr.Text = "● TFM参数";
+            hdr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            hdr.ForeColor = System.Drawing.Color.FromArgb(168, 85, 247);
+            hdr.Size = new System.Drawing.Size(100, 20);
+            hdr.Location = new System.Drawing.Point(4, rowY);
+            hdr.BackColor = System.Drawing.Color.Transparent;
+            _panelTfm.Controls.Add(hdr);
+
+            // 5列, 间距180px
+            int col1X = 4, col2X = 184, col3X = 364, col4X = 544, col5X = 724;
+            rowY += 24;
+
+            _panelTfm.Controls.Add(MakeParamLabel("TFM模式", col1X, rowY, 56, cMuted, f8));
+            _cmbTfmMode = MakeParamCombo(new[] { "全聚焦", "半聚焦" }, 0, col1X + 60, rowY, 64, f8);
+            _panelTfm.Controls.Add(_cmbTfmMode);
+
+            _panelTfm.Controls.Add(MakeParamLabel("网格分辨率", col2X, rowY, 56, cMuted, f8));
+            _nudTfmGridRes = MakeParamNud(0.1m, 5, 0.5m, 0.1m, 1, col2X + 60, rowY, 64);
+            _panelTfm.Controls.Add(_nudTfmGridRes);
+            _panelTfm.Controls.Add(MakeParamLabel("mm", col2X + 126, rowY, 26, cMuted, f8));
+
+            _panelTfm.Controls.Add(MakeParamLabel("成像范围X", col3X, rowY, 56, cMuted, f8));
+            _nudTfmRangeX = MakeParamNud(1, 999, 50.0m, 1.0m, 1, col3X + 60, rowY, 64);
+            _panelTfm.Controls.Add(_nudTfmRangeX);
+            _panelTfm.Controls.Add(MakeParamLabel("mm", col3X + 126, rowY, 26, cMuted, f8));
+
+            _panelTfm.Controls.Add(MakeParamLabel("成像范围Z", col4X, rowY, 56, cMuted, f8));
+            _nudTfmRangeZ = MakeParamNud(1, 999, 50.0m, 1.0m, 1, col4X + 60, rowY, 64);
+            _panelTfm.Controls.Add(_nudTfmRangeZ);
+            _panelTfm.Controls.Add(MakeParamLabel("mm", col4X + 126, rowY, 26, cMuted, f8));
+
+            _panelTfm.Controls.Add(MakeParamLabel("重构模式", col5X, rowY, 56, cMuted, f8));
+            _cmbTfmReconMode = MakeParamCombo(new[] { "直接", "全矩阵捕获" }, 0, col5X + 60, rowY, 64, f8);
+            _panelTfm.Controls.Add(_cmbTfmReconMode);
+
+            _panelTfm.Visible = false;
+            this._tabContentHost.Controls.Add(_panelTfm);
+        }
+
         #endregion
 
         // ======== 控件字段 ========
@@ -1337,11 +1915,11 @@ namespace Tofd_AWI.From.NewInspect
         private System.Windows.Forms.Label _lblStatus;
         private System.Windows.Forms.Label _lblDateTime;
 
-        // 左栏
-        private System.Windows.Forms.Panel _leftPanel;
+        // 底部参数面板
+        private System.Windows.Forms.Panel _bottomParamPanel;
         private System.Windows.Forms.Panel _catPanel;
         private System.Windows.Forms.Panel _tabContentHost;
-        private System.Windows.Forms.Panel _scanCtrlPanel;
+        private System.Windows.Forms.Panel _panelScanCtrl;
         private System.Windows.Forms.CheckBox _chkEncoderEnable;
         private System.Windows.Forms.ComboBox _cmbScanDir;
         private System.Windows.Forms.NumericUpDown _nudScanSpeed;
@@ -1351,7 +1929,7 @@ namespace Tofd_AWI.From.NewInspect
         private System.Collections.Generic.List<System.Windows.Forms.Button> _catButtons
             = new System.Collections.Generic.List<System.Windows.Forms.Button>();
 
-        // 11个Tab参数面板
+        // 12个Tab参数面板
         private System.Windows.Forms.Panel _panelTx;
         private System.Windows.Forms.NumericUpDown _nudTxOffset, _nudTxGain, _nudTxRange;
         private System.Windows.Forms.NumericUpDown _nudTxFreq, _nudTxPulseWidth, _nudTxFilter, _nudTxSampleRate;
