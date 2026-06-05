@@ -8,95 +8,147 @@ namespace Tofd_AWI.From.NewInspect
     // 文件: UcPA22SParams.cs
     // 职责: CTSPA22S 超声板卡参数配置面板
     //       6个标签页: 发射/接收、聚焦法则、闸门/报警、楔块/声速、扫查、校准
-    //       所有参数基于 CTS-PA22S 真实硬件规格
+    //       使用 Panel+Button 自制标签栏(替代 TabControl)
     // ============================================================
 
     public partial class UcPA22SParams : UserControl
     {
-        private static readonly Color BG_PANEL   = Color.FromArgb(30, 41, 59);
-        private static readonly Color BG_INPUT   = Color.FromArgb(40, 52, 72);
-        private static readonly Color CLR_TEXT   = Color.FromArgb(226, 232, 240);
-        private static readonly Color CLR_MUTED  = Color.FromArgb(148, 163, 184);
-        private static readonly Color CLR_BLUE   = Color.FromArgb(59, 130, 246);
-        private static readonly Color CLR_BORDER = Color.FromArgb(51, 65, 85);
+        // 截图色系 — 更暗的深蓝黑色调
+        private static readonly Color BG_PANEL   = Color.FromArgb(16, 22, 36);   // #101624 面板
+        private static readonly Color BG_CELL    = Color.FromArgb(22, 30, 48);   // #161e30 单元格
+        private static readonly Color BG_INPUT   = Color.FromArgb(30, 40, 62);   // #1e283e 输入框
+        private static readonly Color CLR_TEXT   = Color.FromArgb(200, 210, 225); // #c8d2e1 主文字
+        private static readonly Color CLR_MUTED  = Color.FromArgb(100, 115, 140); // #64738c 次要
+        private static readonly Color CLR_BLUE   = Color.FromArgb(56, 130, 246);  // #3882f6 蓝
+        private static readonly Color CLR_GREEN  = Color.FromArgb(34, 197, 94);   // #22c55e 绿
+        private static readonly Color CLR_BORDER = Color.FromArgb(30, 40, 60);    // #1e283c 边框
         private static readonly Font FONT_LABEL  = new Font("微软雅黑", 8F);
-        private static readonly Font FONT_TAB    = new Font("微软雅黑", 8F);
+        private static readonly Font FONT_TAB    = new Font("微软雅黑", 8F, FontStyle.Bold);
+
+        private Panel _tabBar;
+        private Panel _contentPanel;
+        private Button[] _tabButtons;
+        private Panel[] _tabContents;
+        private int _activeTabIndex = 5; // 默认显示"校准"标签(跟截图一致)
 
         public UcPA22SParams()
         {
             InitializeComponent();
-            SetupTabControlTheme();
-            BuildParamTabs();
+            BuildCustomTabs();
         }
 
-        private void SetupTabControlTheme()
+        private void BuildCustomTabs()
         {
-            _tabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
-            _tabControl.DrawItem += (sender, e) =>
+            this.Controls.Clear();
+            this.BackColor = BG_PANEL;
+
+            // ========== 标签栏 ==========
+            _tabBar = new Panel
             {
-                var tab = _tabControl.TabPages[e.Index];
-                bool isSelected = (e.Index == _tabControl.SelectedIndex);
-                var rect = e.Bounds;
-
-                // 填充标签背景
-                using (var bg = new SolidBrush(isSelected ? CLR_BLUE : BG_PANEL))
-                {
-                    e.Graphics.FillRectangle(bg, rect);
-                }
-
-                // 底部边框线
-                if (!isSelected)
-                {
-                    using (var pen = new Pen(CLR_BORDER, 1))
-                    {
-                        e.Graphics.DrawLine(pen, rect.Left, rect.Bottom - 1, rect.Right, rect.Bottom - 1);
-                    }
-                }
-
-                // 文字
-                using (var text = new SolidBrush(isSelected ? Color.White : CLR_MUTED))
-                {
-                    var sf = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
-                    e.Graphics.DrawString(tab.Text, FONT_TAB, text, rect, sf);
-                }
+                Dock = DockStyle.Top,
+                Height = 30,
+                BackColor = BG_PANEL
             };
-            _tabControl.BackColor = BG_PANEL;
-        }
 
-        private void BuildParamTabs()
-        {
-            _tabControl.TabPages.Clear();
+            var tabNames = new[] { "发射/接收", "聚焦法则", "闸门/报警", "楔块/声速", "扫查", "校准" };
+            _tabButtons = new Button[tabNames.Length];
 
-            _tabControl.TabPages.Add(MakeTab("发射/接收", MakeTxRxPanel()));
-            _tabControl.TabPages.Add(MakeTab("聚焦法则", MakeFocalLawPanel()));
-            _tabControl.TabPages.Add(MakeTab("闸门/报警", MakeGateAlarmPanel()));
-            _tabControl.TabPages.Add(MakeTab("楔块/声速", MakeWedgeVelocityPanel()));
-            _tabControl.TabPages.Add(MakeTab("扫查", MakeScanPanel()));
-            _tabControl.TabPages.Add(MakeTab("校准", MakeCalibrationPanel()));
-        }
-
-        private TabPage MakeTab(string title, Control content)
-        {
-            var page = new TabPage(title)
+            int btnWidth = 55; // 紧凑排列
+            for (int i = 0; i < tabNames.Length; i++)
             {
+                var btn = new Button
+                {
+                    Text = tabNames[i],
+                    FlatStyle = FlatStyle.Flat,
+                    Font = FONT_TAB,
+                    Height = 24,
+                    Width = btnWidth,
+                    Left = 4 + i * (btnWidth + 2),
+                    Top = 3,
+                    Tag = i
+                };
+                btn.FlatAppearance.BorderSize = 0;
+                SetTabStyle(btn, i == _activeTabIndex);
+                btn.Click += TabButton_Click;
+                _tabBar.Controls.Add(btn);
+                _tabButtons[i] = btn;
+            }
+
+            // ========== 内容区 ==========
+            _contentPanel = new Panel
+            {
+                Dock = DockStyle.Fill,
                 BackColor = BG_PANEL,
-                ForeColor = CLR_TEXT,
                 Padding = new Padding(4)
             };
-            content.Dock = DockStyle.Fill;
-            content.BackColor = BG_PANEL;
-            page.Controls.Add(content);
-            return page;
+
+            _tabContents = new Panel[]
+            {
+                MakeTxRxPanel(),
+                MakeFocalLawPanel(),
+                MakeGateAlarmPanel(),
+                MakeWedgeVelocityPanel(),
+                MakeScanPanel(),
+                MakeCalibrationPanel()
+            };
+
+            foreach (var p in _tabContents)
+            {
+                p.Dock = DockStyle.Fill;
+                p.Visible = false;
+                _contentPanel.Controls.Add(p);
+            }
+            _tabContents[_activeTabIndex].Visible = true;
+
+            this.Controls.Add(_contentPanel);
+            this.Controls.Add(_tabBar);
+        }
+
+        private void SetTabStyle(Button btn, bool active)
+        {
+            if (active)
+            {
+                btn.BackColor = CLR_BLUE;
+                btn.ForeColor = Color.White;
+                btn.FlatAppearance.BorderSize = 0;
+                // 底部画一条高亮边
+            }
+            else
+            {
+                btn.BackColor = BG_PANEL;
+                btn.ForeColor = CLR_MUTED;
+                btn.FlatAppearance.BorderSize = 0;
+            }
+        }
+
+        private void TabButton_Click(object sender, EventArgs e)
+        {
+            if (sender is Button btn && btn.Tag is int idx)
+            {
+                SwitchTab(idx);
+            }
+        }
+
+        private void SwitchTab(int index)
+        {
+            if (index < 0 || index >= _tabContents.Length) return;
+            if (index == _activeTabIndex) return;
+
+            _tabContents[_activeTabIndex].Visible = false;
+            SetTabStyle(_tabButtons[_activeTabIndex], false);
+
+            _activeTabIndex = index;
+            _tabContents[_activeTabIndex].Visible = true;
+            SetTabStyle(_tabButtons[_activeTabIndex], true);
         }
 
         // ==========================================
         // 发射/接收面板
         // ==========================================
-        private Control MakeTxRxPanel()
+        private Panel MakeTxRxPanel()
         {
-            var panel = new Panel { AutoScroll = true };
-
-            int y = 4;
+            var panel = new Panel { AutoScroll = true, BackColor = BG_PANEL };
+            int y = 6;
             AddGroup(panel, ref y, "发射参数");
             AddField(panel, ref y, "电压", MakeCombo("20V", "40V", "100V"));
             AddField(panel, ref y, "脉冲宽度", MakeNumeric(50, 500, 10, "ns"));
@@ -122,11 +174,10 @@ namespace Tofd_AWI.From.NewInspect
         // ==========================================
         // 聚焦法则面板
         // ==========================================
-        private Control MakeFocalLawPanel()
+        private Panel MakeFocalLawPanel()
         {
-            var panel = new Panel { AutoScroll = true };
-
-            int y = 4;
+            var panel = new Panel { AutoScroll = true, BackColor = BG_PANEL };
+            int y = 6;
             AddGroup(panel, ref y, "聚焦类型");
             AddField(panel, ref y, "类型", MakeCombo("扇扫", "线扫", "复合扫查"));
 
@@ -153,11 +204,10 @@ namespace Tofd_AWI.From.NewInspect
         // ==========================================
         // 闸门/报警面板
         // ==========================================
-        private Control MakeGateAlarmPanel()
+        private Panel MakeGateAlarmPanel()
         {
-            var panel = new Panel { AutoScroll = true };
-
-            int y = 4;
+            var panel = new Panel { AutoScroll = true, BackColor = BG_PANEL };
+            int y = 6;
             AddGroup(panel, ref y, "闸门 1");
             AddField(panel, ref y, "起始", MakeNumeric(0, 1000, 1, "mm"));
             AddField(panel, ref y, "宽度", MakeNumeric(1, 1000, 1, "mm"));
@@ -179,11 +229,10 @@ namespace Tofd_AWI.From.NewInspect
         // ==========================================
         // 楔块/声速面板
         // ==========================================
-        private Control MakeWedgeVelocityPanel()
+        private Panel MakeWedgeVelocityPanel()
         {
-            var panel = new Panel { AutoScroll = true };
-
-            int y = 4;
+            var panel = new Panel { AutoScroll = true, BackColor = BG_PANEL };
+            int y = 6;
             AddGroup(panel, ref y, "楔块参数");
             AddField(panel, ref y, "楔块型号", MakeCombo("I4型", "I5型", "S1型", "自定义"));
             AddField(panel, ref y, "楔块角度", MakeNumeric(0, 90, 0.5m, "°"));
@@ -202,11 +251,10 @@ namespace Tofd_AWI.From.NewInspect
         // ==========================================
         // 扫查面板
         // ==========================================
-        private Control MakeScanPanel()
+        private Panel MakeScanPanel()
         {
-            var panel = new Panel { AutoScroll = true };
-
-            int y = 4;
+            var panel = new Panel { AutoScroll = true, BackColor = BG_PANEL };
+            int y = 6;
             AddGroup(panel, ref y, "扫查模式");
             AddField(panel, ref y, "模式", MakeCombo("扇扫", "线扫", "复合扫查"));
             AddField(panel, ref y, "显示模式", MakeCombo("A+S", "A+L", "A+S+C"));
@@ -223,49 +271,81 @@ namespace Tofd_AWI.From.NewInspect
         }
 
         // ==========================================
-        // 校准面板
+        // 校准面板 — 截图风格：卡片式按钮 + 分组
         // ==========================================
-        private Control MakeCalibrationPanel()
+        private Panel MakeCalibrationPanel()
         {
-            var panel = new Panel { AutoScroll = true };
+            var panel = new Panel { AutoScroll = true, BackColor = BG_PANEL };
+            int y = 8;
 
-            int y = 4;
+            // 校准向导 — 卡片式大按钮
             AddGroup(panel, ref y, "校准向导");
 
             var steps = new[] { "1. 声速校准", "2. 延迟校准", "3. 灵敏度校准", "4. TCG 校准" };
-            foreach (var step in steps)
+            for (int i = 0; i < steps.Length; i++)
             {
+                var stepPanel = new Panel
+                {
+                    Location = new Point(4, y),
+                    Size = new Size(192, 30),
+                    BackColor = BG_CELL,
+                    Padding = new Padding(1)
+                };
+
                 var btn = new Button
                 {
-                    Text = step,
+                    Text = steps[i],
                     FlatStyle = FlatStyle.Flat,
-                    BackColor = BG_INPUT,
+                    BackColor = BG_CELL,
                     ForeColor = CLR_TEXT,
-                    Font = FONT_TAB,
-                    Width = 180,
-                    Height = 28,
-                    Margin = new Padding(4)
+                    Font = FONT_LABEL,
+                    Dock = DockStyle.Left,
+                    Width = 110
                 };
-                btn.FlatAppearance.BorderColor = CLR_BORDER;
-                var lbl = new Label { Location = new Point(192, y + 4), Text = "未完成", ForeColor = CLR_MUTED, Font = FONT_LABEL, AutoSize = true };
-                panel.Controls.Add(btn);
-                panel.Controls.Add(lbl);
+                btn.FlatAppearance.BorderSize = 0;
+
+                var lblStatus = new Label
+                {
+                    Text = "未完成",
+                    ForeColor = CLR_MUTED,
+                    Font = FONT_LABEL,
+                    Dock = DockStyle.Fill,
+                    TextAlign = ContentAlignment.MiddleRight,
+                    Padding = new Padding(0, 0, 6, 0)
+                };
+
+                stepPanel.Controls.Add(lblStatus);
+                stepPanel.Controls.Add(btn);
+                panel.Controls.Add(stepPanel);
                 y += 34;
             }
 
-            AddGroup(panel, ref y, "试块选择");
-            AddField(panel, ref y, "试块", MakeCombo("IIW试块", "CSK-IA", "CSK-IIA", "CSK-III", "自定义"));
-
+            // 校准状态
             AddGroup(panel, ref y, "校准状态");
+            var statusPanel = new Panel
+            {
+                Location = new Point(4, y),
+                Size = new Size(192, 52),
+                BackColor = BG_CELL
+            };
             var statusLabel = new Label
             {
-                Text = "声速: --  延迟: --  灵敏度: --  TCG: --",
+                Text = "声速: --\n延迟: --\n灵敏度: --\nTCG: --",
                 ForeColor = CLR_MUTED,
                 Font = FONT_LABEL,
-                AutoSize = true,
-                Location = new Point(8, y)
+                Dock = DockStyle.Fill,
+                Padding = new Padding(6, 4, 0, 0)
             };
-            panel.Controls.Add(statusLabel);
+            statusPanel.Controls.Add(statusLabel);
+            panel.Controls.Add(statusPanel);
+            y += 60;
+
+            // 试块选择
+            AddGroup(panel, ref y, "试块");
+            var cbBlock = MakeCombo("IIW试块", "CSK-IA", "CSK-IIA", "CSK-III", "自定义");
+            cbBlock.Location = new Point(4, y);
+            cbBlock.Size = new Size(192, 22);
+            panel.Controls.Add(cbBlock);
 
             return panel;
         }
@@ -286,12 +366,12 @@ namespace Tofd_AWI.From.NewInspect
             var line = new Panel
             {
                 BackColor = CLR_BORDER,
-                Location = new Point(4, y + 18),
-                Size = new Size(190, 1)
+                Location = new Point(4, y + 16),
+                Size = new Size(192, 1)
             };
             parent.Controls.Add(lbl);
             parent.Controls.Add(line);
-            y += 24;
+            y += 22;
         }
 
         private void AddField(Panel parent, ref int y, string label, Control input)
@@ -303,16 +383,17 @@ namespace Tofd_AWI.From.NewInspect
                     Text = label,
                     ForeColor = CLR_MUTED,
                     Font = FONT_LABEL,
-                    Location = new Point(8, y + 3),
+                    Location = new Point(6, y + 3),
                     AutoSize = true
                 };
                 parent.Controls.Add(lbl);
             }
 
-            input.Location = new Point(82, y);
-            input.Size = new Size(120, 22);
+            input.Location = new Point(80, y);
+            input.Size = new Size(118, 22);
+            if (input is NumericUpDown nud) nud.Width = 80;
             parent.Controls.Add(input);
-            y += 28;
+            y += 26;
         }
 
         private ComboBox MakeCombo(params string[] items)
@@ -330,7 +411,6 @@ namespace Tofd_AWI.From.NewInspect
             cb.Items.AddRange(items);
             if (items.Length > 0) cb.SelectedIndex = 0;
 
-            // 自定义下拉列表绘制
             cb.DrawItem += (sender, e) =>
             {
                 e.DrawBackground();
@@ -360,7 +440,8 @@ namespace Tofd_AWI.From.NewInspect
                 DecimalPlaces = (step < 1) ? 1 : 0,
                 BackColor = BG_INPUT,
                 ForeColor = CLR_TEXT,
-                Font = FONT_LABEL
+                Font = FONT_LABEL,
+                BorderStyle = BorderStyle.FixedSingle
             };
             nud.Value = min;
             return nud;
@@ -372,12 +453,13 @@ namespace Tofd_AWI.From.NewInspect
             {
                 Text = text,
                 FlatStyle = FlatStyle.Flat,
-                BackColor = BG_INPUT,
+                BackColor = BG_CELL,
                 ForeColor = CLR_TEXT,
                 Font = FONT_LABEL,
-                Size = new Size(120, 22)
+                Size = new Size(118, 22)
             };
             btn.FlatAppearance.BorderColor = CLR_BORDER;
+            btn.FlatAppearance.BorderSize = 1;
             return btn;
         }
     }

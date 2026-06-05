@@ -12,15 +12,15 @@ namespace Tofd_AWI.From.NewInspect
 
     public partial class UcMotionBar : UserControl
     {
-        private static readonly Color BG_BAR    = Color.FromArgb(22, 28, 38);   // #161c26
-        private static readonly Color BG_INPUT   = Color.FromArgb(40, 52, 72);   // #283448
-        private static readonly Color CLR_TEXT   = Color.FromArgb(226, 232, 240); // #e2e8f0
-        private static readonly Color CLR_MUTED  = Color.FromArgb(148, 163, 184); // #94a3b8
+        private static readonly Color BG_BAR    = Color.FromArgb(12, 16, 28);   // #0c101c 更暗
+        private static readonly Color BG_INPUT   = Color.FromArgb(22, 30, 48);   // #161e30
+        private static readonly Color CLR_TEXT   = Color.FromArgb(200, 210, 225); // #c8d2e1
+        private static readonly Color CLR_MUTED  = Color.FromArgb(100, 115, 140); // #64738c
         private static readonly Color CLR_GREEN  = Color.FromArgb(34, 197, 94);   // #22c55e
         private static readonly Color CLR_RED    = Color.FromArgb(239, 68, 68);   // #ef4444
-        private static readonly Color CLR_BLUE   = Color.FromArgb(59, 130, 246);  // #3b82f6
+        private static readonly Color CLR_BLUE   = Color.FromArgb(56, 130, 246);  // #3882f6
         private static readonly Color CLR_AMBER  = Color.FromArgb(245, 158, 11);  // #f59e0b
-        private static readonly Color CLR_BORDER = Color.FromArgb(51, 65, 85);   // #334155
+        private static readonly Color CLR_BORDER = Color.FromArgb(30, 40, 60);    // #1e283c
 
         private double _posX = 0.0, _posY = 0.0, _posZ = 0.0;
         private int _scanProgress = 0;
