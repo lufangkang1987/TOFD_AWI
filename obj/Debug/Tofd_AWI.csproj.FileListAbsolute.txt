@@ -870,9 +870,6 @@ D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\Tofd_AWI.csproj.Up2Dat
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\4轮车体控制系统.exe
 D:\demo\德朗控制接口\Tofd_AWI - 简易版\obj\Debug\4轮车体控制系统.pdb
 C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\Tofd_AWI.csproj.AssemblyReference.cache
-C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\Tofd_AWI.Frm_Main_C_New.resources
-C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\Tofd_AWI.From.Frm_Move_New.resources
-C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\Tofd_AWI.From.NewInspect.UcWaveformView.resources
 C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\Tofd_AWI.Properties.Resources.resources
 C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\Tofd_AWI.csproj.GenerateResource.cache
 C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\Tofd_AWI.csproj.CoreCompileInputs.cache
@@ -945,6 +942,6 @@ C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\msvcr90.dll
 C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\Tofd_AWI.csproj.Up2Date
 C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\4轮车体控制系统.exe
 C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\4轮车体控制系统.pdb
-C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\ClassLibrary_Interface.pdb
+C:\Users\Administrator\source\repos\Tofd_AWI\obj\Debug\Tofd_AWI.From.NewInspect.MainForm.resources
 C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\NewInspect.Services.pdb
 C:\Users\Administrator\source\repos\Tofd_AWI\bin\Debug\Clb_MT_Comm.pdb

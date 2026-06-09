@@ -18,7 +18,7 @@ using NewInspect.Services.State;
 
 namespace Tofd_AWI
 {
-    static class Program_New
+    static class Program
     {
         [STAThread]
         static void Main()
@@ -85,7 +85,7 @@ namespace Tofd_AWI
             try
             {
                 // 新界面预览 (CTSPA22S 参数面板 + 三栏布局 + 深色主题)
-                var previewForm = new From.NewInspect.Frm_NewInspect();
+                var previewForm = new From.NewInspect.MainForm();
                 Application.Run(previewForm);
 
                 // 原启动代码 (保留，后续恢复)

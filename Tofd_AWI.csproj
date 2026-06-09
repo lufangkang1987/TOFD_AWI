@@ -208,71 +208,29 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="From\NewInspect\AppState.cs" />
-    <Compile Include="From\NewInspect\FrmConnect.cs">
+    <Compile Include="From\AppState.cs" />
+    <Compile Include="From\Frm_NewInspect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\NewInspect\FrmSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="From\NewInspect\Frm_NewInspect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="From\NewInspect\Frm_NewInspect.Designer.cs">
+    <Compile Include="From\Frm_NewInspect.Designer.cs">
       <DependentUpon>Frm_NewInspect.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\NewInspect\UcPA22SParams.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="From\NewInspect\UcPA22SParams.Designer.cs">
-      <DependentUpon>UcPA22SParams.cs</DependentUpon>
-    </Compile>
-    <Compile Include="From\NewInspect\UcRightPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="From\NewInspect\UcRightPanel.Designer.cs">
-      <DependentUpon>UcRightPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="From\NewInspect\UcMotionBar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="From\NewInspect\UcMotionBar.Designer.cs">
-      <DependentUpon>UcMotionBar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="From\NewInspect\UcMotionParams.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="From\NewInspect\UcMotionParams.Designer.cs">
-      <DependentUpon>UcMotionParams.cs</DependentUpon>
-    </Compile>
-    <Compile Include="From\NewInspect\UcWaveformView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="From\NewInspect\UcWaveformView.Designer.cs">
-      <DependentUpon>UcWaveformView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program_New.cs" />
-    <Compile Include="From\Frm_Main_C_New.cs">
+    <Compile Include="From\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\Frm_Main_C_New.Designer.cs">
-      <DependentUpon>Frm_Main_C_New.cs</DependentUpon>
+    <Compile Include="From\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\Frm_Move_New.cs">
+    <Compile Include="From\FrmConnect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\Frm_Move_New.Designer.cs">
-      <DependentUpon>Frm_Move_New.cs</DependentUpon>
+    <Compile Include="From\FrmSettings.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="From\Frm_Main_C_New.resx">
-      <DependentUpon>Frm_Main_C_New.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="From\Frm_Move_New.resx">
-      <DependentUpon>Frm_Move_New.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="From\NewInspect\UcWaveformView.resx">
-      <DependentUpon>UcWaveformView.cs</DependentUpon>
+    <EmbeddedResource Include="From\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
