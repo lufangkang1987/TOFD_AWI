@@ -30,6 +30,7 @@ namespace NewInspect.UI
         // 连接状态
         private bool _isConnected;
         private bool _isConnecting;
+        private bool _closingBySuccess;   // 标记是否因连接成功而自动关闭
         private CancellationTokenSource _cts;
 
         // 选中的模式
@@ -98,8 +99,8 @@ namespace NewInspect.UI
                 _isConnected = true;
                 _txtIp.Text = AppState.CurrentIp;
                 SetUiConnected();
-                SetChannelDot(_pnlCmdChannel, true);
-                SetChannelDot(_pnlDataChannel, true);
+                SetChannelDot(_pnlCmdChannel, CommChannelType.Command, true);
+                SetChannelDot(_pnlDataChannel, CommChannelType.Data, true);
             }
         }
 
@@ -116,8 +117,8 @@ namespace NewInspect.UI
                 _isConnected = true;
                 _txtIp.Text = AppState.CurrentIp;
                 SetUiConnected();
-                SetChannelDot(_pnlCmdChannel, true);
-                SetChannelDot(_pnlDataChannel, true);
+                SetChannelDot(_pnlCmdChannel, CommChannelType.Command, true);
+                SetChannelDot(_pnlDataChannel, CommChannelType.Data, true);
             }
             else
             {
@@ -237,6 +238,19 @@ namespace NewInspect.UI
             _rdoCl = CreateModeRadio(130, radioY, "CL 扫查");
             _rdoTfm = CreateModeRadio(248, radioY, "TFM 成像");
             _rdoCscan = CreateModeRadio(366, radioY, "C 扫描");
+
+            // 目前仅普通模式可用：保持按钮外观一致，但禁止切换并给出提示
+            _rdoCl.AutoCheck = false;
+            _rdoTfm.AutoCheck = false;
+            _rdoCscan.AutoCheck = false;
+            // 把鼠标样式改为默认，避免看起来可点击
+            _rdoCl.Cursor = Cursors.Default;
+            _rdoTfm.Cursor = Cursors.Default;
+            _rdoCscan.Cursor = Cursors.Default;
+            // 点击时提示用户当前仅普通模式可用
+            _rdoCl.Click += (s, e) => MessageBox.Show("当前仅支持普通模式。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _rdoTfm.Click += (s, e) => MessageBox.Show("当前仅支持普通模式。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _rdoCscan.Click += (s, e) => MessageBox.Show("当前仅支持普通模式。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             _rdoNormal.CheckedChanged += (s, e) => { if (_rdoNormal.Checked) ConnectState = 1; };
             _rdoCl.CheckedChanged += (s, e) => { if (_rdoCl.Checked) ConnectState = 2; };
@@ -451,7 +465,10 @@ namespace NewInspect.UI
         {
             if (_isConnected)
             {
-                Disconnect();
+                // 已连接状态：按钮显示"进入系统"，点击直接关闭对话框返回 OK
+                _closingBySuccess = true;
+                DialogResult = DialogResult.OK;
+                Close();
                 return;
             }
             if (_isConnecting) return;
@@ -484,7 +501,8 @@ namespace NewInspect.UI
         private void FrmConnect_FormClosing(object sender, FormClosingEventArgs e)
         {
             AppState.ConnectionStateChanged -= OnAppStateChanged;
-            if (_isConnected)
+            // 只有非成功关闭（用户点 X 或取消）时才断开连接
+            if (_isConnected && !_closingBySuccess)
                 Disconnect();
             _cts?.Cancel();
         }
@@ -521,7 +539,7 @@ namespace NewInspect.UI
                 if (!cmdOk)
                 {
                     UpdateStep(_lblStepCmd, "命令通道 连接失败", Color.FromArgb(210, 60, 50));
-                    SetChannelDot(_pnlCmdChannel, false);
+                    SetChannelDot(_pnlCmdChannel, CommChannelType.Command, false);
                     _isConnecting = false;
                     SetUiDisconnected();
                     MessageBox.Show("命令通道连接失败，请检查 IP 地址和仪器状态。",
@@ -529,7 +547,8 @@ namespace NewInspect.UI
                     return;
                 }
                 UpdateStep(_lblStepCmd, "命令通道 已连接", Color.FromArgb(40, 160, 40));
-                SetChannelDot(_pnlCmdChannel, true);
+                SetChannelDot(_pnlCmdChannel, CommChannelType.Command, true);
+                AppState.SetChannelState(CommChannelType.Command, true);
 
                 // Step 2: 连接数据通道
                 UpdateStep(_lblStepData, "数据通道 51005...", Color.FromArgb(24, 120, 200));
@@ -538,7 +557,7 @@ namespace NewInspect.UI
                 if (!dataOk)
                 {
                     UpdateStep(_lblStepData, "数据通道 连接失败", Color.FromArgb(210, 60, 50));
-                    SetChannelDot(_pnlDataChannel, false);
+                    SetChannelDot(_pnlDataChannel, CommChannelType.Data, false);
                     _isConnecting = false;
                     SetUiDisconnected();
                     MessageBox.Show("数据通道连接失败，命令通道已连接。请检查仪器状态。",
@@ -546,7 +565,8 @@ namespace NewInspect.UI
                     return;
                 }
                 UpdateStep(_lblStepData, "数据通道 已连接", Color.FromArgb(40, 160, 40));
-                SetChannelDot(_pnlDataChannel, true);
+                SetChannelDot(_pnlDataChannel, CommChannelType.Data, true);
+                AppState.SetChannelState(CommChannelType.Data, true);
 
                 // 全部连接成功
                 _isConnected = true;
@@ -559,6 +579,7 @@ namespace NewInspect.UI
 
                 // 短暂显示成功状态后关闭对话框
                 await Task.Delay(800);
+                _closingBySuccess = true;   // 标记为成功关闭，避免 FormClosing 中断开
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -650,8 +671,8 @@ namespace NewInspect.UI
             _progConnect.Visible = false;
 
             SetStatusIndicator(Color.Gray, "未连接");
-            SetChannelDot(_pnlCmdChannel, false);
-            SetChannelDot(_pnlDataChannel, false);
+            SetChannelDot(_pnlCmdChannel, CommChannelType.Command, false);
+            SetChannelDot(_pnlDataChannel, CommChannelType.Data, false);
         }
 
         private void SetStatusIndicator(Color color, string text)
@@ -661,15 +682,36 @@ namespace NewInspect.UI
             _lblStatusText.ForeColor = color;
         }
 
-        private void SetChannelDot(Panel channelPanel, bool connected)
+        private void SetChannelDot(Panel channelPanel, CommChannelType channel, bool connected)
         {
+            // 面板背景与圆点颜色：命令通道 → 淡青色，数据通道 → 淡绿色
+            Color bgColor, dotColor;
+            if (connected)
+            {
+                if (channel == CommChannelType.Command)
+                {
+                    bgColor = Color.FromArgb(224, 242, 254);  // 淡青色背景
+                    dotColor = Color.FromArgb(14, 165, 233);   // 青色圆点
+                }
+                else
+                {
+                    bgColor = Color.FromArgb(232, 245, 233);  // 淡绿色背景
+                    dotColor = Color.FromArgb(34, 197, 94);   // 绿色圆点
+                }
+            }
+            else
+            {
+                bgColor = Color.FromArgb(248, 248, 248);      // 浅灰色背景
+                dotColor = Color.Gray;
+            }
+
+            channelPanel.BackColor = bgColor;
+
             foreach (Control ctrl in channelPanel.Controls)
             {
                 if (ctrl is Label lbl && lbl.Text == "●")
                 {
-                    lbl.ForeColor = connected
-                        ? Color.FromArgb(40, 160, 40)
-                        : Color.Gray;
+                    lbl.ForeColor = dotColor;
                     break;
                 }
             }

@@ -49,13 +49,15 @@ namespace Tofd_AWI.From.NewInspect
         public Frm_NewInspect()
         {
             InitializeComponent();
-            WindowState = FormWindowState.Maximized;
             ApplyDarkTheme(this);
-            WireUpEvents();
+            WireUpEvents();          // 先挂事件，再设最大化，确保 Resize 能触发布局
+            WindowState = FormWindowState.Maximized;
+            Frm_NewInspect_Resize(null, EventArgs.Empty); // 兜底：手动触发一次布局
             InitDateTimeTimer();
 
-            // 启动时根据全局状态初始化顶栏
-            UpdateComStatus(AppState.IsInstrumentConnected);
+            // 启动时根据全局状态初始化顶栏 —— 分别刷新命令通道和数据通道
+            UpdateChannelStatus(CommChannelType.Command, AppState.IsCommandChannelConnected);
+            UpdateChannelStatus(CommChannelType.Data, AppState.IsDataChannelConnected);
 
             // 断线检测定时器
             _connMonitorTimer = new System.Windows.Forms.Timer();
@@ -118,13 +120,13 @@ namespace Tofd_AWI.From.NewInspect
 
         private void WireUpEvents()
         {
-            // ★ 订阅全局连接状态变化事件
-            AppState.ConnectionStateChanged += (s, connected) =>
+            // ★ 订阅通道级别状态变化事件 —— 命令通道/数据通道独立刷新颜色
+            AppState.ChannelStateChanged += (s, args) =>
             {
                 if (InvokeRequired)
-                    Invoke(new Action(() => UpdateComStatus(connected)));
+                    Invoke(new Action(() => UpdateChannelStatus(args.Channel, args.Connected)));
                 else
-                    UpdateComStatus(connected);
+                    UpdateChannelStatus(args.Channel, args.Connected);
             };
 
             // "连接" 按钮
@@ -137,8 +139,9 @@ namespace Tofd_AWI.From.NewInspect
                     dlg.ShowDialog(this);
             };
 
-            // 通信状态标签点击
-            _lblComStatus.Click += (s, e) => OpenConnectDialog();
+            // 通信状态标签点击 —— 两个通道标签都打开连接对话框
+            _lblCmdStatus.Click += (s, e) => OpenConnectDialog();
+            _lblDataStatus.Click += (s, e) => OpenConnectDialog();
 
             // CheckBox 变更 → 快速应用
             _chkGate.CheckedChanged += QuickApplyChanged;
@@ -171,7 +174,12 @@ namespace Tofd_AWI.From.NewInspect
             {
                 var result = dlg.ShowDialog(this);
                 if (result == DialogResult.OK)
-                    UpdateComStatus(true);
+                {
+                    // 对话框内部已通过 AppState 设置通道状态并触发事件，
+                    // 此处兜底同步 UI，确保颜色正确
+                    UpdateChannelStatus(CommChannelType.Command, AppState.IsCommandChannelConnected);
+                    UpdateChannelStatus(CommChannelType.Data, AppState.IsDataChannelConnected);
+                }
                 else if (result == DialogResult.Abort)
                     this.Close();
             }
@@ -199,29 +207,39 @@ namespace Tofd_AWI.From.NewInspect
             });
         }
 
+        /// <summary>
+        /// 根据指定通道类型更新顶栏状态标签颜色
+        /// 命令通道 → 青色，数据通道 → 绿色
+        /// </summary>
+        private void UpdateChannelStatus(CommChannelType channel, bool connected)
+        {
+            switch (channel)
+            {
+                case CommChannelType.Command:
+                    _lblCmdStatus.Text = connected ? "● 命令" : "○ 命令";
+                    _lblCmdStatus.ForeColor = connected ? CLR_CYAN : CLR_MUTED;
+                    break;
+                case CommChannelType.Data:
+                    _lblDataStatus.Text = connected ? "● 数据" : "○ 数据";
+                    _lblDataStatus.ForeColor = connected ? CLR_GREEN : CLR_MUTED;
+                    break;
+            }
+
+            // 同步更新按钮和底栏（基于整体连接状态）
+            bool overall = AppState.IsInstrumentConnected;
+            _btnConnect.Text = overall ? "已连接" : "连接设备";
+            _btnConnect.BackColor = overall ? CLR_GREEN : CLR_BLUE;
+            UpdateStatusBar(overall);
+        }
+
+        /// <summary>
+        /// 兜底刷新：外部代码（如对话框返回）需要同步整体UI时调用
+        /// </summary>
         public void UpdateComStatus(bool connected)
         {
-            if (connected)
-            {
-                _lblComStatus.Text = "● 已连接";
-                _lblComStatus.ForeColor = CLR_GREEN;
-                _btnConnect.Text = "已连接";
-                _btnConnect.BackColor = CLR_GREEN;
-            }
-            else
-            {
-                _lblComStatus.Text = "○ 未连接";
-                _lblComStatus.ForeColor = CLR_RED;
-                _btnConnect.Text = "连接设备";
-                _btnConnect.BackColor = CLR_BLUE;
-            }
-
+            _btnConnect.Text = connected ? "已连接" : "连接设备";
+            _btnConnect.BackColor = connected ? CLR_GREEN : CLR_BLUE;
             UpdateStatusBar(connected);
-
-            if (connected)
-                AppState.SetConnected(AppState.CurrentIp ?? "192.168.0.51");
-            else
-                AppState.SetDisconnected();
         }
 
         private void UpdateStatusBar(bool connected)
@@ -668,9 +686,12 @@ namespace Tofd_AWI.From.NewInspect
         {
             int rightEdge = ClientSize.Width;
 
-            // 顶栏右侧通信状态
-            _lblComStatus.Location = new Point(rightEdge - 130, 12);
-            _lblComStatus.Size = new Size(120, 20);
+            // 顶栏右侧通信状态 —— 命令通道 + 数据通道并排
+            _lblDataStatus.Location = new Point(rightEdge - 130, 12);
+            _lblDataStatus.Size = new Size(60, 20);
+
+            _lblCmdStatus.Location = new Point(rightEdge - 200, 12);
+            _lblCmdStatus.Size = new Size(60, 20);
 
             // 底栏状态文本 (动态宽度)
             int statusWidth = rightEdge - 800;

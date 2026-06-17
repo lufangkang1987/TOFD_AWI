@@ -366,15 +366,16 @@ namespace NewInspect.UI
             _grpFirmware = new GroupBox
             {
                 Location = new Point(12, 250),
-                Size = new Size(490, 60),
+                Size = new Size(490, 80),
                 Text = "固件版本",
                 Enabled = false,
-                Font = new Font("Microsoft YaHei UI", 9F)
+                Font = new Font("Microsoft YaHei UI", 9F),
+                Padding = new Padding(0, 0, 0, 8)   // 底部额外留白，防止裁切边框
             };
 
             _lblServerVer = new Label
             {
-                Location = new Point(14, 26),
+                Location = new Point(14, 22),
                 Size = new Size(60, 18),
                 Text = "Server：",
                 ForeColor = Color.FromArgb(80, 80, 80)
@@ -382,7 +383,7 @@ namespace NewInspect.UI
 
             _txtServerVer = new TextBox
             {
-                Location = new Point(80, 24),
+                Location = new Point(80, 20),
                 Size = new Size(140, 24),
                 Text = "V2.1.0",
                 ReadOnly = true,
@@ -393,7 +394,7 @@ namespace NewInspect.UI
 
             _lblFpgaVer = new Label
             {
-                Location = new Point(240, 26),
+                Location = new Point(240, 22),
                 Size = new Size(60, 18),
                 Text = "FPGA：",
                 ForeColor = Color.FromArgb(80, 80, 80)
@@ -401,7 +402,7 @@ namespace NewInspect.UI
 
             _txtFpgaVer = new TextBox
             {
-                Location = new Point(290, 24),
+                Location = new Point(300, 20),
                 Size = new Size(140, 24),
                 Text = "V1.3.2",
                 ReadOnly = true,
@@ -419,7 +420,7 @@ namespace NewInspect.UI
             // --- 操作按钮 ---
             _btnApplyToInstrument = new Button
             {
-                Location = new Point(280, 325),
+                Location = new Point(280, 335),
                 Size = new Size(110, 32),
                 Text = "下发配置至仪器",
                 FlatStyle = FlatStyle.Flat,
@@ -434,7 +435,7 @@ namespace NewInspect.UI
 
             _btnReadFromInstrument = new Button
             {
-                Location = new Point(398, 325),
+                Location = new Point(398, 335),
                 Size = new Size(110, 32),
                 Text = "读取仪器配置",
                 FlatStyle = FlatStyle.Flat,
@@ -947,9 +948,10 @@ namespace NewInspect.UI
             _grpVersion = new GroupBox
             {
                 Location = new Point(12, 12),
-                Size = new Size(490, 100),
+                Size = new Size(490, 155),
                 Text = "版本信息",
-                Font = new Font("Microsoft YaHei UI", 9F)
+                Font = new Font("Microsoft YaHei UI", 9F),
+                Padding = new Padding(0, 0, 0, 10)
             };
 
             _lblSoftwareVer = new Label
@@ -992,7 +994,7 @@ namespace NewInspect.UI
 
             _lblFpgaVer2 = new Label
             {
-                Location = new Point(14, 86),
+                Location = new Point(14, 82),
                 Size = new Size(80, 18),
                 Text = "FPGA 版本：",
                 ForeColor = Color.FromArgb(80, 80, 80)
@@ -1000,7 +1002,7 @@ namespace NewInspect.UI
 
             _txtFpgaVer2 = new TextBox
             {
-                Location = new Point(100, 84),
+                Location = new Point(115, 80),
                 Size = new Size(160, 24),
                 Text = "V1.3.2",
                 ReadOnly = true,
@@ -1018,7 +1020,7 @@ namespace NewInspect.UI
 
             _grpUpdateLog = new GroupBox
             {
-                Location = new Point(12, 122),
+                Location = new Point(12, 177),
                 Size = new Size(490, 220),
                 Text = "更新日志",
                 Font = new Font("Microsoft YaHei UI", 9F)

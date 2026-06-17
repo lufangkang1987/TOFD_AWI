@@ -130,15 +130,24 @@ namespace Tofd_AWI.From.NewInspect
             this._lblQuickApply.Cursor = System.Windows.Forms.Cursors.Hand;
             this._topBar.Controls.Add(this._lblQuickApply);
 
-            // 右侧通信状态
-            this._lblComStatus = new System.Windows.Forms.Label();
-            this._lblComStatus.Text = "○ 未连接";
-            this._lblComStatus.Font = fontSize85;
-            this._lblComStatus.ForeColor = cRed;
-            this._lblComStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this._lblComStatus.BackColor = System.Drawing.Color.Transparent;
-            this._lblComStatus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this._topBar.Controls.Add(this._lblComStatus);
+            // 右侧通信状态 —— 命令通道 + 数据通道独立显示
+            this._lblCmdStatus = new System.Windows.Forms.Label();
+            this._lblCmdStatus.Text = "○ 命令";
+            this._lblCmdStatus.Font = fontSize85;
+            this._lblCmdStatus.ForeColor = cMuted;
+            this._lblCmdStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._lblCmdStatus.BackColor = System.Drawing.Color.Transparent;
+            this._lblCmdStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._topBar.Controls.Add(this._lblCmdStatus);
+
+            this._lblDataStatus = new System.Windows.Forms.Label();
+            this._lblDataStatus.Text = "○ 数据";
+            this._lblDataStatus.Font = fontSize85;
+            this._lblDataStatus.ForeColor = cMuted;
+            this._lblDataStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._lblDataStatus.BackColor = System.Drawing.Color.Transparent;
+            this._lblDataStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._topBar.Controls.Add(this._lblDataStatus);
 
             // ==========================================
             // 底栏 _bottomBar  (38px)
@@ -1898,7 +1907,8 @@ namespace Tofd_AWI.From.NewInspect
         private System.Windows.Forms.CheckBox _chkEnvelope;
         private System.Windows.Forms.CheckBox _chkPeakHold;
         private System.Windows.Forms.Label _lblQuickApply;
-        private System.Windows.Forms.Label _lblComStatus;
+        private System.Windows.Forms.Label _lblCmdStatus;
+        private System.Windows.Forms.Label _lblDataStatus;
 
         // 底栏
         private System.Windows.Forms.Panel _bottomBar;

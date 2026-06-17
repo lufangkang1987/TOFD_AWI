@@ -49,9 +49,10 @@ namespace Tofd_AWI.From.NewInspect
         public Frm_NewInspect()
         {
             InitializeComponent();
-            WindowState = FormWindowState.Maximized;
             ApplyDarkTheme(this);
-            WireUpEvents();
+            WireUpEvents();          // 先挂事件，再设最大化，确保 Resize 能触发布局
+            WindowState = FormWindowState.Maximized;
+            Frm_NewInspect_Resize(null, EventArgs.Empty); // 兜底：手动触发一次布局
             InitDateTimeTimer();
 
             // 启动时根据全局状态初始化顶栏

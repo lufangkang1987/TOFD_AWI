@@ -31,8 +31,8 @@ namespace Tofd_AWI.From.NewInspect
         /// </summary>
         private void InitializeComponent()
         {
-            this.ConnectButton = new System.Windows.Forms.Button();
-            this.SettingBbutton = new System.Windows.Forms.Button();
+            this._btnConnect = new System.Windows.Forms.Button();
+            this._btnSettings = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label26 = new System.Windows.Forms.Label();
@@ -187,6 +187,9 @@ namespace Tofd_AWI.From.NewInspect
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.panel7 = new System.Windows.Forms.Panel();
+            this._lblDateTime = new System.Windows.Forms.Label();
+            this._lblDataStatus = new System.Windows.Forms.Label();
+            this._lblCmdStatus = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelRight = new System.Windows.Forms.Panel();
@@ -305,26 +308,26 @@ namespace Tofd_AWI.From.NewInspect
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ConnectButton
+            // _btnConnect
             // 
-            this.ConnectButton.BackColor = System.Drawing.SystemColors.Control;
-            this.ConnectButton.Location = new System.Drawing.Point(5, 4);
-            this.ConnectButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(89, 37);
-            this.ConnectButton.TabIndex = 0;
-            this.ConnectButton.Text = "连接";
-            this.ConnectButton.UseVisualStyleBackColor = false;
+            this._btnConnect.BackColor = System.Drawing.SystemColors.Control;
+            this._btnConnect.Location = new System.Drawing.Point(5, 4);
+            this._btnConnect.Margin = new System.Windows.Forms.Padding(2);
+            this._btnConnect.Name = "_btnConnect";
+            this._btnConnect.Size = new System.Drawing.Size(89, 37);
+            this._btnConnect.TabIndex = 0;
+            this._btnConnect.Text = "连接";
+            this._btnConnect.UseVisualStyleBackColor = false;
             // 
-            // SettingBbutton
+            // _btnSettings
             // 
-            this.SettingBbutton.Location = new System.Drawing.Point(99, 4);
-            this.SettingBbutton.Margin = new System.Windows.Forms.Padding(2);
-            this.SettingBbutton.Name = "SettingBbutton";
-            this.SettingBbutton.Size = new System.Drawing.Size(89, 37);
-            this.SettingBbutton.TabIndex = 1;
-            this.SettingBbutton.Text = "设置";
-            this.SettingBbutton.UseVisualStyleBackColor = true;
+            this._btnSettings.Location = new System.Drawing.Point(99, 4);
+            this._btnSettings.Margin = new System.Windows.Forms.Padding(2);
+            this._btnSettings.Name = "_btnSettings";
+            this._btnSettings.Size = new System.Drawing.Size(89, 37);
+            this._btnSettings.TabIndex = 1;
+            this._btnSettings.Text = "设置";
+            this._btnSettings.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -2248,14 +2251,53 @@ namespace Tofd_AWI.From.NewInspect
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.ConnectButton);
-            this.panel7.Controls.Add(this.SettingBbutton);
+            this.panel7.Controls.Add(this._lblDateTime);
+            this.panel7.Controls.Add(this._lblDataStatus);
+            this.panel7.Controls.Add(this._lblCmdStatus);
+            this.panel7.Controls.Add(this._btnConnect);
+            this.panel7.Controls.Add(this._btnSettings);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1652, 46);
             this.panel7.TabIndex = 7;
+            // 
+            // _lblDateTime
+            // 
+            this._lblDateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblDateTime.Location = new System.Drawing.Point(1382, 4);
+            this._lblDateTime.Name = "_lblDateTime";
+            this._lblDateTime.Size = new System.Drawing.Size(267, 40);
+            this._lblDateTime.TabIndex = 2;
+            this._lblDateTime.Text = "2026-06-09 15:40:00";
+            this._lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _lblDataStatus
+            // 
+            this._lblDataStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblDataStatus.AutoSize = true;
+            this._lblDataStatus.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this._lblDataStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(115)))), ((int)(((byte)(140)))));
+            this._lblDataStatus.Location = new System.Drawing.Point(1323, 12);
+            this._lblDataStatus.Name = "_lblDataStatus";
+            this._lblDataStatus.Size = new System.Drawing.Size(49, 20);
+            this._lblDataStatus.TabIndex = 9;
+            this._lblDataStatus.Text = "○ 数据";
+            this._lblDataStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // _lblCmdStatus
+            // 
+            this._lblCmdStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblCmdStatus.AutoSize = true;
+            this._lblCmdStatus.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this._lblCmdStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(115)))), ((int)(((byte)(140)))));
+            this._lblCmdStatus.Location = new System.Drawing.Point(1253, 12);
+            this._lblCmdStatus.Name = "_lblCmdStatus";
+            this._lblCmdStatus.Size = new System.Drawing.Size(49, 20);
+            this._lblCmdStatus.TabIndex = 8;
+            this._lblCmdStatus.Text = "○ 命令";
+            this._lblCmdStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panelLeft
             // 
@@ -2875,6 +2917,7 @@ namespace Tofd_AWI.From.NewInspect
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panelLeft.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panelRight.ResumeLayout(false);
@@ -2901,8 +2944,8 @@ namespace Tofd_AWI.From.NewInspect
 
         #endregion
 
-        private Button ConnectButton;
-        private Button SettingBbutton;
+        private Button _btnConnect;
+        private Button _btnSettings;
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
@@ -3109,5 +3152,8 @@ namespace Tofd_AWI.From.NewInspect
         private Label label84;
         private ComboBox comboBox38;
         private Label label83;
+        private Label _lblDateTime;
+        private Label _lblCmdStatus;
+        private Label _lblDataStatus;
     }
 }
