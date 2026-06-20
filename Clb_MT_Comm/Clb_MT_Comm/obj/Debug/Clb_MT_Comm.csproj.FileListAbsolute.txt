@@ -69,3 +69,10 @@ C:\Users\Administrator\source\repos\Tofd_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\C
 C:\Users\Administrator\source\repos\Tofd_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_C.19BCBEA3.Up2Date
 C:\Users\Administrator\source\repos\Tofd_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.dll
 C:\Users\Administrator\source\repos\Tofd_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.pdb
+D:\code\TOFD_AWI\bin\Debug\Clb_MT_Comm.dll
+D:\code\TOFD_AWI\bin\Debug\Clb_MT_Comm.pdb
+D:\code\TOFD_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.csproj.AssemblyReference.cache
+D:\code\TOFD_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.csproj.CoreCompileInputs.cache
+D:\code\TOFD_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_C.19BCBEA3.Up2Date
+D:\code\TOFD_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.dll
+D:\code\TOFD_AWI\Clb_MT_Comm\Clb_MT_Comm\obj\Debug\Clb_MT_Comm.pdb

@@ -12,3 +12,10 @@ C:\Users\Administrator\source\repos\Tofd_AWI\NewInspect.Services\obj\Debug\NewIn
 C:\Users\Administrator\source\repos\Tofd_AWI\NewInspect.Services\obj\Debug\NewInspe.CE941CDE.Up2Date
 C:\Users\Administrator\source\repos\Tofd_AWI\NewInspect.Services\obj\Debug\NewInspect.Services.dll
 C:\Users\Administrator\source\repos\Tofd_AWI\NewInspect.Services\obj\Debug\NewInspect.Services.pdb
+D:\code\TOFD_AWI\bin\Debug\NewInspect.Services.dll
+D:\code\TOFD_AWI\bin\Debug\NewInspect.Services.pdb
+D:\code\TOFD_AWI\NewInspect.Services\obj\Debug\NewInspect.Services.csproj.AssemblyReference.cache
+D:\code\TOFD_AWI\NewInspect.Services\obj\Debug\NewInspect.Services.csproj.CoreCompileInputs.cache
+D:\code\TOFD_AWI\NewInspect.Services\obj\Debug\NewInspe.CE941CDE.Up2Date
+D:\code\TOFD_AWI\NewInspect.Services\obj\Debug\NewInspect.Services.dll
+D:\code\TOFD_AWI\NewInspect.Services\obj\Debug\NewInspect.Services.pdb

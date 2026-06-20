@@ -36,3 +36,10 @@ C:\Users\Administrator\source\repos\Tofd_AWI\ClassLibrary_Interface\obj\Debug\Cl
 C:\Users\Administrator\source\repos\Tofd_AWI\ClassLibrary_Interface\obj\Debug\ClassLib.8BAEBD8B.Up2Date
 C:\Users\Administrator\source\repos\Tofd_AWI\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.dll
 C:\Users\Administrator\source\repos\Tofd_AWI\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.pdb
+D:\code\TOFD_AWI\bin\Debug\ClassLibrary_Interface.dll
+D:\code\TOFD_AWI\bin\Debug\ClassLibrary_Interface.pdb
+D:\code\TOFD_AWI\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.csproj.AssemblyReference.cache
+D:\code\TOFD_AWI\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.csproj.CoreCompileInputs.cache
+D:\code\TOFD_AWI\ClassLibrary_Interface\obj\Debug\ClassLib.8BAEBD8B.Up2Date
+D:\code\TOFD_AWI\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.dll
+D:\code\TOFD_AWI\ClassLibrary_Interface\obj\Debug\ClassLibrary_Interface.pdb
