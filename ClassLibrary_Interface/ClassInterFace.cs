@@ -8,8 +8,6 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-using Emgu.CV;
-using Emgu.CV.Structure;
 namespace ClassLibrary_Interface
 {
     public class ClassInterFace

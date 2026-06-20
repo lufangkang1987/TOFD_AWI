@@ -83,39 +83,12 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
   </ItemGroup>
-  <!-- ====== 项目引用 (替代原来 bin/Debug 的路径引用) ====== -->
+  <!-- Project references used by the new framework. -->
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary_Interface\ClassLibrary_Interface.csproj">
       <Project>{6C68D876-97A7-4D09-9F1F-5D639E066B0D}</Project>
       <Name>ClassLibrary_Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Clb_MT_Comm\Clb_MT_Comm\Clb_MT_Comm.csproj">
-      <Project>{58E7B15E-F61D-4A52-A3EB-73FD1E66BFA8}</Project>
-      <Name>Clb_MT_Comm</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClassLib_DataMang\ClassLib_DataMang.csproj">
-      <Project>{7C123940-A34A-4A85-887A-C9D0389447A4}</Project>
-      <Name>ClassLib_DataMang</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <!-- ====== 硬件 DLL 引用 (这些没有项目源码，沿用 bin/Debug 路径) ====== -->
-  <ItemGroup>
-    <Reference Include="Tofd_DLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Debug\Tofd_DLL.dll</HintPath>
-    </Reference>
-    <Reference Include="Clb_XmCam_DLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Debug\Clb_XmCam_DLL.dll</HintPath>
-    </Reference>
-    <Reference Include="Frame_Work, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Debug\Frame_Work.dll</HintPath>
-    </Reference>
-    <Reference Include="ClassLib_TestData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Debug\ClassLib_TestData.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <!-- ====== 代码文件 ====== -->
   <ItemGroup>

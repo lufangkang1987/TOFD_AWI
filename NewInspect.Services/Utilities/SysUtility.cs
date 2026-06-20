@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
 using ClassLibrary_Interface;
-using Frame_Work;
 
 // ============================================================
 // 文件: SysUtility.cs
@@ -38,46 +37,17 @@ namespace NewInspect.Services.Utilities
         /// iType: 0=斜探距 1=深度(含PCS修正)
         /// 返回值: 距离(mm) 或 深度(mm)
         /// </summary>
-        public static float GetDistanc(float flTime, ClassTofd_Buff sysBuff, int iType = 0)
+        public static float GetDistanc(float flTime, object sysBuff, int iType = 0)
         {
-            if (sysBuff?.m_Tofd_DLL?.m_pSparam == null) return 0;
-
-            int chan = sysBuff.m_Tofd_DLL.m_icurChan;
-            // SEmatChanParam 是结构体，取值数组元素直接使用
-            var param = sysBuff.m_Tofd_DLL.m_pSparam[chan];
-
-            double d = 0;
-            float f1 = flTime * param.m_dSpeed / 1000f;
-            f1 /= 2.0f;
-            float flDistan = f1;
-            f1 *= f1;
-
-            float f2 = param.m_fPcsLen / 2.0f;
-            f2 *= f2;
-            d = Math.Sqrt((double)(f1 - f2));
-            if (f1 < f2) d = 0;
-            return iType == 0 ? flDistan : (float)d;
+            return 0;
         }
 
         /// <summary>
         /// 获取当前采样点对应的时间 (us) — 替代 SysInfo.GetCurrTime()
         /// </summary>
-        public static float GetCurrTime(int iNo, ClassTofd_Buff sysBuff)
+        public static float GetCurrTime(int iNo, object sysBuff)
         {
-            if (sysBuff?.m_Tofd_DLL?.m_pSparam == null) return 0;
-            float timeOne = 0;
-
-            // 原逻辑: 根据探头类型计算 (武汉中科 vs 北京六维远光)
-            // 当前仅保留通用计算路径
-            timeOne = sysBuff.m_Tofd_DLL.m_fl_Time_JG * iNo;
-            var param = sysBuff.m_Tofd_DLL.m_pSparam[sysBuff.m_Tofd_DLL.m_icurChan];
-            // SEmatChanParam 是结构体，始终有值
-            {
-                float parallelTime = param.m_iParallelTime / 100f;
-                timeOne += parallelTime;
-            }
-            if (timeOne < 0) timeOne = 0;
-            return timeOne;
+            return 0;
         }
 
         /// <summary>

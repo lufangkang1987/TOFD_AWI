@@ -1,5 +1,3 @@
-using Frame_Work;
-using ClassLib_TestData;
 using ClassLibrary_Interface.Models;
 using System.Collections.Generic;
 
@@ -21,7 +19,7 @@ namespace NewInspect.Services.State
     public class TofdState
     {
         /// <summary>系统缓存 (保留原有 Frame_Work 数据结构)</summary>
-        public Frame_Work.ClassTofd_Buff SysBuff { get; } = new Frame_Work.ClassTofd_Buff();
+        public object SysBuff { get; } = new object();
 
         /// <summary>是否已连接 TOFD 设备</summary>
         public bool IsLinked { get; set; }
@@ -55,10 +53,10 @@ namespace NewInspect.Services.State
     public class CScanState
     {
         /// <summary>C 扫描数据缓存</summary>
-        public Class_C_Buff DataBuff { get; } = new Class_C_Buff();
+        public object DataBuff { get; } = new object();
 
         /// <summary>C 扫描项目信息</summary>
-        public Class_C_ItemInfor ItemInfo { get; } = new Class_C_ItemInfor();
+        public object ItemInfo { get; } = new object();
 
         /// <summary>采集间隔等待时间</summary>
         public int WaitTimeMs { get; set; } = 0;
@@ -177,15 +175,15 @@ namespace NewInspect.Services.State
     public class ReportState
     {
         /// <summary>打印项目列表</summary>
-        public List<ClPrintItem> PrintItems { get; } = new List<ClPrintItem>();
+        public List<string> PrintItems { get; } = new List<string>();
 
         /// <summary>报表参数</summary>
-        public Cls_Report_P ReportParams { get; set; } = new Cls_Report_P();
+        public object ReportParams { get; set; } = new object();
 
         /// <summary>报表参数 (显示用)</summary>
-        public Cls_Report_P ReportParamsDisplay { get; set; } = new Cls_Report_P();
+        public object ReportParamsDisplay { get; set; } = new object();
 
         /// <summary>报表参数列表</summary>
-        public List<Cls_Report_P> ReportParamList { get; } = new List<Cls_Report_P>();
+        public List<object> ReportParamList { get; } = new List<object>();
     }
 }

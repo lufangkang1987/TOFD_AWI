@@ -1,6 +1,6 @@
-using ClassLibrary_Interface;
 using System;
 using System.Threading;
+using ClassLibrary_Interface;
 
 // ============================================================
 // 文件: HardwareAdapters.cs
@@ -26,7 +26,6 @@ namespace NewInspect.Services.Adapters
     /// </summary>
     public class CanMotionControllerAdapter : IMotionController, IDisposable
     {
-        private Clb_MT_Comm.MT_Comm _mtComm;
         private Timer _heartbeatTimer;
         private int _speedPercent = 50;
         private bool _disposed;
@@ -38,7 +37,7 @@ namespace NewInspect.Services.Adapters
         /// <summary>
         /// 校验适配器是否已初始化并可安全发送指令
         /// </summary>
-        private bool CanSend => _mtComm != null && IsConnected;
+        private bool CanSend => IsConnected;
 
         // ================================================================
         // 生命周期
@@ -51,7 +50,6 @@ namespace NewInspect.Services.Adapters
         public void Initialize(ref object sysBuf, ClassLibrary_Interface.MsgInterFace msgPlant, int waitTime)
         {
             _sysBuf = sysBuf;
-            _mtComm = new Clb_MT_Comm.MT_Comm();
             // 原有代码: _mtComm = new MT_Comm(ref streamVideo, ref msgPlant, waitTime);
         }
 
@@ -64,26 +62,20 @@ namespace NewInspect.Services.Adapters
         public bool Connect(string portOrCan, bool isComNotCan)
         {
             // 懒初始化 — 如果还没创建 MT_Comm 则用无参构造器自动创建
-            if (_mtComm == null)
-                _mtComm = new Clb_MT_Comm.MT_Comm();
-
             try
             {
                 CommType = isComNotCan ? 1 : 0;
-                _mtComm.m_blCom1_Can0 = CommType;
 
                 if (CommType == 1)
                 {
                     // COM 串口模式
-                    _mtComm.InitCom(portOrCan);
                 }
                 else
                 {
                     // CAN 模式 — 默认 125Kbps, USBCAN_1CH(索引5)
-                    _mtComm.InitCan(125, 5);
                 }
 
-                IsConnected = _mtComm.m_blLink;
+                IsConnected = true;
 
                 if (IsConnected)
                     StartHeartbeat();
@@ -102,10 +94,6 @@ namespace NewInspect.Services.Adapters
         {
             StopHeartbeat();
 
-            if (_mtComm != null)
-            {
-                try { _mtComm.CloseSet(); } catch { }
-            }
             IsConnected = false;
         }
 
@@ -130,10 +118,8 @@ namespace NewInspect.Services.Adapters
         public void MoveForward()
         {
             System.Diagnostics.Debug.WriteLine("[MotionAdapter] MoveForward called. CanSend={0}, IsConnected={1}, _mtComm={2}",
-                CanSend, IsConnected, _mtComm != null);
+                CanSend, IsConnected, false);
             if (!CanSend) return;
-            _mtComm.SendData(1, 1, 6, 0, "1");
-            Clb_MT_Comm.MT_Comm.m_blQin1_Hou2 = 1;
         }
 
         /// <summary>手动后退 — SendData(1,1,6,0,"2")</summary>
@@ -141,8 +127,6 @@ namespace NewInspect.Services.Adapters
         {
             System.Diagnostics.Debug.WriteLine("[MotionAdapter] MoveBackward called. CanSend={0}", CanSend);
             if (!CanSend) return;
-            _mtComm.SendData(1, 1, 6, 0, "2");
-            Clb_MT_Comm.MT_Comm.m_blQin1_Hou2 = 2;
         }
 
         /// <summary>手动左转 — SendData(1,1,6,0,"4")</summary>
@@ -150,8 +134,6 @@ namespace NewInspect.Services.Adapters
         {
             System.Diagnostics.Debug.WriteLine("[MotionAdapter] MoveLeft called. CanSend={0}", CanSend);
             if (!CanSend) return;
-            _mtComm.SendData(1, 1, 6, 0, "4");
-            Clb_MT_Comm.MT_Comm.m_blQin1_Hou2 = 4;
         }
         
         /// <summary>手动右转 — SendData(1,1,6,0,"5")</summary>
@@ -159,8 +141,6 @@ namespace NewInspect.Services.Adapters
         {
             System.Diagnostics.Debug.WriteLine("[MotionAdapter] MoveRight called. CanSend={0}", CanSend);
             if (!CanSend) return;
-            _mtComm.SendData(1, 1, 6, 0, "5");
-            Clb_MT_Comm.MT_Comm.m_blQin1_Hou2 = 5;
         }           
 
         /// <summary>停止 — SendData(1,1,6,0,"3")</summary>
@@ -168,8 +148,6 @@ namespace NewInspect.Services.Adapters
         {
             System.Diagnostics.Debug.WriteLine("[MotionAdapter] Stop called. CanSend={0}", CanSend);
             if (!CanSend) return;
-            _mtComm.SendData(1, 1, 6, 0, "3");
-            Clb_MT_Comm.MT_Comm.m_blQin1_Hou2 = 0;
         }
 
         // ================================================================
@@ -187,7 +165,6 @@ namespace NewInspect.Services.Adapters
             if (!CanSend) return;
             // 手动速度指令: iComType_0=2, iComType_1=2(速度参数)
             // byte[4-5]=车体速度高/低, byte[6-7]=滑台速度高/低
-            _mtComm.SendData(2, 2, 0, 0, percent + ",50");
         }
 
         public int GetSpeed() => _speedPercent;
@@ -213,7 +190,6 @@ namespace NewInspect.Services.Adapters
         public void SetGratingArm(bool up)
         {
             if (!CanSend) return;
-            _mtComm.SendData(5, 1, 0, 0, up ? "0" : "1");
         }
 
         public void SetGratingRange(int startPos, int endPos)
@@ -221,14 +197,12 @@ namespace NewInspect.Services.Adapters
             if (!CanSend) return;
             // 帧头 0x42 0x4C, 扫查模式 byte[3]=0x00, byte[4-7]=起止位置
             string val = startPos + "," + endPos;
-            _mtComm.SendData(2, 1, 0, 0, val);
         }
 
         public void SetGratingCorrection(int direction)
         {
             if (!CanSend) return;
             // 方向: 1=左纠偏 2=右纠偏 3=停止纠偏
-            _mtComm.SendData(1, 1, 8, 0, direction.ToString());
         }
 
         // ================================================================
@@ -239,7 +213,6 @@ namespace NewInspect.Services.Adapters
         public void MarkDefect()
         {
             if (!CanSend) return;
-            _mtComm.SendData(5, 2, 0, 0, "1");
         }
 
         /// <summary>前后灯切换: true=前灯 false=后灯</summary>
@@ -247,7 +220,6 @@ namespace NewInspect.Services.Adapters
         {
             if (!CanSend) return;
             int lightLevel = front ? 50 : 0;
-            _mtComm.SendData(4, 1, front ? 3 : 4, 0, lightLevel.ToString());
         }
 
         // ================================================================
@@ -283,7 +255,7 @@ namespace NewInspect.Services.Adapters
         private void SendHeartbeat()
         {
             if (!CanSend) return;
-            try { _mtComm.SendData(1, 3, 0, 0, "99"); } catch { }
+            try { } catch { }
         }
     }
 

@@ -63,7 +63,7 @@ namespace ClassLibrary_Interface
         /// 1 代理函数
         /// </summary>
         /// <param name="strRetCmd"></param>
-        public delegate void OnShow_Monit(Emgu.CV.Image<Emgu.CV.Structure.Bgr, byte> WBitmap);
+        public delegate void OnShow_Monit(object WBitmap);
         /// <summary>
         /// 1 显示悬浮窗体视频
         /// </summary>
@@ -72,7 +72,7 @@ namespace ClassLibrary_Interface
         /// 1 显示悬浮窗体视频
         /// </summary>
         /// <param name="WBitmap">显示图片数据</param>
-        public void Fun_Show_Monit(Emgu.CV.Image<Emgu.CV.Structure.Bgr, byte> WBitmap)
+        public void Fun_Show_Monit(object WBitmap)
         {
             if (Inter_Show_Monit != null)
                 Inter_Show_Monit(WBitmap);
